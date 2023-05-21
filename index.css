@@ -1,0 +1,53 @@
+/* navbar start */
+.navbar {
+   background-color: #082F40; 
+}
+.navbar form {
+    margin-left: auto;
+    justify-content: center;
+}
+.navbar button {
+    background-color: white;
+}
+
+ul ion-icon {
+    font-size: 33px;
+}
+
+.navbar-nav a {
+    position: relative;
+    color: #0295E7CC;
+}
+
+.navbar-nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #0295E7CC;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scale(0);
+    transition: transform .5s;
+}
+.navbar-nav a:hover::after {
+    transform-origin: left;
+    transform: scale(1);
+}
+
+.login {
+    height: 40px;
+    font-size: 1.1em;
+    color: rgb(65, 65, 65);
+    font-weight: 500;
+    transition: .5s;
+}
+
+.login:hover {
+    background: #0295E7CC;
+    color: #f2f3f5;
+  }
+
+ /* navbar end */
