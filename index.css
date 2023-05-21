@@ -1,0 +1,22 @@
+/* navbar start */
+.navbar {
+   background-color: #082F40; 
+}
+.navbar form {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    
+}
+
+
+.navbar button {
+    background-color: white;
+}
+
+ul ion-icon {
+    font-size: 33px;
+    color: #0295E7CC;
+  }
+
+ 
