@@ -14,18 +14,24 @@
   </head>
   <body>
     <!-- navigation bar start -->
-    <header>
+    <header class="border">
       <nav class="navbar navbar-expand-sm">
         <div class="container-fluid d-flex">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" 
+                  type="button" 
+                  data-bs-toggle="collapse" 
+                  data-bs-target="#navbarTogglerDemo03" 
+                  aria-controls="navbarTogglerDemo03" 
+                  aria-expanded="false" 
+                  aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <a class="navbar-brand" href="images/logo.png"><img src="images/logo.png" width="200px" alt="Code Combat Logo"></a>
           <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <form class="d-flex me-auto">
-              <div class="border-0 bg-light rounded-5 " id="search">
-                <button class="btn rounded-start-5" type="submit"><ion-icon name="search"></ion-icon></ion-icon></button>            
-                <input class="rounded-end-5 border-0 p-2 " type="search" placeholder="Search" aria-label="Search">
+              <div class="border-0 bg-light rounded-5" id="search">
+                <button class="btn-search rounded-start-5 border-0 p-2" type="submit"><ion-icon name="search"></ion-icon></ion-icon></button>            
+                <input class="rounded-end-5 border-0 p-2" type="search" placeholder="Search" aria-label="Search">
               </div>       
             </form>
             <ul class="navbar-nav">
@@ -42,13 +48,81 @@
                 <h2></h2>
               </li>
             </ul>  
-            <button class="login border rounded-5 px-4 mx-5 text-center" href="#">LOGIN</ion-icon></button>
+            <button class="btnLogin-popup border rounded-5 px-4 mx-5 text-center">LOG IN</ion-icon></button>
           </div>
         </div>
       </nav>
   </header>
   <!-- navigation bar end -->
 
+
+  <!-- Login start -->
+  <div class="wrapper">
+    <span class="icon-close"><ion-icon name="close-outline"></ion-icon></span>
+
+    <div class="form-box login">
+        <h2>Login</h2>
+        <form action="#">
+            <div class="input-box">
+                <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                <input type="email" required>
+                <label>Email</label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                <input type="password" required>
+                <label>Password</label>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox">
+                Remember me</label>
+                <a href="#">Forgot Password?</a>
+            </div>
+            <button type="submit" class="btn-popup">Login
+            </button>
+            <div class="login-register">
+                <p>Don't have an account? <a 
+                href="#"
+                class="register-link">Sign up</a></a></p>
+            </div>
+        </form>
+    </div>
+    <div class="form-box register">
+        <h2>Create Account</h2>
+        <form action="#">
+            <div class="input-box">
+                <span class="icon">
+                    <ion-icon name="person-outline"></ion-icon></ion-icon></span>
+                <input type="email" required>
+                <label>Username</label>
+            </div>
+            <div class="input-box">
+                <span class="icon">
+                    <ion-icon name="mail-outline"></ion-icon></span>
+                <input type="email" required>
+                <label>Email</label>
+            </div>
+            <div class="input-box">
+                <span class="icon">
+                    <ion-icon name="lock-closed-outline"></ion-icon></span>
+                <input type="password" required>
+                <label>Password</label>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox">
+               I agree to the terms & conditions</label>
+            </div>
+            <button type="submit" class="btn-popup">Register
+            </button>
+            <div class="login-register">
+                <p>Already have an account? <a 
+                href="#"
+                class="login-link">Login</a></p>
+            </div>
+        </form>
+      </div>
+  </div>
+<!-- Login end -->
   
     <main></main>
 
@@ -56,8 +130,9 @@
 
     <script src="index.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>    
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script>
       AOS.init();
     </script>
