@@ -5,7 +5,10 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    background-image: url(./images/backgrouund.jpg);
+    background-size: cover;
     background-position: center;
+    background-repeat: repeat;
 
 }
 
@@ -31,7 +34,11 @@ ul ion-icon {
 
 .navbar-nav a {
     position: relative;
-    color: #0295E7CC;
+    color: white;
+}
+
+.navbar-nav a:hover {
+    color: #2193B0F7;
 }
 
 .navbar-nav a::after {
@@ -41,7 +48,7 @@ ul ion-icon {
     bottom: -6px;
     width: 100%;
     height: 3px;
-    background: #0295E7CC;
+    background: #2193B0F7;
     border-radius: 5px;
     transform-origin: right;
     transform: scale(0);
@@ -52,24 +59,28 @@ ul ion-icon {
     transform: scale(1);
 }
 
+.nav-item h1 {
+    color: rgb(172, 168, 168);
+    font-weight: 100;
+}
 .btnLogin-popup {
     height: 40px;
     font-size: 1.1em;
     background: #082F40;
-    color: rgba(0, 0, 0, 0.658);
+    color: white;
     font-weight: 500;
     transition: .5s;
 }
 
 .btnLogin-popup:hover {
-    background: #0295E7CC;
-    color: #f2f3f5;
+    background: #2193B0F7;
+    color: rgb(20, 20, 20);
   }
 
  /* navbar end */
 
  /* Login start */
- body .wrapper {
+.wrapper {
     position: relative;
     width: 400px;
     height: 440px;
@@ -128,9 +139,11 @@ ul ion-icon {
     cursor: pointer;
     z-index: 1;
 }
+.wrapper .icon-close:hover{
+    background: #e91e63;
+}
 .form-box h2 {
     font-size: 2em;
-    color: #082F40;
     text-align: center;
 }
 .input-box {
@@ -160,7 +173,6 @@ ul ion-icon {
     border: none;
     outline: none;
     font-size: 1em;
-    color: #162938;
     font-weight: 600;
     padding: o 35px 0 5px;
 }
@@ -168,23 +180,19 @@ ul ion-icon {
     position: absolute;
     right: 8px;
     font-size: 1.2em;
-    color: #082F40;
     line-height: 57px;
 }
 .remember-forgot {
     font-size: .9em;
-    color: #082F40;
     font-weight: 500;
     margin: -15px 0 15px;
     display: flex;
     justify-content: space-between;
 }
 .remember-forgot label input {
-    accent-color: #082F40;
     margin-right: 3px;
 }
 .remember-forgot a {
-    color: #082F40;
     text-decoration: none;
 }
 .remember-forgot a:hover {
@@ -204,13 +212,11 @@ ul ion-icon {
 }
 .login-register {
     font-size: .9em;
-    color: #082F40;
     text-align: center;
     font-weight: 500;
     margin: 25px 0 10px;
 }
 .login-register p a {
-    color: #082F40;
     text-decoration: none;
     font-weight: 600;
 }
