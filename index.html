@@ -31,48 +31,16 @@
   .play-now {
     animation: colorChange 4s infinite;
   }
-  .my-element {
-  display: inline-block;
-  margin: 0 0.5rem;
 
-  animation: bounceInUp;
-  animation-duration: 2s;
-  }
   .animate__animated.animate__bounceInUp {
-    --animate-duration: 2s;
+    --animate-duration: 3s;
   }
-  :root {
-    --animate-duration: 900ms;
-    --animate-delay: 0.9s;
+  .animate__animated.animate__tada {
+    --animate-duration: 3s;
   }
 
-  .my-element {
-  display: inline-block;
-  margin: 0 0.5rem;
-
-  animation: bounceInLeft;
-  animation-duration: 2s;
-  }
-  .animate__animated.animate__bounceInLeft {
-    --animate-duration: 2s;
-  }
-  :root {
-    --animate-duration: 900ms;
-    --animate-delay: 0.9s;
-  }
-  .my-element {
-  display: inline-block;
-  margin: 0 0.5rem;
-
-  animation: bounceInRight;
-  animation-duration: 2s;
-  }
-  .animate__animated.animate__bounceInRight {
-    --animate-duration: 2s;
-  }
-  :root {
-    --animate-duration: 900ms;
-    --animate-delay: 0.9s;
+  .animate__animated.animate__swing {
+    --animate-duration: 4s;
   }
     </style>
   </head>
@@ -93,7 +61,7 @@
                   aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <a class="navbar-brand" href="images/logo.png"><img src="images/logo.png" width="200px" alt="Code Combat Logo"></a>
+          <a class="navbar-brand" href="#"><img src="images/logo.png" width="200px" alt="Code Combat Logo"></a>
           <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <form class="me-auto">
               <div class="d-flex border-0 bg-light rounded-5" id="search">
@@ -210,21 +178,23 @@
   </div>
   <!-- register End -->
   
-    <div class="some-text">
+    <div class="hero-section">
       <div class="container">
         <div class="row d-flex">
-          <div class="text-box col-md-4 text-info ms-5 animate__animated animate__bounceInLeft">
-            <h1>Unleash your
-              <br>
-              Javascript coding
-              <br>
-              Potential.
-            </h1>
-            <h4 class="text-white">Play against other player <br>
-              and reach the Pinnacle of Glory.</h4>         
+          <div class=" col-md-4">
+            <div class="text-box rounded-5 text-info ms-5 animate__animated animate__bounceInLeft">
+              <h1>Unleash your
+                <br>
+                Javascript coding
+                <br>
+                Potential.
+              </h1>
+              <h4 class="text-white">Play against other player <br>
+                and reach the Pinnacle of Glory.</h4>         
+            </div>
           </div>
-          <div class="col-md-7 text-end animate__animated animate__bounceInRight">
-            <img src="./images/front-img.png" style="width: 350px;" alt="">
+          <div class="col-md-8 text-end animate__animated animate__bounceInRight">
+            <img src="./images/hero-img.png" style="width: 500px;" alt="">
           </div>
         </div>
         <div class="btn-play text-center mt-4 animate__animated animate__bounceInUp">
@@ -235,7 +205,7 @@
 
 <!--     <main></main> -->
 
-    <footer class="p-1">
+    <footer class="pt-3">
       <div class="row d-flex">
         <div class="col-md-3 fs-5 ms-5 ps-5 pt-3 text-white">
           <p class="ps-4"><b>General</b></p>       
@@ -258,8 +228,10 @@
           </ul>
         </div>
         <div class="col-md-4 text-center pe-5">
-          <img src="./images/footerLogo.png" style="width: 230px;" alt="Logo">
-          <div class="social-logo ms-4 fs-3 mt-5">
+          <div class="animate__animated animate__swing animate__infinite	infinite">
+            <img src="./images/footerLogo.png" style="width: 230px;" alt="Logo">
+          </div>
+          <div class="social-logo ms-4 fs-3 mt-5 animate__animated animate__tada animate__infinite	infinite">
             <a href=""><ion-icon name="logo-facebook"></ion-icon></a>
             <a href=""><ion-icon name="logo-github"></ion-icon></a>
             <a href=""><ion-icon name="logo-linkedin"></ion-icon></a>
@@ -273,22 +245,6 @@
         <p class="text-white text-center">Copyright &copy;2023 COdeCombat Inc. All rights reserved.</p>
       </div>
     </footer>
-<!--     <header class="container hero-body text-white">
-      <div class="row">
-        <div class="col-6 hero-text">
-          <h1 class="text-uppercase hero-title">Unleash your Javascript Coding Potential</h1>
-          <p class="hero-message">Play against other players and reach
-            the Pinnacle of Glory</p>
-          <button class="btn">PLAY NOW</button> 
-        </div>
-        <div class="col-6 hero-img">
-          <img class="" src="images/coding_combat_v_0-removebg-preview.png" alt="">
-        </div>
-      </div>  
-    </header>
-     -->
-   
-
 
     <script src="index.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

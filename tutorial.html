@@ -7,7 +7,17 @@
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css"/>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <title>Code Combat || miniproject2</title>
+    <style>
+        .animate__animated.animate__tada {
+    --animate-duration: 3s;
+  }
+
+  .animate__animated.animate__swing {
+    --animate-duration: 4s;
+  }
+    </style>
   </head>
   <body>
 
@@ -172,8 +182,10 @@
           </ul>
         </div>
         <div class="col-md-4 text-center pe-5">
-          <img src="./images/footerLogo.png" style="width: 230px;" alt="Logo">
-          <div class="social-logo ms-4 fs-3 mt-5">
+          <div class="animate__animated animate__swing animate__infinite	infinite">
+            <img src="./images/footerLogo.png" style="width: 230px;" alt="Logo">
+          </div>
+          <div class="social-logo ms-4 fs-3 mt-5 animate__animated animate__tada animate__infinite	infinite">
             <a href=""><ion-icon name="logo-facebook"></ion-icon></a>
             <a href=""><ion-icon name="logo-github"></ion-icon></a>
             <a href=""><ion-icon name="logo-linkedin"></ion-icon></a>
