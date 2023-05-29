@@ -1,0 +1,114 @@
+{
+    "questions": [
+      {
+        "difficulty": "Easy",
+        "question": "Write a program to find the sum of two numbers.",
+        "answer": "function sum(a, b) { return a + b; }"
+      },
+      {
+        "difficulty": "Easy",
+        "question": "Write a program to check if a number is even or odd.",
+        "answer": "function isEven(number) { return number % 2 === 0; }"
+      },
+      {
+        "difficulty": "Easy",
+        "question": "Write a program to reverse a string.",
+        "answer": "function reverseString(str) { return str.split('').reverse().join(''); }"
+      },
+      {
+        "difficulty": "Easy",
+        "question": "Write a program to check if a string is a palindrome.",
+        "answer": "function isPalindrome(str) { return str === str.split('').reverse().join(''); }"
+      },
+      {
+        "difficulty": "Easy",
+        "question": "Write a program to find the factorial of a number.",
+        "answer": "function factorial(n) { if (n === 0) { return 1; } return n * factorial(n - 1); }"
+      },
+      {
+        "difficulty": "Easy",
+        "question": "Write a program to check if a given year is a leap year.",
+        "answer": "function isLeapYear(year) { return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0; }"
+      },
+      {
+        "difficulty": "Easy",
+        "question": "Write a program to find the largest element in an array.",
+        "answer": "function findLargestElement(arr) { return Math.max(...arr); }"
+      },
+      {
+        "difficulty": "Easy",
+        "question": "Write a program to remove duplicates from an array.",
+        "answer": "function removeDuplicates(arr) { return [...new Set(arr)]; }"
+      },
+      {
+        "difficulty": "Easy",
+        "question": "Write a program to find the sum of all numbers in an array.",
+        "answer": "function sumArray(arr) { return arr.reduce((total, num) => total + num, 0); }"
+      },
+      {
+        "difficulty": "Medium",
+        "question": "Write a program to find the second largest element in an array.",
+        "answer": "function findSecondLargestElement(arr) { arr.sort((a, b) => b - a); return arr[1]; }"
+      },
+      {
+        "difficulty": "Medium",
+        "question": "Write a program to reverse the order of words in a string.",
+        "answer": "function reverseWords(str) { return str.split(' ').reverse().join(' '); }"
+      },
+      {
+        "difficulty": "Medium",
+        "question": "Write a program to check if two strings are anagrams.",
+        "answer": "function areAnagrams(str1, str2) { return str1.split('').sort().join('') === str2.split('').sort().join(''); }"
+      },
+      {
+        "difficulty": "Medium",
+        "question": "Write a program to find the intersection of two arrays.",
+        "answer": "function findIntersection(arr1, arr2) { return arr1.filter(value => arr2.includes(value)); }"
+      },
+      {
+        "difficulty": "Medium",
+        "question": "Write a program to find the missing number in an array of consecutive numbers.",
+        "answer": "function findMissingNumber(arr) { const n = arr.length + 1; const sum = (n * (n + 1)) / 2; const arrSum = arr.reduce((total, num) => total + num, 0); return sum - arrSum; }"
+      },
+      {
+        "difficulty": "Medium",
+        "question": "Write a program to check if a given string is a valid palindrome ignoring non-alphanumeric characters.",
+        "answer": "function isPalindrome(str) { const regex = /[^a-z0-9]/gi; const cleanedStr = str.replace(regex, '').toLowerCase(); return cleanedStr === cleanedStr.split('').reverse().join(''); }"
+      },
+      {
+        "difficulty": "Medium",
+        "question": "Write a program to find the maximum product of two integers in an array.",
+        "answer": "function findMaxProduct(arr) { arr.sort((a, b) => b - a); return arr[0] * arr[1]; }"
+      },
+      {
+        "difficulty": "Hard",
+        "question": "Write a program to find the longest common subsequence of two strings.",
+        "answer": "function longestCommonSubsequence(str1, str2) { const m = str1.length; const n = str2.length; const dp = Array(m + 1).fill(0).map(() => Array(n + 1).fill(0)); for (let i = 1; i <= m; i++) { for (let j = 1; j <= n; j++) { if (str1[i - 1] === str2[j - 1]) { dp[i][j] = dp[i - 1][j - 1] + 1; } else { dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]); } } } let lcs = ''; let i = m; let j = n; while (i > 0 && j > 0) { if (str1[i - 1] === str2[j - 1]) { lcs = str1[i - 1] + lcs; i--; j--; } else if (dp[i - 1][j] > dp[i][j - 1]) { i--; } else { j--; } } return lcs; } }"
+      },
+      {
+        "difficulty": "Hard",
+        "question": "Write a program to find the maximum sum of a subarray in an array.",
+        "answer": "function maximumSubarraySum(array) { let maxSum = -Infinity; let currentSum = 0; for (let i = 0; i < array.length; i++) { currentSum = Math.max(array[i], currentSum + array[i]); maxSum = Math.max(maxSum, currentSum); } return maxSum; }"
+      },
+      {
+        "difficulty": "Hard",
+        "question": "Write a program to find the kth smallest element in an unsorted array.",
+        "answer": "function findKthSmallestElement(array, k) { array.sort((a, b) => a - b); return array[k - 1]; }"
+      },
+      {
+        "difficulty": "Hard",
+        "question": "Write a program to implement a binary search tree and perform insert and search operations.",
+        "answer": "class Node { constructor(value) { this.value = value; this.left = null; this.right = null; } } class BinarySearchTree { constructor() { this.root = null; } insert(value) { const newNode = new Node(value); if (this.root === null) { this.root = newNode; } else { this.insertNode(this.root, newNode); } } insertNode(node, newNode) { if (newNode.value < node.value) { if (node.left === null) { node.left = newNode; } else { this.insertNode(node.left, newNode); } } else { if (node.right === null) { node.right = newNode; } else { this.insertNode(node.right, newNode); } } } search(value) { return this.searchNode(this.root, value); } searchNode(node, value) { if (node === null) { return false; } if (value < node.value) { return this.searchNode(node.left, value); } else if (value > node.value) { return this.searchNode(node.right, value); } else { return true; } } }"
+      },
+      {
+        "difficulty": "Hard",
+        "question": "Write a program to implement the Dijkstra's algorithm for finding the shortest path in a graph.",
+        "answer": "class Graph { constructor() { this.nodes = []; this.edges = {}; } addNode(node) { this.nodes.push(node); this.edges[node] = {}; } addEdge(node1, node2, weight) { this.edges[node1][node2] = weight; this.edges[node2][node1] = weight; } dijkstra(startNode, endNode) { const distances = {}; const visited = {}; const previous = {}; const queue = new PriorityQueue(); for (const node of this.nodes) { if (node === startNode) { distances[node] = 0; queue.enqueue(node, 0); } else { distances[node] = Infinity; queue.enqueue(node, Infinity); } previous[node] = null; } while (!queue.isEmpty()) { const current = queue.dequeue(); if (current === endNode) { const path = []; let node = endNode; while (node !== null) { path.unshift(node); node = previous[node]; } return path; } visited[current] = true; for (const neighbor in this.edges[current]) { const distance = this.edges[current][neighbor]; const totalDistance = distances[current] + distance; if (totalDistance < distances[neighbor]) { distances[neighbor] = totalDistance; previous[neighbor] = current; queue.enqueue(neighbor, totalDistance); } } } return null; } } class PriorityQueue { constructor() { this.items = []; } enqueue(item, priority) { const queueElement = { item, priority }; let added = false; for (let i = 0; i < this.items.length; i++) { if (queueElement.priority < this.items[i].priority) { this.items.splice(i, 0, queueElement); added = true; break; } } if (!added) { this.items.push(queueElement); } } dequeue() { return this.items.shift().item; } isEmpty() { return this.items.length === 0; } } const graph = new Graph(); graph.addNode('A'); graph.addNode('B'); graph.addNode('C'); graph.addNode('D'); graph.addNode('E'); graph.addNode('F'); graph.addEdge('A', 'B', 4); graph.addEdge('A', 'C', 2); graph.addEdge('B', 'E', 3); graph.addEdge('C', 'D', 2); graph.addEdge('C', 'F', 4); graph.addEdge('D', 'E', 3); graph.addEdge('D', 'F', 1); graph.addEdge('E', 'F', 1); const shortestPath = graph.dijkstra('A', 'E');"
+      },
+      {
+        "difficulty": "Hard",
+        "question": "Write a program to implement a merge sort algorithm for sorting an array.",
+        "answer": "function mergeSort(arr) { if (arr.length <= 1) { return arr; } const middle = Math.floor(arr.length / 2); const left = arr.slice(0, middle); const right = arr.slice(middle); return merge(mergeSort(left), mergeSort(right)); } function merge(left, right) { const result = []; let leftIndex = 0; let rightIndex = 0; while (leftIndex < left.length && rightIndex < right.length) { if (left[leftIndex] < right[rightIndex]) { result.push(left[leftIndex]); leftIndex++; } else { result.push(right[rightIndex]); rightIndex++; } } return result.concat(left.slice(leftIndex)).concat(right.slice(rightIndex)); }"
+      }
+    ]
+  }
