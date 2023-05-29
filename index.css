@@ -245,7 +245,7 @@ ul ion-icon {
 }
 
 .text-box {
-    backdrop-filter: blur(5px); 
+    backdrop-filter: blur(3px); 
     padding: 10px;
 }
 
@@ -321,4 +321,27 @@ ul {
 }
 /* footer end */
 
+/* animation start */
+.play-now {
+    animation: colorChange 4s infinite;
+  }
+
+  .animate__animated.animate__bounceInUp {
+    --animate-duration: 3s;
+  }
+  .animate__animated.animate__tada {
+    --animate-duration: 3s;
+  }
+
+  .animate__animated.animate__swing {
+    --animate-duration: 4s;
+  }
+/* animation end */
+
+  /* tutorial start */
+  .tutorial {
+    margin-top: -350px;
+    height: 100vh;
+    backdrop-filter: blur(2px); 
+  }
 
