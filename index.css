@@ -280,9 +280,9 @@ ul ion-icon {
 /* footer start */
 footer {
     margin-bottom: 0;
-    padding-bottom: 0;
+    padding-bottom: 10px;
     width: 100%;
-   
+    backdrop-filter: blur(20px); 
     border-top: 5px solid #2193B0F7;         
 }
 ul {
