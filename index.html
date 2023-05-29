@@ -8,6 +8,29 @@
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css"/>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <title>Code Combat || miniproject2</title>
+    <style>
+      @keyframes colorChange {
+    0% {
+      color: red;
+    }
+    25% {
+      color: blue;
+    }
+    50% {
+      color: green;
+    }
+    75% {
+      color: purple;
+    }
+    100% {
+      color: orange;
+    }
+  }
+
+  .play-now {
+    animation: colorChange 4s infinite;
+  }
+    </style>
   </head>
   <body>
 
@@ -42,7 +65,7 @@
                 <h1 class="ps-2">|</h1>
               </li>              
               <li class="nav-item d-flex pe-2">
-                <a class="nav-link" href="#" title="Tutorial"><ion-icon name="book"></ion-icon></a>
+                <a class="nav-link" href="tutorial.html" title="Tutorial"><ion-icon name="book"></ion-icon></a>
                 <h1 class="ps-2">|</h1>
               </li>
               <li class="nav-item d-flex pe-2">
@@ -141,11 +164,31 @@
   </div>
   <!-- register End -->
   
-    <main class="container">
-      <div class="border text-center text-white p-5 fs-1">
-        This is main page!!
+  
+    <div class="some-text">
+      <div class="container">
+        <div class="row d-flex">
+          <div class="text-box col-md-4 text-info ms-5">
+            <h1>Unleash your
+              <br>
+              Javascript coding
+              <br>
+              Potential.
+            </h1>
+            <h4 class="text-white">Play against other player <br>
+              and reach the Pinnacle of Glory.</h4>         
+          </div>
+          <div class="col-md-7 text-end">
+            <img src="./images/front-img.png" style="width: 350px;" alt="">
+          </div>
+        </div>
+        <div class="btn-play text-center mt-4">
+          <h2><a class="play-now p-2 px-5 rounded-5" href=""><b>Play Now</b></a></h2>
+        </div>
       </div>
-    </main>
+    </div>
+
+    <main></main>
 
     <footer class="p-1">
       <div class="row d-flex">

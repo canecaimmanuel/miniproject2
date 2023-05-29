@@ -97,6 +97,7 @@ ul ion-icon {
     overflow: hidden;
     transform: scale(0);
     transition: transform .5s ease, height .2s ease;
+    z-index: 99;
 }
 .wrapper.active-popup {
     transform: scale(1);
@@ -230,13 +231,25 @@ ul ion-icon {
 }
 /* Login end */
 
-/* main content */
-main {
-    margin: -270px;
+/* start page */
+.some-text {
+    margin-top: -340px;
     height: 100vh;
-    padding: 10px;
+}
+.text-box {
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    border-radius: 50px;
+}
+.btn-play a{
+    text-decoration: none;
+    background-color: #0ca8cff7;
+}
+.btn-play a:hover {
+    background: #fff;
 }
 
+/* start page end */
 
 /* footer start */
 footer {
