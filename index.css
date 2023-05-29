@@ -1,25 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700&display=swap');
 
+* {
+    /* border: solid red; */
+    font-family: 'Roboto';
+}
 
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image: url(./images/backgrouund.jpg);
+    background: linear-gradient(rgba(0,0,0,0.5), black), url(./images/backgrouund.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: repeat;
-
+    background-attachment: fixed;
 }
 
 /* navbar start */
-header {
+.navbar-body {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     background: #082F40;
-
     z-index: 99;
   }
 
@@ -224,3 +228,41 @@ ul ion-icon {
     text-decoration: underline;
 }
 /* Login end */
+
+
+/* main  */
+.hero-body {
+    position: absolute;
+    z-index: -1;
+    padding-top: 50px;
+}
+
+.hero-text {
+    position: relative;
+    padding-top: 150px;
+}
+
+.hero-title {
+    font-size: 60px;
+    color: #0297E7;
+    margin-bottom: 40px;
+    font-weight: bolder;
+}
+
+.hero-message {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.hero-img img{
+    position: relative;
+    width: 110%;
+}
+
+.hero-text .btn {
+    color: #fff
+}
+
+.hero-text .btn:hover {
+    cursor: pointer;
+}
