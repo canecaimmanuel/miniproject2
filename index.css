@@ -6,12 +6,8 @@
 }
 
 body { 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
     background-image: url(./images/backgrouund.jpg);
-/*     background: linear-gradient(rgba(0,0,0,0.5), black), url(./images/backgrouund.jpg); */
+    /* background: linear-gradient(rgba(0,0,0,0.5), black), url(./images/backgrouund.jpg); */
     background-size: cover;
     background-position: center;
     background-repeat: repeat;
