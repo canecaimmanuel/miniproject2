@@ -8,36 +8,11 @@
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css"/>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <title>Code Combat || miniproject2</title>
-    <style>
-      @keyframes colorChange {
-    0% {
-      color: red;
-    }
-    25% {
-      color: blue;
-    }
-    50% {
-      color: green;
-    }
-    75% {
-      color: purple;
-    }
-    100% {
-      color: orange;
-    }
-  }
-
-  .play-now {
-    animation: colorChange 4s infinite;
-  }
-    </style>
   </head>
   <body>
 
     <!-- navigation bar start -->
-
-
-    <section class="navbar-body">
+    <header>
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid d-flex">
           <button class="navbar-toggler  bg-info" 
@@ -59,7 +34,7 @@
             </form>
             <ul class="navbar-nav">
               <li class="nav-item d-flex pe-2 ">
-                <a class="nav-link active text-info text-bg-secondary rounded" aria-current="page" href="#" title="Home Page"><ion-icon name="home"></ion-icon></a> 
+                <a class="nav-link" href="index.html" title="Home Page"><ion-icon name="home"></ion-icon></a> 
                 <h1 class="ps-2">|</h1>
               </li>
               <li class="nav-item d-flex pe-2 ">
@@ -67,7 +42,7 @@
                 <h1 class="ps-2">|</h1>
               </li>              
               <li class="nav-item d-flex pe-2">
-                <a class="nav-link" href="tutorial.html" title="Tutorial"><ion-icon name="book"></ion-icon></a>
+                <a class="nav-link active text-info text-bg-secondary rounded" aria-current="page" href="tutorial.html" title="Tutorial"><ion-icon name="book"></ion-icon></a>
                 <h1 class="ps-2">|</h1>
               </li>
               <li class="nav-item d-flex pe-2">
@@ -79,7 +54,7 @@
           </div>
         </div>
       </nav>
-    </section>
+  </header>
   <!-- navigation bar end -->
 
 
@@ -166,30 +141,13 @@
   </div>
   <!-- register End -->
   
-    <div class="some-text">
-      <div class="container">
-        <div class="row d-flex">
-          <div class="text-box col-md-4 text-info ms-5">
-            <h1>Unleash your
-              <br>
-              Javascript coding
-              <br>
-              Potential.
-            </h1>
-            <h4 class="text-white">Play against other player <br>
-              and reach the Pinnacle of Glory.</h4>         
-          </div>
-          <div class="col-md-7 text-end">
-            <img src="./images/front-img.png" style="width: 350px;" alt="">
-          </div>
-        </div>
-        <div class="btn-play text-center mt-4">
-          <h2><a class="play-now p-2 px-5 rounded-5" href=""><b>Play Now</b></a></h2>
-        </div>
+  <!-- main content start -->
+    <main class="container">
+      <div class="border text-center text-white p-5 fs-1">
+        This is tutorial page!!
       </div>
-    </div>
-
-<!--     <main></main> -->
+    </main>
+    <!-- main content end -->
 
     <footer class="p-1">
       <div class="row d-flex">
@@ -229,22 +187,6 @@
         <p class="text-white text-center">Copyright &copy;2023 COdeCombat Inc. All rights reserved.</p>
       </div>
     </footer>
-<!--     <header class="container hero-body text-white">
-      <div class="row">
-        <div class="col-6 hero-text">
-          <h1 class="text-uppercase hero-title">Unleash your Javascript Coding Potential</h1>
-          <p class="hero-message">Play against other players and reach
-            the Pinnacle of Glory</p>
-          <button class="btn">PLAY NOW</button> 
-        </div>
-        <div class="col-6 hero-img">
-          <img class="" src="images/coding_combat_v_0-removebg-preview.png" alt="">
-        </div>
-      </div>  
-    </header>
-     -->
-   
-
 
     <script src="index.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

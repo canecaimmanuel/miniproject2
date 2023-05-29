@@ -5,12 +5,13 @@
     font-family: 'Roboto';
 }
 
-body {
+body { 
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.5), black), url(./images/backgrouund.jpg);
+    background-image: url(./images/backgrouund.jpg);
+/*     background: linear-gradient(rgba(0,0,0,0.5), black), url(./images/backgrouund.jpg); */
     background-size: cover;
     background-position: center;
     background-repeat: repeat;
@@ -84,6 +85,12 @@ ul ion-icon {
  /* navbar end */
 
  /* Login start */
+ .login-box {
+    display: grid;
+    place-items: center;
+    margin-top: 100px;
+ }
+
 .wrapper {
     position: relative;
     width: 400px;
@@ -99,6 +106,7 @@ ul ion-icon {
     overflow: hidden;
     transform: scale(0);
     transition: transform .5s ease, height .2s ease;
+    z-index: 99;
 }
 .wrapper.active-popup {
     transform: scale(1);
@@ -227,11 +235,49 @@ ul ion-icon {
 .login-register p a:hover {
     text-decoration: underline;
 }
+
+.social-logo a:hover {
+    color: rgb(250, 250, 250);
+}
+/* Login end */
+
+/* start page */
+.some-text {
+    margin-top: -340px;
+    height: 100vh;
+}
+.text-box {
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    border-radius: 50px;
+}
+.btn-play a{
+    text-decoration: none;
+    background-color: #0ca8cff7;
+}
+.btn-play a:hover {
+    background: #fff;
+}
+
+/* start page end */
+
+/* footer start */
+footer {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    width: 100%;
+    backdrop-filter: blur(20px);          
+}
+ul {
+    list-style-type: none;
+}
+
+/* footer end */
 /* Login end */
 
 
 /* main  */
-.hero-body {
+/* .hero-body {
     position: absolute;
     z-index: -1;
     padding-top: 50px;
@@ -265,4 +311,4 @@ ul ion-icon {
 
 .hero-text .btn:hover {
     cursor: pointer;
-}
+} */
