@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css"/>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <title>Code Combat || miniproject2</title>
     <style>
       @keyframes colorChange {
@@ -29,6 +30,49 @@
 
   .play-now {
     animation: colorChange 4s infinite;
+  }
+  .my-element {
+  display: inline-block;
+  margin: 0 0.5rem;
+
+  animation: bounceInUp;
+  animation-duration: 2s;
+  }
+  .animate__animated.animate__bounceInUp {
+    --animate-duration: 2s;
+  }
+  :root {
+    --animate-duration: 900ms;
+    --animate-delay: 0.9s;
+  }
+
+  .my-element {
+  display: inline-block;
+  margin: 0 0.5rem;
+
+  animation: bounceInLeft;
+  animation-duration: 2s;
+  }
+  .animate__animated.animate__bounceInLeft {
+    --animate-duration: 2s;
+  }
+  :root {
+    --animate-duration: 900ms;
+    --animate-delay: 0.9s;
+  }
+  .my-element {
+  display: inline-block;
+  margin: 0 0.5rem;
+
+  animation: bounceInRight;
+  animation-duration: 2s;
+  }
+  .animate__animated.animate__bounceInRight {
+    --animate-duration: 2s;
+  }
+  :root {
+    --animate-duration: 900ms;
+    --animate-delay: 0.9s;
   }
     </style>
   </head>
@@ -169,7 +213,7 @@
     <div class="some-text">
       <div class="container">
         <div class="row d-flex">
-          <div class="text-box col-md-4 text-info ms-5">
+          <div class="text-box col-md-4 text-info ms-5 animate__animated animate__bounceInLeft">
             <h1>Unleash your
               <br>
               Javascript coding
@@ -179,11 +223,11 @@
             <h4 class="text-white">Play against other player <br>
               and reach the Pinnacle of Glory.</h4>         
           </div>
-          <div class="col-md-7 text-end">
+          <div class="col-md-7 text-end animate__animated animate__bounceInRight">
             <img src="./images/front-img.png" style="width: 350px;" alt="">
           </div>
         </div>
-        <div class="btn-play text-center mt-4">
+        <div class="btn-play text-center mt-4 animate__animated animate__bounceInUp">
           <h2><a class="play-now p-2 px-5 rounded-5" href=""><b>Play Now</b></a></h2>
         </div>
       </div>
