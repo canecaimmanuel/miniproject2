@@ -59,8 +59,9 @@
 
 
   <!-- Login start -->
-  <div class="wrapper">
-    <span class="icon-close"><ion-icon name="close-outline"></ion-icon></span>
+  <div class="login-box">
+    <div class="wrapper">
+      <span class="icon-close"><ion-icon name="close-outline"></ion-icon></span>
 
     <div class="form-box login">
         <h2 class="text-info">Login</h2>
@@ -87,59 +88,103 @@
                 href="#"
                 class="register-link text-light">Sign up</a></a></p>
             </div>
-            <div class="d-flex ">
-              <p class="text-info">or sign in with</p>
-              <a class="pe-2 ps-3 fs-4" title="Google" href=""><ion-icon name="logo-google"></ion-icon></a>
-              <a class="pe-2 ps-2 fs-4" title="Facebook" href=""><ion-icon name="logo-facebook"></ion-icon></a>
-              <a class="pe-2 ps-2 fs-4" title="Github" href=""><ion-icon name="logo-github"></ion-icon></a>
-              <a class="pe-2 ps-2 fs-4" title="Twitch" href=""><ion-icon name="logo-twitch"></ion-icon></a>
-              <a class="pe-2 ps-2 fs-4" title="Twitter" href=""><ion-icon name="logo-twitter"></ion-icon></a>
+            <div class="d-flex text-white">
+              <p>or login with</p>
+              <div class="social-logo ms-4 fs-3">
+                <a href=""><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href=""><ion-icon name="logo-github"></ion-icon></a>
+                <a href=""><ion-icon name="logo-linkedin"></ion-icon></a>
+                <a href=""><ion-icon name="logo-twitter"></ion-icon></a>
+                <a href=""><ion-icon name="logo-google"></ion-icon></a>
+              </div>
             </div>
         </form>
     </div>
     <!-- Login end -->
 
-    <!-- Register Start -->
-    <div class="form-box register">
-        <h2 class="text-info">Create Account</h2>
-        <form action="#">
-            <div class="input-box">
-                <span class="icon">
-                    <ion-icon class="text-info" name="person-outline"></ion-icon></ion-icon></span>
-                <input class="text-light" type="email" required>
-                <label class="text-light">Username</label>
-            </div>
-            <div class="input-box">
-                <span class="icon">
-                    <ion-icon class="text-info" name="mail-outline"></ion-icon></span>
-                <input class="text-light" type="email" required>
-                <label class="text-light">Email</label>
-            </div>
-            <div class="input-box">
-                <span class="icon">
-                    <ion-icon class="text-info" name="lock-closed-outline"></ion-icon></span>
-                <input class="text-light" type="password" required>
-                <label class="text-light">Password</label>
-            </div>
-            <div class="remember-forgot">
-                <label class="text-info"><input type="checkbox">
-               I agree to the terms & conditions</label>
-            </div>
-            <button type="submit" class="btn-popup">Register
-            </button>
-            <div class="login-register">
-                <p class="text-info">Already have an account? <a 
-                href="#"
-                class="login-link text-light">Login</a></p>
-            </div>
-        </form>
-      </div>
+      <!-- Register Start -->
+      <div class="form-box register">
+          <h2 class="text-info">Create Account</h2>
+          <form action="#">
+              <div class="input-box">
+                  <span class="icon">
+                      <ion-icon class="text-info" name="person-outline"></ion-icon></ion-icon></span>
+                  <input class="text-light" type="email" required>
+                  <label class="text-light">Username</label>
+              </div>
+              <div class="input-box">
+                  <span class="icon">
+                      <ion-icon class="text-info" name="mail-outline"></ion-icon></span>
+                  <input class="text-light" type="email" required>
+                  <label class="text-light">Email</label>
+              </div>
+              <div class="input-box">
+                  <span class="icon">
+                      <ion-icon class="text-info" name="lock-closed-outline"></ion-icon></span>
+                  <input class="text-light" type="password" required>
+                  <label class="text-light">Password</label>
+              </div>
+              <div class="remember-forgot">
+                  <label class="text-info"><input type="checkbox">
+                I agree to the terms & conditions</label>
+              </div>
+              <button type="submit" class="btn-popup">Register
+              </button>
+              <div class="login-register">
+                  <p class="text-info">Already have an account? <a 
+                  href="#"
+                  class="login-link text-light">Login</a></p>
+              </div>
+          </form>
+        </div>
+    </div>
   </div>
   <!-- register End -->
   
-    <main></main>
+    <main class="container">
+      <div class="border text-center text-white p-5 fs-1">
+        This is main page!!
+      </div>
+    </main>
 
-    <footer></footer>
+    <footer class="p-1">
+      <div class="row d-flex">
+        <div class="col-md-3 fs-5 ms-5 ps-5 pt-3 text-white">
+          <p class="ps-4"><b>General</b></p>       
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#"> Chagelog</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 fs-5 ms-5 ps-5 pt-3 text-white">
+          <p class="ps-4"><b>Get Involved</b></p>       
+          <ul>
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">Community</a></li>
+            <li><a href="#">Contribute</a></li>
+            <li><a href="#">Forum</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 text-center pe-5">
+          <img src="./images/footerLogo.png" style="width: 230px;" alt="Logo">
+          <div class="social-logo ms-4 fs-3 mt-5">
+            <a href=""><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href=""><ion-icon name="logo-github"></ion-icon></a>
+            <a href=""><ion-icon name="logo-linkedin"></ion-icon></a>
+            <a href=""><ion-icon name="logo-twitter"></ion-icon></a>
+            <a href=""><ion-icon name="logo-google"></ion-icon></a>
+            <a href=""><ion-icon name="logo-youtube"></ion-icon></a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p class="text-white text-center">Copyright &copy;2023 COdeCombat Inc. All rights reserved.</p>
+      </div>
+    </footer>
 
     <script src="index.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

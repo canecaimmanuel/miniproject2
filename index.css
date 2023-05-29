@@ -1,10 +1,6 @@
 
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
     background-image: url(./images/backgrouund.jpg);
     background-size: cover;
     background-position: center;
@@ -80,6 +76,12 @@ ul ion-icon {
  /* navbar end */
 
  /* Login start */
+ .login-box {
+    display: grid;
+    place-items: center;
+    margin-top: 100px;
+ }
+
 .wrapper {
     position: relative;
     width: 400px;
@@ -223,4 +225,28 @@ ul ion-icon {
 .login-register p a:hover {
     text-decoration: underline;
 }
+.social-logo a:hover {
+    color: rgb(250, 250, 250);
+}
 /* Login end */
+
+/* main content */
+main {
+    margin: -270px;
+    height: 100vh;
+    padding: 10px;
+}
+
+
+/* footer start */
+footer {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    width: 100%;
+    backdrop-filter: blur(20px);          
+}
+ul {
+    list-style-type: none;
+}
+
+/* footer end */
