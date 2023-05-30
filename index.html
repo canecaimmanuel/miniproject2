@@ -9,208 +9,256 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <title>Code Combat || miniproject2</title>
-  
+    <style>
+  .hero-section {
+    margin-top: -400px;
+    height: 100vh;
+  }
+
+  .text-box {
+      backdrop-filter: blur(3px); 
+      padding: 10px;
+  }
+
+  .btn-play a{
+    font-family: 'arial black';
+    color: #14396A !important;
+    font-size: 25px;
+    text-shadow: 2px 1px 0px #7CACDE;
+    box-shadow: 1px 1px 1px #BEE2F9;
+    padding: 10px 40px;
+    border-radius: 10px;
+    border: 2px solid #3866A3;
+    background: #63B8EE;
+    background: linear-gradient(to top, #63B8EE, #468CCF);
+    text-decoration: none;
+  }
+  .btn-play a:hover {
+    color: #14396A !important;
+    background: #468CCF;
+    background: linear-gradient(to top, #468CCF, #64DCEE);
+  }
+  .btn-learn {
+  font-family: 'arial black';
+  color: #14396A !important;
+  font-size: 14px;
+  text-shadow: 2px 1px 0px #7CACDE;
+  box-shadow: 1px 1px 1px #BEE2F9;
+  padding: 10px 25px;
+  border-radius: 10px;
+  border: 2px solid #3866A3;
+  background: #63B8EE;
+  background: linear-gradient(to top, #63B8EE, #468CCF);
+  }
+  .btn-learn:hover {
+    color: #14396A !important;
+    background: #468CCF;
+    background: linear-gradient(to top, #468CCF, #64DCEE);
+  }
+    </style>
   </head>
   <body>
     <canvas></canvas>
     <!-- navigation bar start -->
-      <section class="navbar-body">
-        <nav class="navbar navbar-expand-lg">
-          <div class="container-fluid d-flex">
-            <button class="navbar-toggler  bg-info" 
-                    type="button" 
-                    data-bs-toggle="collapse" 
-                    data-bs-target="#navbarTogglerDemo03" 
-                    aria-controls="navbarTogglerDemo03" 
-                    aria-expanded="false" 
-                    aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <a class="navbar-brand" href="#"><img src="images/logo.png" width="200px" alt="Code Combat Logo"></a>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-              <form class="me-auto">
-                <div class="d-flex border-0 bg-light rounded-5" id="search">
-                  <button class="btn-search rounded-start-5 border-0 p-2" type="submit"><ion-icon name="search"></ion-icon></ion-icon></button>            
-                  <input class="rounded-end-5 border-0 p-2" type="search" placeholder="Search" aria-label="Search">
-                </div>       
-              </form>
-              <ul class="navbar-nav">
-                <li class="nav-item d-flex pe-2 ">
-                  <a class="nav-link active text-info text-bg-secondary rounded" aria-current="page" href="#" title="Home Page"><ion-icon name="home"></ion-icon></a> 
-                  <h1 class="ps-2">|</h1>
-                </li>
-                <li class="nav-item d-flex pe-2 ">
-                  <a class="nav-link" href="#" title="Play Game"><ion-icon name="game-controller"></ion-icon></ion-icon></a>
-                  <h1 class="ps-2">|</h1>
-                </li>              
-                <li class="nav-item d-flex pe-2">
-                  <a class="nav-link" href="tutorial.html" title="Tutorial"><ion-icon name="book"></ion-icon></a>
-                  <h1 class="ps-2">|</h1>
-                </li>
-                <li class="nav-item d-flex pe-2">
-                  <a class="nav-link" href="#" title="About Us"><ion-icon name="alert-circle"></ion-icon></a>
-                  <h1 class="ps-2"></h1>
-                </li>
-              </ul>  
-              <button class="btnLogin-popup border rounded-4 px-4 mx-5 text-center">LOGIN</ion-icon></button>
-            </div>
+
+
+    <section class="navbar-body">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid d-flex">
+          <button class="navbar-toggler  bg-info" 
+                  type="button" 
+                  data-bs-toggle="collapse" 
+                  data-bs-target="#navbarTogglerDemo03" 
+                  aria-controls="navbarTogglerDemo03" 
+                  aria-expanded="false" 
+                  aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img src="images/logo.png" width="200px" alt="Code Combat Logo"></a>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <form class="me-auto">
+              <div class="d-flex border-0 bg-light rounded-5" id="search">
+                <button class="btn-search rounded-start-5 border-0 p-2" type="submit"><ion-icon name="search"></ion-icon></ion-icon></button>            
+                <input class="rounded-end-5 border-0 p-2" type="search" placeholder="Search" aria-label="Search">
+              </div>       
+            </form>
+            <ul class="navbar-nav">
+              <li class="nav-item d-flex pe-2 ">
+                <a class="nav-link active text-info text-bg-secondary rounded" aria-current="page" href="#" title="Home Page"><ion-icon name="home"></ion-icon></a> 
+                <h1 class="ps-2">|</h1>
+              </li>
+              <li class="nav-item d-flex pe-2 ">
+                <a class="nav-link" href="#" title="Play Game"><ion-icon name="game-controller"></ion-icon></ion-icon></a>
+                <h1 class="ps-2">|</h1>
+              </li>              
+              <li class="nav-item d-flex pe-2">
+                <a class="nav-link" href="tutorial.html" title="Tutorial"><ion-icon name="book"></ion-icon></a>
+                <h1 class="ps-2">|</h1>
+              </li>
+              <li class="nav-item d-flex pe-2">
+                <a class="nav-link" href="#" title="About Us"><ion-icon name="alert-circle"></ion-icon></a>
+                <h1 class="ps-2"></h1>
+              </li>
+            </ul>  
+            <button class="btnLogin-popup border rounded-4 px-4 mx-5 text-center">LOGIN</ion-icon></button>
           </div>
-        </nav>
-      </section>
-    <!-- navigation bar end -->
-  
-  
-    <!-- Login start -->
-    <div class="login-box">
-      <div class="wrapper">
-        <span class="icon-close"><ion-icon name="close-outline"></ion-icon></span>
-  
-      <div class="form-box login">
-          <h2 class="text-info">Login</h2>
+        </div>
+      </nav>
+    </section>
+  <!-- navigation bar end -->
+
+
+  <!-- Login start -->
+  <div class="login-box">
+    <div class="wrapper">
+      <span class="icon-close"><ion-icon name="close-outline"></ion-icon></span>
+
+    <div class="form-box login">
+        <h2 class="text-info">Login</h2>
+        <form action="#">
+            <div class="input-box">
+                <span class="icon text-info"><ion-icon name="mail-outline"></ion-icon></span>
+                <input class="text-light" type="email" required>
+                <label class="text-light">Email</label>
+            </div>
+            <div class="input-box">
+                <span class="icon text-info"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                <input class="text-light" type="password" required>
+                <label class="text-light">Password</label>
+            </div>
+            <div class="remember-forgot">
+                <label class="text-info"><input type="checkbox">
+                Remember me</label>
+                <a class="text-info" href="#">Forgot Password?</a>
+            </div>
+            <button type="submit" class="btn-popup">Login
+            </button>
+            <div class="login-register text-info">
+                <p>Don't have an account? <a 
+                href="#"
+                class="register-link text-light">Sign up</a></a></p>
+            </div>
+            <div class="d-flex text-white">
+              <p>or login with</p>
+              <div class="social-logo ms-4 fs-3">
+                <a href=""><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href=""><ion-icon name="logo-github"></ion-icon></a>
+                <a href=""><ion-icon name="logo-linkedin"></ion-icon></a>
+                <a href=""><ion-icon name="logo-twitter"></ion-icon></a>
+                <a href=""><ion-icon name="logo-google"></ion-icon></a>
+              </div>
+            </div>
+        </form>
+    </div>
+    <!-- Login end -->
+
+      <!-- Register Start -->
+      <div class="form-box register">
+          <h2 class="text-info">Create Account</h2>
           <form action="#">
               <div class="input-box">
-                  <span class="icon text-info"><ion-icon name="mail-outline"></ion-icon></span>
+                  <span class="icon">
+                      <ion-icon class="text-info" name="person-outline"></ion-icon></ion-icon></span>
+                  <input class="text-light" type="email" required>
+                  <label class="text-light">Username</label>
+              </div>
+              <div class="input-box">
+                  <span class="icon">
+                      <ion-icon class="text-info" name="mail-outline"></ion-icon></span>
                   <input class="text-light" type="email" required>
                   <label class="text-light">Email</label>
               </div>
               <div class="input-box">
-                  <span class="icon text-info"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                  <span class="icon">
+                      <ion-icon class="text-info" name="lock-closed-outline"></ion-icon></span>
                   <input class="text-light" type="password" required>
                   <label class="text-light">Password</label>
               </div>
               <div class="remember-forgot">
                   <label class="text-info"><input type="checkbox">
-                  Remember me</label>
-                  <a class="text-info" href="#">Forgot Password?</a>
+                I agree to the terms & conditions</label>
               </div>
-              <button type="submit" class="btn-popup">Login
+              <button type="submit" class="btn-popup">Register
               </button>
-              <div class="login-register text-info">
-                  <p>Don't have an account? <a 
+              <div class="login-register">
+                  <p class="text-info">Already have an account? <a 
                   href="#"
-                  class="register-link text-light">Sign up</a></a></p>
-              </div>
-              <div class="d-flex text-white">
-                <p>or login with</p>
-                <div class="social-logo ms-4 fs-3">
-                  <a href=""><ion-icon name="logo-facebook"></ion-icon></a>
-                  <a href=""><ion-icon name="logo-github"></ion-icon></a>
-                  <a href=""><ion-icon name="logo-linkedin"></ion-icon></a>
-                  <a href=""><ion-icon name="logo-twitter"></ion-icon></a>
-                  <a href=""><ion-icon name="logo-google"></ion-icon></a>
-                </div>
+                  class="login-link text-light">Login</a></p>
               </div>
           </form>
-      </div>
-      <!-- Login end -->
+        </div>
+    </div>
+  </div>
+  <!-- register End -->
   
-        <!-- Register Start -->
-        <div class="form-box register">
-            <h2 class="text-info">Create Account</h2>
-            <form action="#">
-                <div class="input-box">
-                    <span class="icon">
-                        <ion-icon class="text-info" name="person-outline"></ion-icon></ion-icon></span>
-                    <input class="text-light" type="email" required>
-                    <label class="text-light">Username</label>
-                </div>
-                <div class="input-box">
-                    <span class="icon">
-                        <ion-icon class="text-info" name="mail-outline"></ion-icon></span>
-                    <input class="text-light" type="email" required>
-                    <label class="text-light">Email</label>
-                </div>
-                <div class="input-box">
-                    <span class="icon">
-                        <ion-icon class="text-info" name="lock-closed-outline"></ion-icon></span>
-                    <input class="text-light" type="password" required>
-                    <label class="text-light">Password</label>
-                </div>
-                <div class="remember-forgot">
-                    <label class="text-info"><input type="checkbox">
-                  I agree to the terms & conditions</label>
-                </div>
-                <button type="submit" class="btn-popup">Register
-                </button>
-                <div class="login-register">
-                    <p class="text-info">Already have an account? <a 
-                    href="#"
-                    class="login-link text-light">Login</a></p>
-                </div>
-            </form>
+    <div class="hero-section">
+      <div class="container">
+        <div class="row d-flex">
+          <div class=" col-md-4">
+            <div class="text-box rounded-5 text-info ms-5 animate__animated animate__bounceInLeft">
+              <h1>Unleash your
+                <br>
+                Javascript coding
+                <br>
+                Potential.
+              </h1>
+              <h4 class="text-white">Play against other player <br>
+                and reach the Pinnacle of Glory.</h4>         
+            </div>
           </div>
+          <div class="col-md-8 text-end animate__animated animate__bounceInRight">
+            <img src="./images/hero-img.png" style="width: 500px;" alt="">
+          </div>
+        </div>
+        <div class="btn-play text-center mt-4 animate__animated animate__bounceInUp">
+          <h2><a class="play-now p-2 px-5 rounded-5" href=""><b>Play Now</b></a></h2>
+        </div>
       </div>
     </div>
-    <!-- register End -->
-    
-      <div class="hero-section">
-        <div class="container">
-          <div class="row d-flex">
-            <div class=" col-md-4">
-              <div class="text-box rounded-5 text-info ms-5 animate__animated animate__bounceInLeft">
-                <h1>Unleash your
-                  <br>
-                  Javascript coding
-                  <br>
-                  Potential.
-                </h1>
-                <h4 class="text-white">Play against other player <br>
-                  and reach the Pinnacle of Glory.</h4>         
-              </div>
-            </div>
-            <div class="col-md-8 text-end animate__animated animate__bounceInRight">
-              <img src="./images/hero-img.png" style="width: 500px;" alt="">
-            </div>
+
+<!--     <main></main> -->
+
+    <footer class="pt-3">
+      <div class="row d-flex">
+        <div class="col-md-3 fs-5 ms-5 ps-5 pt-3 text-white">
+          <p class="ps-4"><b>General</b></p>       
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#"> Chagelog</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 fs-5 ms-5 ps-5 pt-3 text-white">
+          <p class="ps-4"><b>Get Involved</b></p>       
+          <ul>
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">Community</a></li>
+            <li><a href="#">Contribute</a></li>
+            <li><a href="#">Forum</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 text-center pe-5">
+          <div class="animate__animated animate__swing animate__infinite	infinite">
+            <img src="./images/footerLogo.png" style="width: 230px;" alt="Logo">
           </div>
-          <div class="btn-play text-center mt-4 animate__animated animate__bounceInUp">
-            <h2><a class="play-now p-2 px-5 rounded-5" href=""><b>Play Now</b></a></h2>
+          <div class="social-logo ms-4 fs-3 mt-5 animate__animated animate__tada animate__infinite	infinite">
+            <a href=""><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href=""><ion-icon name="logo-github"></ion-icon></a>
+            <a href=""><ion-icon name="logo-linkedin"></ion-icon></a>
+            <a href=""><ion-icon name="logo-twitter"></ion-icon></a>
+            <a href=""><ion-icon name="logo-google"></ion-icon></a>
+            <a href=""><ion-icon name="logo-youtube"></ion-icon></a>
           </div>
         </div>
       </div>
-  
-  <!--     <main></main> -->
-  
-      <footer class="pt-3">
-        <div class="row d-flex">
-          <div class="col-md-3 fs-5 ms-5 ps-5 pt-3 text-white">
-            <p class="ps-4"><b>General</b></p>       
-            <ul>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Help Center</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Contact</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#"> Chagelog</a></li>
-            </ul>
-          </div>
-          <div class="col-md-4 fs-5 ms-5 ps-5 pt-3 text-white">
-            <p class="ps-4"><b>Get Involved</b></p>       
-            <ul>
-              <li><a href="#">GitHub</a></li>
-              <li><a href="#">Community</a></li>
-              <li><a href="#">Contribute</a></li>
-              <li><a href="#">Forum</a></li>
-            </ul>
-          </div>
-          <div class="col-md-4 text-center pe-5">
-            <div class="animate__animated animate__swing animate__infinite	infinite">
-              <img src="./images/footerLogo.png" style="width: 230px;" alt="Logo">
-            </div>
-            <div class="social-logo ms-4 fs-3 mt-5 animate__animated animate__tada animate__infinite	infinite">
-              <a href=""><ion-icon name="logo-facebook"></ion-icon></a>
-              <a href=""><ion-icon name="logo-github"></ion-icon></a>
-              <a href=""><ion-icon name="logo-linkedin"></ion-icon></a>
-              <a href=""><ion-icon name="logo-twitter"></ion-icon></a>
-              <a href=""><ion-icon name="logo-google"></ion-icon></a>
-              <a href=""><ion-icon name="logo-youtube"></ion-icon></a>
-            </div>
-          </div>
-        </div>
-        <div>
-          <p class="text-white text-center">Copyright &copy;2023 COdeCombat Inc. All rights reserved.</p>
-        </div>
-      </footer>  
-   
+      <div>
+        <p class="text-white text-center">Copyright &copy;2023 COdeCombat Inc. All rights reserved.</p>
+      </div>
+    </footer>
+
     <script src="index.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>    
