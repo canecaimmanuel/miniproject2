@@ -7,12 +7,51 @@
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css"/>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <title>Code Combat || miniproject2</title>
+    <style>
+      .custom-loader {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  color:#8cdcf0f7;
+  background: radial-gradient(farthest-side, currentColor calc(100% - 6px),#0000 calc(100% - 5px) 0);
+  -webkit-mask:radial-gradient(farthest-side,#0000 calc(100% - 13px),#000 calc(100% - 12px));
+  border-radius: 50%;
+  animation: s9 2s infinite linear;
+}
+.custom-loader::before,
+.custom-loader::after {    
+  content:"";
+  grid-area: 1/1;
+  background:
+    linear-gradient(currentColor 0 0) center,
+    linear-gradient(currentColor 0 0) center;
+  background-size: 100% 10px,10px 100%;
+  background-repeat: no-repeat;
+}
+.custom-loader::after {
+   transform: rotate(45deg);
+}
+
+@keyframes s9 { 
+  100%{transform: rotate(1turn)}
+}
+.tutorial {
+    margin-top: -350px;
+    height: 100vh;
+    
+  }
+  .some-text {
+    backdrop-filter: blur(2px); 
+  }
+
+    </style>
   </head>
   <body>
 
     <!-- navigation bar start -->
-    <header>
+    <section class="navbar-body">
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid d-flex">
           <button class="navbar-toggler  bg-info" 
@@ -24,7 +63,7 @@
                   aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <a class="navbar-brand" href="images/logo.png"><img src="images/logo.png" width="200px" alt="Code Combat Logo"></a>
+          <a class="navbar-brand" href="#"><img src="images/logo.png" width="200px" alt="Code Combat Logo"></a>
           <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <form class="me-auto">
               <div class="d-flex border-0 bg-light rounded-5" id="search">
@@ -54,7 +93,7 @@
           </div>
         </div>
       </nav>
-  </header>
+    </section>
   <!-- navigation bar end -->
 
 
@@ -142,9 +181,14 @@
   <!-- register End -->
   
   <!-- main content start -->
-    <main class="container">
-      <div class="border text-center text-white p-5 fs-1">
+    <main class="container tutorial">
+      <div class="some-text border text-center text-white p-5 fs-1">
         This is tutorial page!!
+      </div>
+      <div class="row justify-content-center mt-5">
+        <div class="col-1 ">
+          <div class="custom-loader"></div>
+        </div>
       </div>
     </main>
     <!-- main content end -->
@@ -154,26 +198,28 @@
         <div class="col-md-3 fs-5 ms-5 ps-5 pt-3 text-white">
           <p class="ps-4"><b>General</b></p>       
           <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Help Center</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#"> Chagelog</a></li>
+            <li><a class="text-decoration-none" href="#">About</a></li>
+            <li><a class="text-decoration-none" href="#">Help Center</a></li>
+            <li><a class="text-decoration-none" href="#">Privacy Policy</a></li>
+            <li><a class="text-decoration-none" href="#">Contact</a></li>
+            <li><a class="text-decoration-none" href="#">Blog</a></li>
+            <li><a class="text-decoration-none" href="#"> Chagelog</a></li>
           </ul>
         </div>
         <div class="col-md-4 fs-5 ms-5 ps-5 pt-3 text-white">
           <p class="ps-4"><b>Get Involved</b></p>       
           <ul>
-            <li><a href="#">GitHub</a></li>
-            <li><a href="#">Community</a></li>
-            <li><a href="#">Contribute</a></li>
-            <li><a href="#">Forum</a></li>
+            <li><a class="text-decoration-none" href="#">GitHub</a></li>
+            <li><a class="text-decoration-none" href="#">Community</a></li>
+            <li><a class="text-decoration-none" href="#">Contribute</a></li>
+            <li><a class="text-decoration-none" href="#">Forum</a></li>
           </ul>
         </div>
         <div class="col-md-4 text-center pe-5">
-          <img src="./images/footerLogo.png" style="width: 230px;" alt="Logo">
-          <div class="social-logo ms-4 fs-3 mt-5">
+          <div class="animate__animated animate__swing animate__infinite	infinite">
+            <img src="./images/footerLogo.png" width="230px" alt="Logo">
+          </div>
+          <div class="social-logo ms-4 fs-3 mt-5 animate__animated animate__tada animate__infinite	infinite">
             <a href=""><ion-icon name="logo-facebook"></ion-icon></a>
             <a href=""><ion-icon name="logo-github"></ion-icon></a>
             <a href=""><ion-icon name="logo-linkedin"></ion-icon></a>
