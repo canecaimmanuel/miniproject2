@@ -271,29 +271,6 @@ ul ion-icon {
 }
 /* Login end */
 
-/* Hero Section  */
-.hero-section {
-    margin-top: -400px;
-    height: 100vh;
-}
-
-.text-box {
-    backdrop-filter: blur(3px); 
-    padding: 10px;
-}
-
-.btn-play a{
-    text-decoration: none;
-    background-color: #2193B0F7;
-    font-weight: bold;
-    font-size: 30px;
-}
-.btn-play a:hover {
-    background: #fff;
-}
-
-/* start page end */
-
 /* footer start */
 footer {
     margin-bottom: 0;
@@ -310,6 +287,14 @@ ul {
 
 
 /* main  */
+.hero-img p {
+    margin-top: -160px;
+    margin-bottom: 160px;
+}
+.some-text {
+    backdrop-filter: blur(3px);
+}
+
 /* .hero-body {
     position: absolute;
     z-index: -1;
@@ -354,9 +339,6 @@ ul {
 /* footer end */
 
 /* animation start */
-.play-now {
-    animation: colorChange 4s infinite;
-  }
 
   .animate__animated.animate__bounceInUp {
     --animate-duration: 3s;
@@ -370,13 +352,4 @@ ul {
   }
 /* animation end */
 
-  /* tutorial start */
-  .tutorial {
-    margin-top: -350px;
-    height: 100vh;
-    
-  }
-  .some-text {
-    backdrop-filter: blur(2px); 
-  }
 

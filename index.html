@@ -10,22 +10,50 @@
     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <title>Code Combat || miniproject2</title>
     <style>
-      @keyframes colorChange {
-    0% {
-      color: red;
-    }
-    25% {
-      color: blue;
-    }
-    50% {
-      color: green;
-    }
-    75% {
-      color: purple;
-    }
-    100% {
-      color: orange;
-    }
+  .hero-section {
+    margin-top: -400px;
+    height: 100vh;
+  }
+
+  .text-box {
+      backdrop-filter: blur(3px); 
+      padding: 10px;
+  }
+
+  .btn-play a{
+    font-family: 'arial black';
+    color: #14396A !important;
+    font-size: 25px;
+    text-shadow: 2px 1px 0px #7CACDE;
+    box-shadow: 1px 1px 1px #BEE2F9;
+    padding: 10px 40px;
+    border-radius: 10px;
+    border: 2px solid #3866A3;
+    background: #63B8EE;
+    background: linear-gradient(to top, #63B8EE, #468CCF);
+    text-decoration: none;
+  }
+  .btn-play a:hover {
+    color: #14396A !important;
+    background: #468CCF;
+    background: linear-gradient(to top, #468CCF, #64DCEE);
+  }
+  .btn-learn {
+  font-family: 'arial black';
+  color: #14396A !important;
+  font-size: 14px;
+  text-shadow: 2px 1px 0px #7CACDE;
+  box-shadow: 1px 1px 1px #BEE2F9;
+  padding: 10px 25px;
+  border-radius: 10px;
+  border: 2px solid #3866A3;
+  background: #63B8EE;
+  background: linear-gradient(to top, #63B8EE, #468CCF);
+  }
+  .btn-learn:hover {
+    color: #14396A !important;
+    background: #468CCF;
+    background: linear-gradient(to top, #468CCF, #64DCEE);
   }
     </style>
   </head>
@@ -177,44 +205,79 @@
               <h4 class="text-white">Play against other player <br>
                 and reach the Pinnacle of Glory.</h4>         
             </div>
+            <div class="btn-play text-center mt-5 animate__animated animate__bounceInUp">
+              <h2><a href="">Play Now</a></h2>
+            </div>
           </div>
           <div class="col-md-8 text-end animate__animated animate__bounceInRight">
-            <img src="./images/hero-img.png" style="width: 500px;" alt="">
+            <img src="./images/hero-img.png" width="500px" alt="">
           </div>
         </div>
-        <div class="btn-play text-center mt-4 animate__animated animate__bounceInUp">
-          <h2><a class="play-now p-2 px-5 rounded-5" href=""><b>Play Now</b></a></h2>
-        </div>
+        
       </div>
     </div>
 
-<!--     <main></main> -->
+    <main class="container">
+      <div class="hero-img row text-center mb-5">
+        <div class="col-md-4">
+          <img class="rounded-5" src="./images/trainingImg.jpg" width="280px" height="215px" alt="">
+          <p class="fs-2"><b>TRAINING <br> MODE</b></p>
+        </div>
+        <div class="col-md-4">
+          <img class="rounded-5" src="./images/playerImg.png" width="280px" height="215px" alt="">
+          <p class="fs-2"><b>SINGLE PLAYER</b></p>
+        </div>
+        <div class="col-md-4">
+          <img class="rounded-5" src="./images/multiimg.jpg" width="280px" height="215px" alt="">
+          <p class="fs-2 text-white"><b>PLAYER <br> VS <br> player</b></p>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row text-center mb-5 pb-5">
+          <div class="col-md-6">
+            <img src="./images/hero1.jpg" alt="">
+          </div>
+          <div class="col-md-6 text-start">
+            <div>
+              <p class="some-text fs-3 text-white p-3"><b>The game is designed to teach players
+                how to code in a fun and interactive way
+                by presenting programming concepts 
+               and techniques in a game-like format. 
+               And presented with a series of coding
+                challenges and must write code to 
+               complete them.</b></p>
+               <button class="btn-learn"><b>LEARN MORE</b></button>
+            </div>
+          </div>
+      </div>
+      </div>
+    </main>
 
     <footer class="pt-3">
       <div class="row d-flex">
         <div class="col-md-3 fs-5 ms-5 ps-5 pt-3 text-white">
           <p class="ps-4"><b>General</b></p>       
           <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Help Center</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#"> Chagelog</a></li>
+            <li><a class="text-decoration-none" href="#">About</a></li>
+            <li><a class="text-decoration-none" href="#">Help Center</a></li>
+            <li><a class="text-decoration-none" href="#">Privacy Policy</a></li>
+            <li><a class="text-decoration-none" href="#">Contact</a></li>
+            <li><a class="text-decoration-none" href="#">Blog</a></li>
+            <li><a class="text-decoration-none" href="#"> Chagelog</a></li>
           </ul>
         </div>
         <div class="col-md-4 fs-5 ms-5 ps-5 pt-3 text-white">
           <p class="ps-4"><b>Get Involved</b></p>       
           <ul>
-            <li><a href="#">GitHub</a></li>
-            <li><a href="#">Community</a></li>
-            <li><a href="#">Contribute</a></li>
-            <li><a href="#">Forum</a></li>
+            <li><a class="text-decoration-none" href="#">GitHub</a></li>
+            <li><a class="text-decoration-none" href="#">Community</a></li>
+            <li><a class="text-decoration-none" href="#">Contribute</a></li>
+            <li><a class="text-decoration-none" href="#">Forum</a></li>
           </ul>
         </div>
         <div class="col-md-4 text-center pe-5">
           <div class="animate__animated animate__swing animate__infinite	infinite">
-            <img src="./images/footerLogo.png" style="width: 230px;" alt="Logo">
+            <img src="./images/footerLogo.png" width="230px" alt="Logo">
           </div>
           <div class="social-logo ms-4 fs-3 mt-5 animate__animated animate__tada animate__infinite	infinite">
             <a href=""><ion-icon name="logo-facebook"></ion-icon></a>
