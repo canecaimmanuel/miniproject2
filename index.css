@@ -3,7 +3,9 @@
 * {
     font-family: 'Roboto';
     scrollbar-width: thin;
+
     scrollbar-color: #2193B0F7 #DFE9EB; 
+
   }
   /* Chrome, Edge and Safari */
   *::-webkit-scrollbar {
@@ -294,7 +296,6 @@ ul {
 .some-text {
     backdrop-filter: blur(3px);
 }
-
 
 /* footer start */
 footer {
