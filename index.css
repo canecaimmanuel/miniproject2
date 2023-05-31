@@ -286,17 +286,6 @@ ul {
 
 /* footer end */
 
-
-
-/* main  */
-.hero-img p {
-    margin-top: -160px;
-    margin-bottom: 160px;
-}
-.some-text {
-    backdrop-filter: blur(3px);
-}
-
 /* footer start */
 footer {
     margin-bottom: 0;
