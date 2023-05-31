@@ -315,4 +315,6 @@ ul a{
   }
 /* animation end */
 
-
+.about-page section h2 {
+    color: rgb(101, 213, 230);
+}
