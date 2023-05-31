@@ -1,34 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700&display=swap');
 
-@keyframes colorChange {
-    0% {
-      color: red;
-    }
-    25% {
-      color: blue;
-    }
-    50% {
-      color: green;
-    }
-    75% {
-      color: purple;
-    }
-    100% {
-      color: orange;
-    }
-  }
-
 * {
     font-family: 'Roboto';
     scrollbar-width: thin;
-    scrollbar-color: #2193B0F7 #DFE9EB;
-    
+    scrollbar-color: #2193B0F7 #DFE9EB; 
   }
-  
   /* Chrome, Edge and Safari */
   *::-webkit-scrollbar {
     width: 10px;
-    width: 10px;
+
   }
   *::-webkit-scrollbar-track {
     border-radius: 5px;
@@ -57,15 +37,14 @@
   }
 
 body { 
-    background: #000;
+    overflow-x: hidden;
 }
 
 canvas {
+    margin-top: -50px;
     display: block;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    z-index: -99999;
+    position: fixed;
+    z-index: -9999;
 }
 
 /* navbar start */
@@ -316,36 +295,6 @@ ul {
     backdrop-filter: blur(3px);
 }
 
-/* .hero-body {
-    position: absolute;
-    z-index: -1;
-    padding-top: 50px;
-}
-
-.hero-text {
-    position: relative;
-    padding-top: 150px;
-}
-
-
-.hero-title {
-    font-size: 50px;
-    color: #2193B0F7;
-    font-weight: bolder;
-}
-
-.hero-message {
-    font-size: 25px;
-    font-weight: bold;
-}
-
-.hero-img img{
-    margin-top: -140px;
-    width: 110%;
-}
-
-/* Hero Section end  */
-
 
 /* footer start */
 footer {
@@ -356,6 +305,9 @@ footer {
 }
 ul {
     list-style-type: none;
+}
+ul a{
+    text-decoration: none;
 }
 /* footer end */
 
@@ -373,4 +325,8 @@ ul {
   }
 /* animation end */
 
-
+/* main content */
+.hero-content h3 {
+    margin-top: -150px;
+    margin-bottom: 150px;
+}
