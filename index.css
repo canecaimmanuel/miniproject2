@@ -3,7 +3,7 @@
 * {
     font-family: century gothic;
     scrollbar-width: thin;
-
+    /* border: solid red; */
     scrollbar-color: #2193B0F7 #DFE9EB; 
 
   }
@@ -450,13 +450,22 @@ ul a{
     color: rgb(101, 213, 230);
 }
 
+
+.path {
+  stroke-dasharray: 20;
+}
 /* buttons */
+.btn-play {}
+
 .btn-play a{
     color: #14396A !important;
     font-size: 25px;
-    margin-top: 160px;
+    margin-top: 100px;
     margin-bottom: 100px;
+   margin-right: 150px !important;
+
   }
+
   .btn {
     font-family: 'arial black';
     color: #14396A !important;
@@ -470,6 +479,7 @@ ul a{
     background: linear-gradient(to top, #63B8EE, #468CCF);
     text-decoration: none;
   }
+
   .btn:hover {
     color: #14396A !important;
     background: #468CCF;
