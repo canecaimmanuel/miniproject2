@@ -43,10 +43,10 @@ body {
 }
 
 canvas {
-    margin-top: -50px;
     display: block;
     position: fixed;
     z-index: -9999;
+    
 }
 
 /* navbar start */
@@ -55,9 +55,9 @@ canvas {
     top: 0;
     left: 0;
     width: 100%;
-    background: #082F40;
+    backdrop-filter: blur(10px);
     z-index: 99;
-    border-bottom: 5px solid #2193B0F7;
+
   }
 
 .navbar form {
@@ -118,9 +118,11 @@ ul ion-icon {
 
  /* Login start */
  .login-box {
-    display: grid;
-    place-items: center;
-    margin-top: 100px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
  }
 
 .wrapper {
@@ -137,8 +139,7 @@ ul ion-icon {
     align-items: center;
     overflow: hidden;
     transform: scale(0);
-    transition: transform .5s ease, height .2s ease;
-    z-index: 99;
+    transition: transform .5s ease, height .2s ease;  
 }
 .wrapper.active-popup {
     transform: scale(1);
@@ -242,18 +243,7 @@ ul ion-icon {
 .remember-forgot a:hover {
     text-decoration: underline;
 }
-.btn-popup {
-    width: 100%;
-    height: 45px;
-    background: #082F40;
-    border: none;
-    outline: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1em;
-    color: #fff;
-    font-weight: 500;
-}
+
 .login-register {
     font-size: .9em;
     text-align: center;
@@ -272,6 +262,90 @@ ul ion-icon {
     color: rgb(250, 250, 250);
 }
 /* Login end */
+
+/* Feedback start */
+.feedback-container {
+    position: fixed;
+    bottom: 30%;
+    left: 0px;
+    padding: 5px;
+    transform: translateY(-50%, -50%);
+    white-space: nowrap;
+    writing-mode:vertical-lr;
+    font-size: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    border-end-start-radius: 20px;
+    z-index: 99;
+  }
+  .sticky {
+    position: fixed;
+    bottom: 0;
+  }
+  .popup-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease, height .5s ease;
+    width: 500px;
+    padding: 20px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    z-index: 9999;
+    display: none;
+  }
+
+  .popup-container.active-popup {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #162938;
+    font-size: 2em;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .close-button:hover {
+    background: #e91e63;
+  }
+  #feedbackInput {
+    width: 100%;
+    height: 150px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    display: none;
+  }
+
+  /* Feedback End */
 
 /* footer start */
 footer {
@@ -314,5 +388,3 @@ ul a{
     --animate-duration: 4s;
   }
 /* animation end */
-
-

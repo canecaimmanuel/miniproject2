@@ -9,41 +9,23 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <title>Code Combat || miniproject2</title>
     <style>
-  .hero-section {
-    margin-top: -400px;
-    margin-bottom: -300;
-  }
 
   .text-box {
       backdrop-filter: blur(3px); 
       padding: 10px;
+      margin-top: 160px;
   }
-  .some-text {
-    backdrop-filter: blur(3px); 
-  }
-  .btn-play {
+  .btn-play a{
+    color: #14396A !important;
+    font-size: 25px;
     margin-top: 160px;
     margin-bottom: 100px;
   }
-  .btn-play a{
-    font-family: 'arial black';
-    color: #14396A !important;
-    font-size: 25px;
-    text-shadow: 2px 1px 0px #7CACDE;
-    box-shadow: 1px 1px 1px #BEE2F9;
-    border: 2px solid #3866A3;
-    background: #63B8EE;
-    background: linear-gradient(to top, #63B8EE, #468CCF);
-    text-decoration: none;
-  }
-  .btn-play a:hover {
-    color: #14396A !important;
-    background: #468CCF;
-    background: linear-gradient(to top, #468CCF, #64DCEE);
-  }
-  .btn-learn {
+  .btn {
     font-family: 'arial black';
     color: #14396A !important;
     font-size: 14px;
@@ -56,14 +38,24 @@
     background: linear-gradient(to top, #63B8EE, #468CCF);
     text-decoration: none;
   }
-  .btn-learn:hover {
+  .btn:hover {
     color: #14396A !important;
     background: #468CCF;
     background: linear-gradient(to top, #468CCF, #64DCEE);
   }
+  .hero-content {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
   .hero-content h3 {
     margin-top: -150px;
     margin-bottom: 150px;
+  }     
+  .hero-content2 h3 {
+    padding: 100px;
+  }
+  .background-blur {
+    backdrop-filter: blur(10px);
   }
   .typing-animation {
             font-family: 'Press Start 2P', cursive;
@@ -102,7 +94,31 @@
                 opacity: 0;
             }
         }
-    </style>
+    .hero-img {
+      margin-top: 150px;
+    }
+
+    .hero-img img {
+        opacity: 0.8;
+        animation: flicker 1s infinite;
+    @keyframes flicker {
+        0%, 25%, 75%, 100% {
+            opacity: 1;
+        }
+        12.5%, 37.5%, 62.5% {
+            opacity: 0.5;
+        }
+    }
+    }
+        .bounce {
+    animation: bounceAnimation 5s ease-in-out infinite;
+    }
+
+    @keyframes bounceAnimation {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-20px); }
+    }
+        </style>
   </head>
   <body>
     <canvas></canvas>
@@ -154,7 +170,6 @@
     </section>
   <!-- navigation bar end -->
 
-
   <!-- Login start -->
   <div class="login-box">
     <div class="wrapper">
@@ -165,12 +180,12 @@
         <form action="#">
             <div class="input-box">
                 <span class="icon text-info"><ion-icon name="mail-outline"></ion-icon></span>
-                <input class="text-light" type="email" required>
+                <input class="text-light" autocomplete="email" type="email" required>
                 <label class="text-light">Email</label>
             </div>
             <div class="input-box">
-                <span class="icon text-info"><ion-icon name="lock-closed-outline"></ion-icon></span>
-                <input class="text-light" type="password" required>
+                <span class="icon text-info"><i class="fas fa-eye-slash" id="togglePassword"></i></span>
+                <input class="text-light" autocomplete="current-password" type="password" id="id_password" required>              
                 <label class="text-light">Password</label>
             </div>
             <div class="remember-forgot">
@@ -178,8 +193,9 @@
                 Remember me</label>
                 <a class="text-info" href="#">Forgot Password?</a>
             </div>
-            <button type="submit" class="btn-popup">Login
-            </button>
+            <div class="text-center">
+              <button type="submit" class="btn px-5">Login</button>
+            </div>
             <div class="login-register text-info">
                 <p>Don't have an account? <a 
                 href="#"
@@ -206,7 +222,7 @@
               <div class="input-box">
                   <span class="icon">
                       <ion-icon class="text-info" name="person-outline"></ion-icon></ion-icon></span>
-                  <input class="text-light" type="email" required>
+                  <input class="text-light" type="email" id="id_password" required>
                   <label class="text-light">Username</label>
               </div>
               <div class="input-box">
@@ -216,17 +232,17 @@
                   <label class="text-light">Email</label>
               </div>
               <div class="input-box">
-                  <span class="icon">
-                      <ion-icon class="text-info" name="lock-closed-outline"></ion-icon></span>
-                  <input class="text-light" type="password" required>
-                  <label class="text-light">Password</label>
-              </div>
+                <span class="icon text-info"><i class="fas fa-eye-slash" id="togglePassword1"></i></span>
+                <input class="text-light" autocomplete="current-password" type="password" id="id_password1" required>              
+                <label class="text-light">Password</label>
+            </div>
               <div class="remember-forgot">
                   <label class="text-info"><input type="checkbox">
                 I agree to the terms & conditions</label>
               </div>
-              <button type="submit" class="btn-popup">Register
-              </button>
+              <div class="text-center">
+                <button type="submit" class="btn px-5">Register</button>
+              </div>
               <div class="login-register">
                   <p class="text-info">Already have an account? <a 
                   href="#"
@@ -236,6 +252,7 @@
         </div>
     </div>
   </div>
+  <div id="overlay" class="overlay"></div>
   <!-- register End -->
   
     <div class="hero-section">
@@ -249,14 +266,14 @@
                 <br>
                 Potential.
               </h1>
-              <h4 class="text-white fs-6" style="font-family: 'Press Start 2P', cursive;">Play against other player <br>
+              <h4 class="text-white fs-6 bounce" style="font-family: 'Press Start 2P', cursive;">Play against other player <br>
                 and reach the Pinnacle of Glory.</h4>         
             </div>
             <div class="btn-play text-center animate__animated animate__bounceInUp">
-              <h2><a class="play-now p-2 px-5 rounded-5" href=""><b>Play Now</b></a></h2>
+              <h2><a class="btn p-2 px-5 rounded-5" href=""><b>Play Now</b></a></h2>
             </div>
           </div>
-          <div class="col-md-5 text-end animate__animated animate__bounceInRight">
+          <div class="hero-img col-md-5 text-end animate__animated animate__bounceInRight">
             <img src="./images/hero-img.png" width="500px" alt="">
           </div>
         </div>
@@ -264,35 +281,60 @@
       </div>
     </div>
 
+    <!-- Feedback start -->
+    <div id="feedbackContainer" class="feedback-container">
+      <a href="#" id="openPopupButton"><b>Feedback</b></a>
+      <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+      <a href="#"><ion-icon name="logo-github"></ion-icon></a>
+      <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+      <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+    </div>
+  
+    <div id="popupContainer" class="popup-container">
+      <span class="close-button" onclick="closePopup()">&times;</span>
+      <h3 class="text-info text-center w-100">Feedback</h3>
+      <form id="feedbackForm">
+        <textarea id="feedbackInput" placeholder="Enter your feedback here"></textarea>
+        <br>
+        <button class="btn border-0" type="submit">Submit</button>
+        <span class="fs-1 text-white ps-5"> 
+        <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+        <a href="#"><ion-icon name="logo-github"></ion-icon></a>
+        <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+        <a href="#"><ion-icon name="logo-twitter"></ion-icon></a></span>
+      </form>
+    </div>
+  
+    <div id="overlay" class="overlay"></div>
+    <!-- Feedback End -->
+    
     <!-- main content start -->
-    <main class="container my-5">
+    <main class="container my-5 pb-5">
       <div class="hero-content row text-center">
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="fade-up-right" data-aos-anchor-placement="top-center">
           <img class="rounded-5" src="./images/trainingImg.jpg" width="300px" height="200" alt="">
           <h3>TRAINING <br> MODE</h3>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="flip-up" data-aos-anchor-placement="top-center">
           <img class="rounded-5" src="./images/playerImg.png" width="300px" height="200" alt="">
           <h3>SINGLE PLAYER</h3>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="fade-up-left" data-aos-anchor-placement="top-center">
           <img class="rounded-5" src="./images/multiimg.jpg" width="300px" height="200" alt="">
           <h3 class="text-white">PLAYER <br>VS<br>PLAYER</h3>
         </div>
       </div>
-      <div class="row text-center my-5">
-        <div class="col-md-6">
-          <img src="./images/hero1.jpg" alt="">
-        </div>
-        <div class=" col-md-6 text-start text-white p-3">
-          <h3 class="some-text mb-5">The game is designed to teach players
+      <div class="background-blur row text-center my-5 border rounded-3" data-aos="zoom-out-up" data-aos-anchor-placement="top-center">
+        <img class="hero-img2 col-md-6" src="./images/hero1.jpg" alt="">
+        <di class="hero-content2 col-md-6 text-start text-white p-3">
+          <h3>The game is designed to teach players
           how to code in a fun and interactive way
           by presenting programming concepts 
          and techniques in a game-like format. 
          And presented with a series of coding
           challenges and must write code to 
-         complete them.</h3>
-         <a class="btn-learn" href="">LEARN MORE</a></div>
+         complete them.
+         <a class="btn mt-5" href="#">LEARN MORE</a></h3>
       </div>
     </main>
 
@@ -323,12 +365,12 @@
             <img src="./images/footerLogo.png" width="230px" alt="Logo">
           </div>
           <div class="social-logo ms-4 fs-3 animate__animated animate__tada animate__infinite	infinite">
-            <a href=""><ion-icon name="logo-facebook"></ion-icon></a>
-            <a href=""><ion-icon name="logo-github"></ion-icon></a>
-            <a href=""><ion-icon name="logo-linkedin"></ion-icon></a>
-            <a href=""><ion-icon name="logo-twitter"></ion-icon></a>
-            <a href=""><ion-icon name="logo-google"></ion-icon></a>
-            <a href=""><ion-icon name="logo-youtube"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-github"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-youtube"></ion-icon></a>
           </div>
         </div>
       </div>
@@ -338,6 +380,7 @@
     </footer>
 
     <script src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>    
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
