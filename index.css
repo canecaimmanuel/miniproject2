@@ -48,6 +48,7 @@ canvas {
     
 }
 
+
 nav div ul li h1 {
   scale: 70%;
   color: #8a8a8a !important;
@@ -128,6 +129,42 @@ ul ion-icon {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 9999;
+ }
+
+#feedbackContainer {
+  padding-top: 20px;
+  background-color: #3866A3 !important;
+  height: 250px;
+  padding-left: 10px;
+}
+
+#openPopupButton {
+  color: white !important;
+  margin-bottom: 10px;
+}
+
+.white {
+  fill: white;
+}
+
+.navbar-brand {
+  margin-left: 2vw;
+}
+
+ .hero-img {
+  filter: drop-shadow(0 0 10px rgba(27, 160, 255, 0.5));
+ }
+
+ .nav-logo {
+  filter: drop-shadow(0 0 10px rgba(27, 160, 255, 0.5));
+ }
+
+ .shine {
+  filter: drop-shadow(0 0 8px rgba(27, 160, 255, 0.9));
+ }
+ 
+ .box-glow {
+  box-shadow: 0 0 10px 5px rgba(34, 174, 255, 0.5);
  }
 
 .wrapper {
