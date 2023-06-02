@@ -14,6 +14,11 @@
     <title>Code Combat || miniproject2</title>
     <style>
 
+@font-face {
+  font-family: zzzz;
+  src: url("fonts/nasalization.otf");
+}
+
   .text-box {
       backdrop-filter: blur(3px); 
       padding: 10px;
@@ -35,12 +40,14 @@
     backdrop-filter: blur(10px);
   }
   .typing-animation {
-            font-family: 'Press Start 2P', cursive;
+            font-family: 'zzzz', cursive;
             font-size: 34px;
             white-space: nowrap;
-            overflow: hidden;
+
             width: 30em;
             animation: typing 10s steps(40, end), blink-caret 0.75s step-end infinite, flicker 2s infinite;
+            color: rgb(195, 231, 255) !important;
+            text-shadow: 0 0 5px #1897ff, 0 0 10px #1897ff, 0 0 15px #1897ff, 0 0 20px #1897ff;
         }
 
         @keyframes typing {
@@ -243,15 +250,15 @@
                 <br>
                 Potential.
               </h1>
-              <h4 class="text-white fs-6 bounce" style="font-family: 'Press Start 2P', cursive;">Play against other player <br>
-                and reach the Pinnacle of Glory.</h4>         
+              <h1 class="text-white fs-4 bounce" style="font-family: 'zzzz', cursive;">Play against other player <br>
+                and reach the Pinnacle of Glory.</h1>         
             </div>
             <div class="btn-play text-center animate__animated animate__bounceInUp">
               <h2><a class="btn p-2 px-5 rounded-5" href=""><b>Play Now</b></a></h2>
             </div>
           </div>
           <div class="hero-img col-md-5 text-end animate__animated animate__bounceInRight">
-            <img src="./images/hero-img.png" width="500px" alt="">
+            <img src="./images/characterW_logo.svg" width="500px" alt="">
           </div>
         </div>
         
