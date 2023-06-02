@@ -104,12 +104,14 @@ ul ion-icon {
     font-weight: 100;
 }
 .btnLogin-popup {
+  scale: 80%;
     height: 40px;
     font-size: 1.1em;
-    background: #082F40;
+    background: rgba(0, 0, 0, 0.5);
     color: white;
     font-weight: 500;
     transition: .5s;
+    border-radius: 50px !important;
 }
 
 .btnLogin-popup:hover {
