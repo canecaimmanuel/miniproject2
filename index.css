@@ -131,11 +131,25 @@ ul ion-icon {
     z-index: 9999;
  }
 
+nav form input {
+   background-color: rgb(92, 92, 92) !important;
+   color: white;
+ }
+
+ nav form button {
+  background-color: rgb(34, 34, 34) !important;
+}
+
+
 #feedbackContainer {
   padding-top: 20px;
   background-color: #3866A3 !important;
   height: 250px;
   padding-left: 10px;
+}
+
+input[type="search"]::placeholder {
+  color: rgb(255, 255, 255); /* Set the color you desire */
 }
 
 #openPopupButton {
