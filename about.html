@@ -8,54 +8,11 @@
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css"/>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <title>Code Combat || miniproject2</title>
     <style>
-
-      .custom-loader {
-  width: 50px;
-  height: 50px;
-  display: grid;
-  color:#8cdcf0f7;
-  background: radial-gradient(farthest-side, currentColor calc(100% - 6px),#0000 calc(100% - 5px) 0);
-  -webkit-mask:radial-gradient(farthest-side,#0000 calc(100% - 13px),#000 calc(100% - 12px));
-  border-radius: 50%;
-  animation: s9 2s infinite linear;
-}
-.custom-loader::before,
-.custom-loader::after {    
-  content:"";
-  grid-area: 1/1;
-  background:
-    linear-gradient(currentColor 0 0) center,
-    linear-gradient(currentColor 0 0) center;
-  background-size: 100% 10px,10px 100%;
-  background-repeat: no-repeat;
-}
-.custom-loader::after {
-   transform: rotate(45deg);
-}
-
-@keyframes s9 { 
-  100%{transform: rotate(1turn)}
-}
-<<<<<<< HEAD
-=======
-.about-page {
-    margin-top: -350px;
-    color: #6cb1ff;
-    padding: 20px;
-    border-radius: 5px;
-    border: 1px solid rgb(101, 213, 230);
-    font-size: 26px;
-    font-family: 'Courier New', Courier, monospace;
-    background-color: rgba(24, 73, 128, 0.37);
-    margin-bottom: 150px;
-  }
->>>>>>> da080140bc624d38c5108bce682e23d14b121fc7
-  .some-text {
-    backdrop-filter: blur(2px); 
-  }
-
     </style>
   </head>
   <body>
@@ -121,17 +78,18 @@
                 <label class="text-light">Email</label>
             </div>
             <div class="input-box">
-                <span class="icon text-info"><ion-icon name="lock-closed-outline"></ion-icon></span>
-                <input class="text-light" type="password" required>
-                <label class="text-light">Password</label>
+              <span class="icon text-info"><i class="fas fa-eye-slash" id="togglePassword"></i></span>
+              <input class="text-light" autocomplete="current-password" type="password" id="id_password" required>              
+              <label class="text-light">Password</label>
             </div>
             <div class="remember-forgot">
                 <label class="text-info"><input type="checkbox">
                 Remember me</label>
                 <a class="text-info" href="#">Forgot Password?</a>
             </div>
-            <button type="submit" class="btn-popup">Login
-            </button>
+            <div class="text-center">
+              <button type="submit" class="btn px-5">Login</button>
+            </div>
             <div class="login-register text-info">
                 <p>Don't have an account? <a 
                 href="#"
@@ -168,17 +126,17 @@
                   <label class="text-light">Email</label>
               </div>
               <div class="input-box">
-                  <span class="icon">
-                      <ion-icon class="text-info" name="lock-closed-outline"></ion-icon></span>
-                  <input class="text-light" type="password" required>
-                  <label class="text-light">Password</label>
+                <span class="icon text-info"><i class="fas fa-eye-slash" id="togglePassword1"></i></span>
+                <input class="text-light" autocomplete="current-password" type="password" id="id_password1" required>              
+                <label class="text-light">Password</label>
               </div>
               <div class="remember-forgot">
                   <label class="text-info"><input type="checkbox">
                 I agree to the terms & conditions</label>
               </div>
-              <button type="submit" class="btn-popup">Register
-              </button>
+              <div class="text-center">
+                <button type="submit" class="btn px-5">Register</button>
+              </div>
               <div class="login-register">
                   <p class="text-info">Already have an account? <a 
                   href="#"
@@ -192,19 +150,9 @@
   <!-- register End -->
   
   <!-- main content start -->
-<<<<<<< HEAD
-    <main class="container">
-      <div class="some-text border m-5 text-center text-white p-5 fs-1">
-        This is About page!!
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-1 ">
-          <div class="custom-loader"></div>
-        </div>
-=======
     <main class="container about-page">
       <div class="some-text text-center text-white p-5 fs-2">
-        <section class="text-uppercase">
+        <section class="text-uppercase" style="margin-top: 150px";>
           <h1>About Code Combat</h1>
         </section>
 
@@ -247,7 +195,6 @@
             <li>Address: 101 Main Street, Manila, Philippines</li>
           </ul>
         </section>
->>>>>>> da080140bc624d38c5108bce682e23d14b121fc7
       </div>
     </main>
     <!-- main content end -->
@@ -294,6 +241,7 @@
     </footer>
 
     <script src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>    
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -302,5 +250,24 @@
       AOS.init();
     </script>
     <script src="script.js"></script>
+    <script>
+      const togglePassword = document.querySelector('#togglePassword');
+    const password = document.querySelector('#id_password');
+    togglePassword.addEventListener('click', function (e) {
+        const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+        password.setAttribute('type', type);
+        this.classList.toggle('fa-eye-slash');
+        this.classList.toggle('fa-eye');
+    });
+
+    const togglePassword1 = document.querySelector('#togglePassword1');
+    const password1 = document.querySelector('#id_password1');
+    togglePassword1.addEventListener('click', function (e) {
+        const type = password1.getAttribute('type') === 'password' ? 'text' : 'password';
+        password1.setAttribute('type', type);
+        this.classList.toggle('fa-eye-slash');
+        this.classList.toggle('fa-eye');
+    });
+    </script>
   </body>
 </html>
