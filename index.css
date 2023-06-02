@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700&display=swap');
 
 * {
-    font-family: 'Roboto';
+    font-family: century gothic;
     scrollbar-width: thin;
 
     scrollbar-color: #2193B0F7 #DFE9EB; 
@@ -48,7 +48,10 @@ canvas {
     
 }
 
-
+nav div ul li h1 {
+  scale: 70%;
+  color: #8a8a8a !important;
+}
 
 /* navbar start */
 .navbar-body {
