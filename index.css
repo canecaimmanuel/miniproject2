@@ -13,8 +13,7 @@
 
   }
   *::-webkit-scrollbar-track {
-    border-radius: 5px;
-    background-color: #DFE9EB;
+    background-color: #001417;
   }
   
   *::-webkit-scrollbar-track:hover {
@@ -26,7 +25,7 @@
   }
   
   *::-webkit-scrollbar-thumb {
-    border-radius: 2px;
+    border-radius: 1vw;
     background-color: #2193B0F7;
   }
   
@@ -49,7 +48,29 @@ canvas {
     
 }
 
+/*- - - - --  Searcg bar - - - - - -- - - -*/
+
 /* navbar start */
+
+
+
+nav div ul li {
+    scale: 85%;
+}
+
+nav div ul li h1 {
+    scale: 70%;
+    color: #1a5a73 !important;
+}
+
+nav div button {
+    scale: 80%;
+}
+
+nav div form div {
+    background-color: #0f526e !important;
+}
+
 .navbar-body {
     position: fixed;
     top: 0;
@@ -57,7 +78,11 @@ canvas {
     width: 100%;
     backdrop-filter: blur(10px);
     z-index: 99;
+<<<<<<< HEAD
 
+=======
+    border-bottom: 5px solid #176579f7;
+>>>>>>> da080140bc624d38c5108bce682e23d14b121fc7
   }
 
 .navbar form {
@@ -111,7 +136,7 @@ ul ion-icon {
 
 .btnLogin-popup:hover {
     background: #2193B0F7;
-    color: rgb(20, 20, 20);
+    color: rgb(255, 255, 255);
   }
 
  /* navbar end */
@@ -365,13 +390,14 @@ footer {
     margin-bottom: 0;
     padding-bottom: 10px;
     backdrop-filter: blur(20px); 
-    border-top: 5px solid #2193B0F7;         
+    border-top: 3px solid #004b5df7;         
 }
 ul {
     list-style-type: none;
 }
 ul a{
     text-decoration: none;
+    color: rgb(45, 178, 255);
 }
 /* footer end */
 
@@ -388,3 +414,10 @@ ul a{
     --animate-duration: 4s;
   }
 /* animation end */
+<<<<<<< HEAD
+=======
+
+.about-page section h2 {
+    color: rgb(101, 213, 230);
+}
+>>>>>>> da080140bc624d38c5108bce682e23d14b121fc7
