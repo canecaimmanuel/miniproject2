@@ -98,3 +98,30 @@ window.addEventListener('scroll', function () {
             
         }
       });
+
+      function toggleParagraph() {
+        var additionalText = document.getElementById("additional-text");
+        if (additionalText.style.display === "none") {
+          additionalText.style.display = "block";
+        } else {
+          additionalText.style.display = "none";
+        }
+      }
+
+      function toggleParagraph1() {
+        var additionalText = document.getElementById("additional-text1");
+        if (additionalText.style.display === "none") {
+          additionalText.style.display = "block";
+        } else {
+          additionalText.style.display = "none";
+        }
+      }
+
+      function toggleParagraph2() {
+        var additionalText = document.getElementById("additional-text2");
+        if (additionalText.style.display === "none") {
+          additionalText.style.display = "block";
+        } else {
+          additionalText.style.display = "none";
+        }
+      }
