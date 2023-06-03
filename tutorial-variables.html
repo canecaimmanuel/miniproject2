@@ -46,10 +46,10 @@
     backdrop-filter: blur(2px); 
   }
 
-  /* CSS for Exercise Button */
+/* CSS for Exercise Button */
 
-  .exercise-container {
-      text-align: center;
+.exercise-container {
+      text-align: start;
     }
 
     .exercise-button {
@@ -58,31 +58,32 @@
     }
 
     .exercise-textarea {
-      width: 400px;
+      width: 500px;
       height: 200px;
-      margin: 20px auto;
+      margin: 20px;
+      background: transparent;
+      color:#189AB4;
       display: none;
+      resize:none;
     }
 
     .run-button {
-      padding: 10px 20px;
-      margin: 20px auto;
+      height: 50px;
+      width: 75px;
+      padding: 2px 2px;
+      margin-top:80px;
       font-size: 16px;
+      font-weight: bold;
       display: none;
     }
 
     .result-message {
       margin: 20px;
+      width: 500px;
       font-weight: bold;
-    }
-     
-    .tutorial-button {
-      background-color: #000000;
-      color: #FFFFFF;
-      float: right;
-      width: 200px;
-      
-      border-radius: 10px;
+      background:transparent;
+      color: #189AB4;
+      border-style: hidden;
     }
     
     </style>
@@ -222,35 +223,69 @@
   <!-- main content start -->
     <main class="container tutorial mb-auto mx-auto flex-container col-md-12">
       <div class="row some-text border text-white fs-5">
-        <h1>Welcome to Code Combat's interactive JavaScript tutorial!</h1>
-        <p>Whether you're a seasoned programmer or just starting out, this tutorial is designed to help you learn the JavaScript programming language. We have carefully crafted this website with everyone in mind.</p>
-        <p>To get started, simply click on the chapter you want to begin from and follow the instructions provided. Good luck on your learning journey!</p>
-        <p>Let's dive into the basics of JavaScript and unleash your coding potential!</p>
-        <h3>Learn the basics</h3>
+        <h1 class="mt-3">Variables and Types</h1>
+        <p>Like almost every dynamic language, JavaScript is a "duck-typed" language, and therefore every variable is defined using the var keyword, and can contain all types of variables.</p>
+        <p>We can define several types of variables to use in our code:</p>
+        <div class="codes">
+          <code class="language-javascript"><span class="keyword">const</span> myNumber <span class="operator">=</span> <span class="number">3</span><span class="punctuation">;      </span>              <span class="comment" spellcheck="true">// a number</span>
+<span class="keyword">const</span> myString <span class="operator">=</span> <span class="string">"Hello, World!"</span>      <span class="comment" spellcheck="true">// a string</span>
+<span class="keyword">const</span> myBoolean <span class="operator">=</span> <span class="boolean">true</span><span class="punctuation">;</span>               <span class="comment" spellcheck="true">// a boolean</span>
+          </code>
+        </div>
+        <p>A few notes about variable types in JavaScript:</p>
         <ul>
-          <li><a href="tutorial-hello.html">Hello, World!</a></li>
-          <li><a href="tutorial-variables.html">Variables and Types</a></li>
-          <li><a href="tutorial-arrays.html">Arrays</a></li>
-          <li><a href="#">Manipulating Arrays</a></li>
-          <li><a href="#">Operators</a></li>
-          <li><a href="#">Conditions</a></li>
-          <li><a href="#">Loops</a></li>
-          <li><a href="#">Objects</a></li>
-          <li><a href="#">Functions</a></li>
-          <li><a href="#">Pop-Up Boxes</a></li>
-          <li><a href="#">Callbacks</a></li>
-          <li><a href="#">Arrow Functions</a></li>
+          <li>In JavaScript, the Number type can be both a floating point number and an integer. </li>
+          <li>Boolean variables can only be equal to either <code class="  language-javascript"><span class="boolean">true</span></code> or <code class="  language-javascript"><span class="boolean">false</span></code>.</li>
         </ul>
-        <h3>Advance Tutorials</h3>
-        <ul>
-          <li><a href="#">Promises</a></li>
-          <li><a href="#">Async and Await</a></li>
-          <li><a href="#">Object Oriented Javascript</a></li>
-          <li><a href="#">Function Context</a></li>
-          <li><a href="#">Inheritance</a></li>
-          <li><a href="#">Destructuring</a></li>
-          <li><a href="#">Data Structures</a></li>
-        </ul>
+        <p>
+          There are two more advanced types in JavaScript. An array, and an object. We will get to them in more advanced tutorials.
+        </p>
+        <div class="codes">
+          <code class="  language-javascript"><span class="keyword">const</span> myArray <span class="operator">=</span> <span class="punctuation">[</span><span class="punctuation">]</span><span class="punctuation">;</span>                    <span class="comment" spellcheck="true">// an array</span>
+<span class="keyword">const</span> myObject <span class="operator">=</span> <span class="punctuation">{</span><span class="punctuation">}</span><span class="punctuation">;</span>                  <span class="comment" spellcheck="true">// an object</span>
+          </code>
+        </div>
+        <p>On top of that, there are two special types called <code class="  language-javascript">undefined</code> and <code class="  language-javascript"><span class="keyword">null</span></code>.</p>
+        <p>When a variable is used without first defining a value for it, it is equal to undefined. For example:</p>
+        <div class="codes">
+          <code class="  language-javascript"><span class="keyword">const</span> newVariable<span class="punctuation">;</span>
+console<span class="punctuation">.</span><span class="function">log</span><span class="punctuation">(</span>newVariable<span class="punctuation">)</span><span class="punctuation">;</span> <span class="comment" spellcheck="true">//prints undefined</span>
+          </code>
+        </div>
+        <p>However, the <code class="  language-javascript"><span class="keyword">null</span></code> value is a different type of value, and is used when a variable should be marked as empty. <code class="  language-javascript">undefined</code> can be used for this purpose, but it should not be used.</p>
+        <div class="codes">
+          <code class="  language-javascript"><span class="keyword">const</span> emptyVariable <span class="operator">=</span> <span class="keyword">null</span><span class="punctuation">;</span>
+console<span class="punctuation">.</span><span class="function">log</span><span class="punctuation">(</span>emptyVariable<span class="punctuation">)</span><span class="punctuation">;</span>
+            </code>
+        </div>
+         
+        <h2>Exercise:</h2>
+        <p>You must define the following variables:</p>
+        <ol class="ms-5">
+          <li>A number called myNumber which contains the number <code class="  language-javascript"><span class="number">4</span></code>;</li>
+          <li>A string called myString which contains the sentence <code class="  language-javascript">Variables are great<span class="punctuation">.</span></code>;</li>
+          <li>A boolean called myBoolean which contains the value <code class="  language-javascript"><span class="boolean">false</span></code>;</li>
+        </ol>
+        
+          <div class="exercise-container">
+            <button class="exercise-button btn btn-success" onclick="showExercise()"><i class="fas fa-play"></i> Start Exercise</button>
+            <div class="container"></div>
+            <div class="row">
+              <textarea class="exercise-textarea col-md-5" id="exerciseTextarea" placeholder="Write your code here..."></textarea>
+              <button class="run-button btn btn-success col-md-2" onclick="runExercise()">Run</button>
+              <div class="result-message col-md-5" id="resultMessage"></div>
+            </div>
+          </div>
+
+        <div class="col mb-3">
+            <a class="btn btn-primary pull-left" href="tutorial-hello.html">
+            <i class="fas fa-angle-double-left"></i> Previous Tutorial
+            </a>
+                 
+            <a class="btn btn-primary pull-right" href="tutorial-arrays.html">
+             Next Tutorial <i class="fas fa-angle-double-right"></i>
+            </a>
+        </div>
 
       </div>
 
@@ -308,5 +343,38 @@
       AOS.init();
     </script>
     <script src="script.js"></script>
+    <!-- Script for Exercise Button -->
+    <script>
+      function showExercise() {
+        let textarea = document.getElementById("exerciseTextarea");
+        let runButton = document.getElementsByClassName("run-button")[0];
+  
+        textarea.style.display = "block";
+        runButton.style.display = "block";
+        document.getElementById("resultMessage").innerText = "";
+      }
+  
+      function runExercise() {
+        let textarea = document.getElementById("exerciseTextarea");
+        let exerciseCode = textarea.value;
+        let resultMessage = document.getElementById("resultMessage");
+  
+        let correctCode = `const myNumber=4;
+const myString="Variables are great.";
+const myBoolean=false;
+console.log("myNumber is equal to " + myNumber);
+console.log("myString is equal to " + myString);
+console.log("myBoolean is equal to " + myBoolean);
+    `;
+  
+        if (exerciseCode.trim() === correctCode.trim()) {
+          resultMessage.innerText = `myNumber is equal to 4
+myString is equal to Variables are great.
+myBoolean is equal to false!`;
+        } else {
+          resultMessage.innerText = "Incorrect answer. The correct answer is:\n" + correctCode;
+        }
+      }
+    </script>
   </body>
 </html>
