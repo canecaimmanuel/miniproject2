@@ -13,43 +13,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <title>Code Combat || miniproject2</title>
     <style>
-      .custom-loader {
-  width: 50px;
-  height: 50px;
-  display: grid;
-  color:#8cdcf0f7;
-  background: radial-gradient(farthest-side, currentColor calc(100% - 6px),#0000 calc(100% - 5px) 0);
-  -webkit-mask:radial-gradient(farthest-side,#0000 calc(100% - 13px),#000 calc(100% - 12px));
-  border-radius: 50%;
-  animation: s9 2s infinite linear;
-}
-.custom-loader::before,
-.custom-loader::after {    
-  content:"";
-  grid-area: 1/1;
-  background:
-    linear-gradient(currentColor 0 0) center,
-    linear-gradient(currentColor 0 0) center;
-  background-size: 100% 10px,10px 100%;
-  background-repeat: no-repeat;
-}
-.custom-loader::after {
-   transform: rotate(45deg);
-}
-
-@keyframes s9 { 
-  100%{transform: rotate(1turn)}
-}
-  .some-text {
-    backdrop-filter: blur(2px); 
-  }
-
   /* CSS for Exercise Button */
 
   .exercise-container {
       text-align: center;
     }
-
     .exercise-button {
       padding: 10px 20px;
       font-size: 16px;
@@ -78,8 +46,7 @@
       background-color: #000000;
       color: #FFFFFF;
       float: right;
-      width: 200px;
-      
+      width: 200px;     
       border-radius: 10px;
     }
     
@@ -288,10 +255,10 @@
   </div>
   <div id="overlay" class="overlay"></div>
   <!-- register End -->
-  
+  <div style="padding-top: 150px;"></div>
   <!-- main content start -->
     <main class="container tutorial col-md-12" id="tutorial">
-      <div class="row some-text border text-white fs-5">
+      <div class="row some-text border rounded-3 text-white fs-5">
         <h1>Welcome to Code Combat's interactive JavaScript tutorial!</h1>
         <p>Whether you're a seasoned programmer or just starting out, this tutorial is designed to help you learn the JavaScript programming language. We have carefully crafted this website with everyone in mind.</p>
         <p>To get started, simply click on the chapter you want to begin from and follow the instructions provided. Good luck on your learning journey!</p>

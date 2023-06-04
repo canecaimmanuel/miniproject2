@@ -10,48 +10,11 @@
     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <title>Code Combat || miniproject2</title>
     <style>
-      .custom-loader {
-  width: 50px;
-  height: 50px;
-  display: grid;
-  color:#8cdcf0f7;
-  background: radial-gradient(farthest-side, currentColor calc(100% - 6px),#0000 calc(100% - 5px) 0);
-  -webkit-mask:radial-gradient(farthest-side,#0000 calc(100% - 13px),#000 calc(100% - 12px));
-  border-radius: 50%;
-  animation: s9 2s infinite linear;
-}
-.custom-loader::before,
-.custom-loader::after {    
-  content:"";
-  grid-area: 1/1;
-  background:
-    linear-gradient(currentColor 0 0) center,
-    linear-gradient(currentColor 0 0) center;
-  background-size: 100% 10px,10px 100%;
-  background-repeat: no-repeat;
-}
-.custom-loader::after {
-   transform: rotate(45deg);
-}
-
-@keyframes s9 { 
-  100%{transform: rotate(1turn)}
-}
-.tutorial {
-    margin-top: -350px;
-    height: 100vh;
-    
-  }
-  .some-text {
-    backdrop-filter: blur(2px); 
-  }
-
   /* CSS for Exercise Button */
 
   .exercise-container {
       text-align: start;
     }
-
     .exercise-button {
       padding: 10px 20px;
       font-size: 16px;
@@ -103,29 +66,99 @@
                   aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <a class="navbar-brand" href="#"><img src="images/logo.png" width="200px" alt="Code Combat Logo"></a>
+          <a class="navbar-brand" href="#">
+
+            <svg
+   xml:space="preserve"
+   width="300px"
+   height="40px"
+   version="1.1"
+   style="clip-rule:evenodd;fill-rule:evenodd;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
+   viewBox="0 0 238.13003 21.989998"
+   id="svg1206"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+ <defs
+   id="defs1191"><style
+     type="text/css"
+     id="style1189">
+   <![CDATA[
+    .str0 {stroke:#FADEC7;stroke-width:0.39;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2.61313}
+    .fil0 {fill:none;fill-rule:nonzero}
+   ]]>
+  </style></defs>
+ <g
+   id="Layer_x0020_1">
+  <metadata
+   id="CorelCorpID_0Corel-Layer" />
+  <path
+   class="fil0 str0"
+   d="m 9.62,0.56 c -6.06,0 -9.43,3.43 -9.43,10.45 0,6.98 3.34,10.41 9.43,10.41 h 8.07 V 17.77 H 9.62 C 5.57,17.77 3.84,15.76 3.84,11 3.84,6.21 5.6,4.2 9.62,4.2 h 8.07 V 0.55 H 9.62 Z"
+   id="path1194" />
+  <path
+   id="_1"
+   class="fil0 str0"
+   d="m 30.39,0.56 c -6.06,0 -9.43,3.46 -9.43,10.48 0,6.98 3.34,10.38 9.43,10.38 h 2.84 c 6.09,0 9.43,-3.4 9.43,-10.38 0,-7.02 -3.37,-10.48 -9.43,-10.48 z m 2.84,3.65 c 4.02,0 5.75,2.04 5.75,6.8 0,4.79 -1.73,6.77 -5.75,6.77 h -2.84 c -4.05,0 -5.78,-1.98 -5.78,-6.74 0,-4.79 1.76,-6.83 5.78,-6.83 z" />
+  <path
+   id="_2"
+   class="fil0 str0"
+   d="m 48.68,0.56 c -1.17,0 -1.73,0.56 -1.73,1.7 v 17.46 c 0,1.14 0.56,1.7 1.73,1.7 h 7.36 c 6.12,0 9.39,-3.4 9.39,-10.41 0,-7.05 -3.31,-10.45 -9.39,-10.45 z M 50.6,4.58 C 50.6,4.3 50.72,4.21 51,4.21 h 5.04 c 4.05,0 5.75,2.01 5.75,6.77 0,4.79 -1.7,6.8 -5.75,6.8 H 51 c -0.28,0 -0.4,-0.09 -0.4,-0.37 z" />
+  <path
+   id="_3"
+   class="fil0 str0"
+   d="m 75.94,0.56 c -4.91,0 -6.98,2.35 -6.98,5.69 0,2.29 0.99,3.89 2.94,4.7 -1.92,0.8 -3,2.41 -3,4.79 0,3.25 2.01,5.69 6.95,5.69 H 86.42 V 17.78 H 75.85 c -2.13,0 -3.15,-0.99 -3.15,-2.63 0,-1.7 1.08,-2.53 3.18,-2.53 H 86.23 V 9.31 H 75.97 c -2.1,0 -3.18,-0.77 -3.18,-2.47 0,-1.61 0.96,-2.63 3.15,-2.63 H 86.39 V 0.56 Z" />
+  <path
+   id="_4"
+   class="fil0 str0"
+   d="m 108.05,0.56 c -6.06,0 -9.43,3.43 -9.43,10.45 0,6.98 3.34,10.41 9.43,10.41 h 8.07 v -3.65 h -8.07 c -4.05,0 -5.78,-2.01 -5.78,-6.77 0,-4.79 1.76,-6.8 5.78,-6.8 h 8.07 V 0.55 h -8.07 z" />
+  <path
+   id="_5"
+   class="fil0 str0"
+   d="m 128.82,0.56 c -6.06,0 -9.43,3.46 -9.43,10.48 0,6.98 3.34,10.38 9.43,10.38 h 2.84 c 6.09,0 9.43,-3.4 9.43,-10.38 0,-7.02 -3.37,-10.48 -9.43,-10.48 z m 2.84,3.65 c 4.02,0 5.75,2.04 5.75,6.8 0,4.79 -1.73,6.77 -5.75,6.77 h -2.84 c -4.05,0 -5.78,-1.98 -5.78,-6.74 0,-4.79 1.76,-6.83 5.78,-6.83 z" />
+  <path
+   id="_6"
+   class="fil0 str0"
+   d="m 152.37,4.61 c 0.22,-0.53 0.59,-0.9 1.14,-0.9 0.62,0 1.08,0.46 1.08,1.21 v 12.3 c 0,2.75 1.55,4.57 4.6,4.57 2.78,0 4.14,-1.48 4.94,-3.86 L 169.2,4.61 c 0.19,-0.53 0.62,-0.9 1.14,-0.9 0.62,0 1.05,0.46 1.05,1.21 v 16.5 h 3.68 V 4.73 c 0,-2.72 -1.55,-4.54 -4.64,-4.54 -2.78,0 -4.11,1.48 -4.91,3.86 l -5.07,13.32 c -0.19,0.53 -0.62,0.87 -1.17,0.87 -0.62,0 -1.05,-0.46 -1.05,-1.17 V 4.74 c 0,-2.72 -1.55,-4.54 -4.64,-4.54 -2.78,0 -4.11,1.48 -4.91,3.86 l -6.46,17.37 h 3.89 l 6.24,-16.81 z" />
+  <path
+   id="_7"
+   class="fil0 str0"
+   d="m 181.85,0.56 c -1.17,0 -1.73,0.56 -1.73,1.7 v 17.46 c 0,1.14 0.56,1.7 1.73,1.7 h 9.27 c 4.91,0 6.98,-2.41 6.98,-5.75 0,-2.41 -1.11,-3.96 -3.09,-4.76 1.95,-0.77 3,-2.23 3,-4.64 0,-3.4 -2.07,-5.72 -6.98,-5.72 h -9.18 z m 1.85,11.84 h 7.51 c 2.13,0 3.21,0.93 3.21,2.69 0,1.7 -1.02,2.72 -3.21,2.72 h -7.11 c -0.25,0 -0.4,-0.09 -0.4,-0.34 z m 0,-7.88 c 0,-0.25 0.15,-0.37 0.4,-0.37 h 7.05 c 2.23,0 3.18,1.08 3.18,2.72 0,1.7 -1.05,2.5 -3.21,2.5 h -7.42 z" />
+  <path
+   id="_8"
+   class="fil0 str0"
+   d="m 210.31,4.64 c 0.22,-0.49 0.56,-0.71 1.05,-0.71 0.49,0 0.83,0.22 1.02,0.71 l 6.34,16.78 h 4.05 L 215.72,2.88 c -0.74,-1.95 -2.16,-2.69 -4.33,-2.69 -2.19,0 -3.62,0.74 -4.39,2.69 l -7.32,18.54 h 4.02 z" />
+  <polygon
+   id="_9"
+   class="fil0 str0"
+   points="231.85,21.42 231.85,4.21 237.94,4.21 237.94,0.56 222.09,0.56 222.09,4.21 228.17,4.21 228.17,21.42 " />
+ </g>
+</svg>
+              
+          </a>
           <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <form class="me-auto">
-              <div class="d-flex border-0 bg-light rounded-5" id="search">
-                <button class="btn-search rounded-start-5 border-0 p-2" type="submit"><ion-icon name="search"></ion-icon></ion-icon></button>            
-                <input class="rounded-end-5 border-0 p-2" type="search" placeholder="Search" aria-label="Search">
-              </div>       
+              <div class="d-flex justify-content-center">
+                <div class="d-flex border-0 bg-light rounded-5" style="outline: 1px solid white;" id="search">
+                  <button class="btn-search rounded-start-5 border-0 p-2" type="submit"><ion-icon class="white" name="search"></ion-icon></ion-icon></button>            
+                  <input class="rounded-end-5 border-0 p-2" type="search" placeholder="Search" aria-label="Search">
+                </div>
+              </div>         
             </form>
             <ul class="navbar-nav">
-              <li class="nav-item d-flex pe-2 ">
-                <a class="nav-link" href="index.html" title="Home Page"><ion-icon name="home"></ion-icon></a> 
+              <li class="nav-item d-flex pe-2 "> 
+                <a class="nav-link shine" href="index.html" title="Home Page"><ion-icon class="nav-logo" name="home"></ion-icon></a> 
                 <h1 class="ps-2">|</h1>
               </li>
               <li class="nav-item d-flex pe-2 ">
-                <a class="nav-link" href="#" title="Play Game"><ion-icon name="game-controller"></ion-icon></ion-icon></a>
+                <a class="nav-link shine" href="#" title="Play Game"><ion-icon class="nav-logo" name="game-controller"></ion-icon></ion-icon></a>
                 <h1 class="ps-2">|</h1>
               </li>              
               <li class="nav-item d-flex pe-2">
-                <a class="nav-link text-info text-bg-secondary rounded" aria-current="page" href="tutorial.html" title="Tutorial"><ion-icon name="book"></ion-icon></a>
+                <a class="nav-link text-info text-bg-secondary rounded shine" aria-current="page" href="tutorial.html" title="Tutorial"><ion-icon class="nav-logo" name="book"></ion-icon></a>
                 <h1 class="ps-2">|</h1>
               </li>
               <li class="nav-item d-flex pe-2">
-                <a class="nav-link" href="about.html" title="About Us"><ion-icon name="alert-circle"></ion-icon></a>
+                <a class="nav-link shine" href="about.html" title="About Us"><ion-icon class="nav-logo" name="alert-circle"></ion-icon></a>
                 <h1 class="ps-2"></h1>
               </li>
             </ul>  
@@ -151,17 +184,18 @@
                 <label class="text-light">Email</label>
             </div>
             <div class="input-box">
-                <span class="icon text-info"><ion-icon name="lock-closed-outline"></ion-icon></span>
-                <input class="text-light" type="password" required>
-                <label class="text-light">Password</label>
+              <span class="icon text-info"><i class="fas fa-eye-slash" id="togglePassword"></i></span>
+              <input class="text-light" autocomplete="current-password" type="password" id="id_password" required>              
+              <label class="text-light">Password</label>
             </div>
             <div class="remember-forgot">
                 <label class="text-info"><input type="checkbox">
                 Remember me</label>
                 <a class="text-info" href="#">Forgot Password?</a>
             </div>
-            <button type="submit" class="btn-popup">Login
-            </button>
+            <div class="text-center">
+              <button type="submit" class="btn px-5" style="font-family: 'arial black';">Login</button>
+            </div>
             <div class="login-register text-info">
                 <p>Don't have an account? <a 
                 href="#"
@@ -198,17 +232,17 @@
                   <label class="text-light">Email</label>
               </div>
               <div class="input-box">
-                  <span class="icon">
-                      <ion-icon class="text-info" name="lock-closed-outline"></ion-icon></span>
-                  <input class="text-light" type="password" required>
-                  <label class="text-light">Password</label>
+                <span class="icon text-info"><i class="fas fa-eye-slash" id="togglePassword1"></i></span>
+                <input class="text-light" autocomplete="current-password" type="password" id="id_password1" required>              
+                <label class="text-light">Password</label>
               </div>
               <div class="remember-forgot">
                   <label class="text-info"><input type="checkbox">
                 I agree to the terms & conditions</label>
               </div>
-              <button type="submit" class="btn-popup">Register
-              </button>
+              <div class="text-center">
+                <button type="submit" class="btn px-5" style="font-family: 'arial black';">Register</button>
+              </div>
               <div class="login-register">
                   <p class="text-info">Already have an account? <a 
                   href="#"
@@ -218,21 +252,22 @@
         </div>
     </div>
   </div>
+  <div id="overlay" class="overlay"></div>
   <!-- register End -->
-  
+  <div style="padding-top: 150px;"></div>
   <!-- main content start -->
     <main class="container tutorial col-md-12" id="manipulating">
-      <div class="row some-text border text-white fs-5">
+      <div class="row some-text border rounded-3 text-white fs-5">
         <h1 class="mt-3">Manipulating Arrays</h1>
         <h3>Pushing and popping</h3>
         <p>Arrays can also function as a stack. The push and pop methods insert and remove variables from the end of an array.</p>
         <p>For example, let's create an empty array and push a few variables.</p>
         <div class="codes">
         <code class="language-javascript"><span class="keyword">var</span> myStack <span class="operator">=</span> <span class="punctuation">[</span><span class="punctuation">]</span><span class="punctuation">;</span>
-myStack<span class="punctuation">.</span><span class="function">push</span><span class="punctuation">(</span><span class="number">1</span><span class="punctuation">)</span><span class="punctuation">;</span>
-myStack<span class="punctuation">.</span><span class="function">push</span><span class="punctuation">(</span><span class="number">2</span><span class="punctuation">)</span><span class="punctuation">;</span>
-myStack<span class="punctuation">.</span><span class="function">push</span><span class="punctuation">(</span><span class="number">3</span><span class="punctuation">)</span><span class="punctuation">;</span>
-console<span class="punctuation">.</span><span class="function">log</span><span class="punctuation">(</span>myStack<span class="punctuation">)</span><span class="punctuation">;</span>
+        myStack<span class="punctuation">.</span><span class="function">push</span><span class="punctuation">(</span><span class="number">1</span><span class="punctuation">)</span><span class="punctuation">;</span>
+        myStack<span class="punctuation">.</span><span class="function">push</span><span class="punctuation">(</span><span class="number">2</span><span class="punctuation">)</span><span class="punctuation">;</span>
+        myStack<span class="punctuation">.</span><span class="function">push</span><span class="punctuation">(</span><span class="number">3</span><span class="punctuation">)</span><span class="punctuation">;</span>
+        console<span class="punctuation">.</span><span class="function">log</span><span class="punctuation">(</span>myStack<span class="punctuation">)</span><span class="punctuation">;</span>
         </code>
         </div>
         <p>This will print out:</p>

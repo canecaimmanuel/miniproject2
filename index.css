@@ -449,8 +449,6 @@ ul a{
 .about-page section h2 {
     color: rgb(101, 213, 230);
 }
- 
-=======
 
 .path {
   stroke-dasharray: 20;
@@ -982,21 +980,26 @@ ul a{
     /* CSS for main tutorial */
     
     #tutorial {
-        margin-bottom:  100px;
+        margin-bottom:  200px;
+        backdrop-filter: blur(30px);
     }
 
     #variables {
-        margin-bottom: 500px;
+        margin-bottom: 200px;
+        backdrop-filter: blur(30px);
     }
 
     #arrays {
-        margin-bottom: 500px;
+        margin-bottom: 200px;
+        backdrop-filter: blur(30px);
     }
 
     #manipulating {
-        margin-bottom: 1500px;
+        margin-bottom: 200px;
+        backdrop-filter: blur(30px);
     }
 
     #operators {
-        margin-bottom: 1050px;
+        margin-bottom: 200px;
+        backdrop-filter: blur(30px);
     }
