@@ -61,7 +61,7 @@ nav div ul li h1 {
     left: 0;
     width: 100%;
     backdrop-filter: blur(10px);
-    z-index: 999;
+    z-index: 990;
   }
 
 .navbar form {
