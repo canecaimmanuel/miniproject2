@@ -221,14 +221,14 @@
   <!-- register End -->
   
   <!-- main content start -->
-    <main class="container tutorial mb-auto mx-auto flex-container col-md-12">
+    <main class="container tutorial col-md-12" id="manipulating">
       <div class="row some-text border text-white fs-5">
         <h1 class="mt-3">Manipulating Arrays</h1>
         <h3>Pushing and popping</h3>
         <p>Arrays can also function as a stack. The push and pop methods insert and remove variables from the end of an array.</p>
         <p>For example, let's create an empty array and push a few variables.</p>
         <div class="codes">
-        <code class="  language-javascript"><span class="keyword">var</span> myStack <span class="operator">=</span> <span class="punctuation">[</span><span class="punctuation">]</span><span class="punctuation">;</span>
+        <code class="language-javascript"><span class="keyword">var</span> myStack <span class="operator">=</span> <span class="punctuation">[</span><span class="punctuation">]</span><span class="punctuation">;</span>
 myStack<span class="punctuation">.</span><span class="function">push</span><span class="punctuation">(</span><span class="number">1</span><span class="punctuation">)</span><span class="punctuation">;</span>
 myStack<span class="punctuation">.</span><span class="function">push</span><span class="punctuation">(</span><span class="number">2</span><span class="punctuation">)</span><span class="punctuation">;</span>
 myStack<span class="punctuation">.</span><span class="function">push</span><span class="punctuation">(</span><span class="number">3</span><span class="punctuation">)</span><span class="punctuation">;</span>
@@ -237,56 +237,56 @@ console<span class="punctuation">.</span><span class="function">log</span><span 
         </div>
         <p>This will print out:</p>
         <div class="codes">
-          <code class="  language-javascript"><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span>
+          <code class="language-javascript"><span class="number">1</span><span class="punctuation">,</span><span class="number">2</span><span class="punctuation">,</span><span class="number">3</span>
           </code>
         </div>
         <p>After pushing variables to the array, we can then pop variables off from the end.</p>
         <div class="codes">
-        <code class="language-javascript">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>myStack<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>myStack<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <code class="language-javascript">console<span class="punctuation">.</span><span class="function">log</span><span class="punctuation">(</span>myStack<span class="punctuation">.</span><span class="function">pop</span><span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">;</span>
+console<span class="punctuation">.</span><span class="function">log</span><span class="punctuation">(</span>myStack<span class="punctuation">)</span><span class="punctuation">;</span>
             </code>
         </div>
         <p>This will print out the variable we popped from the array, and what's left of the array:</p>
         <div class="codes">
-          <code class="language-javascript"><span class="token number">3</span>           <span class="token comment" spellcheck="true">// the result from myStack.pop()</span>
-<span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span>         <span class="token comment" spellcheck="true">// what myStack contains now</span>
+          <code class="language-javascript"><span class="number">3</span>           <span class="comment" spellcheck="true">// the result from myStack.pop()</span>
+<span class="number">1</span><span class="punctuation">,</span><span class="number">2</span>         <span class="comment" spellcheck="true">// what myStack contains now</span>
           </code>
         </div>
         <h3>Queues using shifting and unshifting</h3>
-        <p>The <code class="  language-javascript">unshift</code> and <code class="  language-javascript">shift</code> methods are similar to <code class="  language-javascript">push</code> and <code class="  language-javascript">pop</code>, only they work from the beginning of the array. We can use the <code class="  language-javascript">push</code> and <code class="  language-javascript">shift</code> methods consecutively to utilize an array as a queue. For example:</p>
+        <p>The <code class="language-javascript">unshift</code> and <code class="  language-javascript">shift</code> methods are similar to <code class="  language-javascript">push</code> and <code class="  language-javascript">pop</code>, only they work from the beginning of the array. We can use the <code class="  language-javascript">push</code> and <code class="  language-javascript">shift</code> methods consecutively to utilize an array as a queue. For example:</p>
         <div class="codes">
-          <pre class="language-javascript"><code class="  language-javascript"><span class="token keyword">var</span> myQueue <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-myQueue<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-myQueue<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-myQueue<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <pre class="language-javascript"><code class="  language-javascript"><span class="keyword">var</span> myQueue <span class="operator">=</span> <span class="punctuation">[</span><span class="punctuation">]</span><span class="punctuation">;</span>
+myQueue<span class="punctuation">.</span><span class="function">push</span><span class="punctuation">(</span><span class="number">1</span><span class="punctuation">)</span><span class="punctuation">;</span>
+myQueue<span class="punctuation">.</span><span class="function">push</span><span class="punctuation">(</span><span class="number">2</span><span class="punctuation">)</span><span class="punctuation">;</span>
+myQueue<span class="punctuation">.</span><span class="function">push</span><span class="punctuation">(</span><span class="number">3</span><span class="punctuation">)</span><span class="punctuation">;</span>
             
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>myQueue<span class="token punctuation">.</span><span class="token function">shift</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>myQueue<span class="token punctuation">.</span><span class="token function">shift</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>myQueue<span class="token punctuation">.</span><span class="token function">shift</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="punctuation">.</span><span class="function">log</span><span class="punctuation">(</span>myQueue<span class="punctuation">.</span><span class="function">shift</span><span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">;</span>
+console<span class="punctuation">.</span><span class="function">log</span><span class="punctuation">(</span>myQueue<span class="punctuation">.</span><span class="function">shift</span><span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">;</span>
+console<span class="punctuation">.</span><span class="function">log</span><span class="punctuation">(</span>myQueue<span class="punctuation">.</span><span class="function">shift</span><span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">;</span>
             </code></pre>
         </div>
         <p>The <code class="language-javascript">shift</code> keyword will remove the variables of the array in the exact order they were inserted in, and the output will be:</p>
         <div class="codes">
-          <code class="  language-javascript"><span class="token number">1</span>
-<span class="token number">2</span>
-<span class="token number">3</span>
+          <code class="  language-javascript"><span class="number">1</span>
+<span class="number">2</span>
+<span class="number">3</span>
           </code>
         </div>
         <p>The <code class="language-javascript">unshift</code> method is used to insert a variable at the beginning of an array. For example:</p>
         <div class="codes">
-          <code class="  language-javascript"><span class="token keyword">var</span> myArray <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-myArray<span class="token punctuation">.</span><span class="token function">unshift</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>myArray<span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment" spellcheck="true">// will print out 0,1,2,3</span>
+          <code class="language-javascript"><span class="keyword">var</span> myArray <span class="operator">=</span> <span class="punctuation">[</span><span class="number">1</span><span class="punctuation">,</span><span class="number">2</span><span class="punctuation">,</span><span class="number">3</span><span class="punctuation">]</span><span class="punctuation">;</span>
+myArray<span class="punctuation">.</span><span class="function">unshift</span><span class="punctuation">(</span><span class="number">0</span><span class="punctuation">)</span><span class="punctuation">;</span>
+console<span class="punctuation">.</span><span class="function">log</span><span class="punctuation">(</span>myArray<span class="punctuation">)</span><span class="punctuation">;</span>       <span class="comment" spellcheck="true">// will print out 0,1,2,3</span>
           </code>
         </div>
         <h3>Splicing</h3>
         <p>Splicing arrays in JavaScript removes a certain part from an array to create a new array, made up from the part we took out. For example, if we wanted to remove the five numbers from the following array beginning from the 3rd index, we would do the following:</p>
         <div class="codes">
-          <code class="  language-javascript"><span class="token keyword">var</span> myArray <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token keyword">var</span> splice <span class="token operator">=</span> myArray<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <code class="language-javascript"><span class="keyword">var</span> myArray <span class="operator">=</span> <span class="punctuation">[</span><span class="number">0</span><span class="punctuation">,</span><span class="number">1</span><span class="punctuation">,</span><span class="number">2</span><span class="punctuation">,</span><span class="number">3</span><span class="punctuation">,</span><span class="number">4</span><span class="punctuation">,</span><span class="number">5</span><span class="punctuation">,</span><span class="number">6</span><span class="punctuation">,</span><span class="number">7</span><span class="punctuation">,</span><span class="number">8</span><span class="punctuation">,</span><span class="number">9</span><span class="punctuation">]</span><span class="punctuation">;</span>
+<span class="keyword">var</span> splice <span class="operator">=</span> myArray<span class="punctuation">.</span><span class="function">splice</span><span class="punctuation">(</span><span class="number">3</span><span class="punctuation">,</span><span class="number">5</span><span class="punctuation">)</span><span class="punctuation">;</span>
             
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>splice<span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">// will print out 3,4,5,6,7</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>myArray<span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment" spellcheck="true">// will print out 0,1,2,8,9</span>
+console<span class="punctuation">.</span><span class="function">log</span><span class="punctuation">(</span>splice<span class="punctuation">)</span><span class="punctuation">;</span>        <span class="comment" spellcheck="true">// will print out 3,4,5,6,7</span>
+console<span class="punctuation">.</span><span class="function">log</span><span class="punctuation">(</span>myArray<span class="punctuation">)</span><span class="punctuation">;</span>       <span class="comment" spellcheck="true">// will print out 0,1,2,8,9</span>
             </code></pre>
         </div>
         <p>After splicing the array, it will only contain the part before and after the splicing. The splice is equal to all the variables between 3 and 7 (inclusive), and the remainder of the array, which contains all variables between 0 and 2 (inclusive), and 8 to 9 (inclusive).</p>
@@ -311,7 +311,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
           <i class="fas fa-angle-double-left"></i> Previous Tutorial
           </a>
                
-          <a class="btn btn-primary pull-right" href="#">
+          <a class="btn btn-primary pull-right" href="tutorial-operators.html">
            Next Tutorial <i class="fas fa-angle-double-right"></i>
           </a>
       </div>

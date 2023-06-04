@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css"/>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Code Combat || miniproject2</title>
     <style>
       .custom-loader {
@@ -46,9 +47,9 @@
     backdrop-filter: blur(2px); 
   }
 
-/* CSS for Exercise Button */
+  /* CSS for Exercise Button */
 
-.exercise-container {
+  .exercise-container {
       text-align: start;
     }
 
@@ -85,7 +86,7 @@
       color: #189AB4;
       border-style: hidden;
     }
-    
+     
     </style>
   </head>
   <body>
@@ -221,69 +222,87 @@
   <!-- register End -->
   
   <!-- main content start -->
-    <main class="container tutorial col-md-12" id="arrays">
+    <main class="container tutorial col-md-12" id="operators">
       <div class="row some-text border text-white fs-5">
-        <h1 class="mt-3">Arrays</h1>
-        <p>JavaScript can hold an array of variables in an Array object. In JavaScript, an array also functions as a list, a stack or a queue.</p>
-        <p>To define an array, either use the brackets notation or the Array object notation:</p>
+        <h1 class="mt-3">Operators</h1>
+        <p>Every variable in JavaScript is casted automatically so any operator between two variables will always give some kind of result.</p>
+        <h3>The addition operator</h3>
+        <p>The + (addition) operator is used for both addition and concatenation of strings.</p>
+        <p>For example, adding two variables is easy:</p>
         <div class="codes">
-        <code class="language-javascript"><span class="keyword">var</span> myArray <span class="operator">=</span> <span class="punctuation">[</span><span class="number">1</span><span class="punctuation">,</span> <span class="number">2</span><span class="punctuation">,</span> <span class="number">3</span><span class="punctuation">]</span><span class="punctuation">;</span>
-<span class="keyword">var</span> theSameArray <span class="operator">=</span> <span class="keyword">new</span> <span class="class-name">Array</span><span class="punctuation">(</span><span class="number">1</span><span class="punctuation">,</span> <span class="number">2</span><span class="punctuation">,</span> <span class="number">3</span><span class="punctuation">)</span><span class="punctuation">;</span>
-        </code>
+            <code class="language-javascript"><span class="keyword">var</span> a <span class="operator">=</span> <span class="number">1</span><span class="punctuation">;</span>
+<span class="keyword">var</span> b <span class="operator">=</span> <span class="number">2</span><span class="punctuation">;</span>
+<span class="keyword">var</span> c <span class="operator">=</span> a <span class="operator">+</span> b<span class="punctuation">;</span>     <span class="comment" spellcheck="true">// c is now equal to 3</span>
+            </code>
         </div>
-        <h3>Addressing</h3>
-        <p>We can use the brackets [] operator to address a specific cell in our array. Addressing uses zero-based indices, so for example, in myArray the 2nd member can be addressed with index 1. One of the benefits of using an array datastructure is that you have constant time look-up, if you already know the index of the element you are trying to access.</p>
-        <div class="class">
-          <pre class="language-javascript"><code class="  language-javascript">console<span class="punctuation">.</span><span class="function">log</span><span class="punctuation">(</span>myArray<span class="punctuation">[</span><span class="number">1</span><span class="punctuation">]</span><span class="punctuation">)</span><span class="punctuation">;</span>      <span class="comment" spellcheck="true">// prints out 2</span>
-          </code></pre>
+        <p>The addition operator is used for concatenating strings to strings, strings to numbers, and numbers to strings:</p>
+        <div class="codes">
+            <code class="  language-javascript"><span class="keyword">var</span> name <span class="operator">=</span> <span class="string">"John"</span><span class="punctuation">;</span>
+console<span class="punctuation">.</span><span class="function">log</span><span class="punctuation">(</span><span class="string">"Hello "</span> <span class="operator">+</span> name <span class="operator">+</span> <span class="string">"!"</span><span class="punctuation">)</span><span class="punctuation">;</span>
+console<span class="punctuation">.</span><span class="function">log</span><span class="punctuation">(</span><span class="string">"The meaning of life is "</span> <span class="operator">+</span> <span class="number">42</span><span class="punctuation">)</span><span class="punctuation">;</span>
+console<span class="punctuation">.</span><span class="function">log</span><span class="punctuation">(</span><span class="number">42</span> <span class="operator">+</span> <span class="string">" is the meaning of life"</span><span class="punctuation">)</span><span class="punctuation">;</span>
+            </code>
         </div>
-        <p>Arrays in JavaScript are sparse, meaning that we can also assign variables to random locations even though previous cells were undefined. For example:</p>
-        <div class="class">
-        <code class="language-javascript"><span class="keyword">var</span> myArray <span class="operator">=</span> <span class="punctuation">[</span><span class="punctuation">]</span>
-myArray<span class="punctuation">[</span><span class="number">3</span><span class="punctuation">]</span> <span class="operator">=</span> <span class="string">"hello"</span>
-console<span class="punctuation">.</span><span class="function">log</span><span class="punctuation">(</span>myArray<span class="punctuation">)</span><span class="punctuation">;</span>
-        </code>
+        <p>JavaScript behaves differently when you are trying to combine two operands of different types. The default primitive value is a string, so when you try to add a number to a string, JavaScript will transform the number to a string before the concatenation.</p>
+        <div class="codes">
+            <code class="language-javascript">console<span class="punctuation">.</span><span class="function">log</span><span class="punctuation">(</span><span class="number">1</span> <span class="operator">+</span> <span class="string">"1"</span><span class="punctuation">)</span><span class="punctuation">;</span>   <span class="comment" spellcheck="true">// outputs "11"</span>
+            </code>
         </div>
-        <p>Will print out:</p>
-        <div class="class">
-          <code class="language-javascript"><span class="punctuation">[</span>undefined<span class="punctuation">,</span> undefined<span class="punctuation">,</span> undefined<span class="punctuation">,</span> <span class="string">"hello"</span><span class="punctuation">]</span>
-          </code>
+        <h3>Mathematical operators</h3>
+        <p>To subtract, multiply and divide two numbers, use the minus (<code class="  language-javascript"><span class="operator">-</span></code>), asterisk (<code class="  language-javascript"><span class="operator">*</span></code>) and slash (<code class="  language-javascript"><span class="operator">/</span></code>) signs.</p>
+        <div class="codes">
+            <code class="  language-javascript">console<span class="punctuation">.</span><span class="function">log</span><span class="punctuation">(</span><span class="number">3</span> <span class="operator">-</span> <span class="number">5</span><span class="punctuation">)</span><span class="punctuation">;</span>     <span class="comment" spellcheck="true">// outputs -2</span>
+console<span class="punctuation">.</span><span class="function">log</span><span class="punctuation">(</span><span class="number">3</span> <span class="operator">*</span> <span class="number">5</span><span class="punctuation">)</span><span class="punctuation">;</span>     <span class="comment" spellcheck="true">// outputs 15</span>
+console<span class="punctuation">.</span><span class="function">log</span><span class="punctuation">(</span><span class="number">3</span> <span class="operator">/</span> <span class="number">5</span><span class="punctuation">)</span><span class="punctuation">;</span>     <span class="comment" spellcheck="true">// outputs 0.6</span>
+            </code>
         </div>
-        <h3>Array Elements</h3>
-        <p>Because JavaScript Arrays are just special kinds of objects, you can have elements of different types stored together in the same array. The example below is an array with a string, a number, and an empty object.</p>
-        <div class="class">
-          <code class="language-javascript"><span class="keyword">var</span> myArray <span class="operator">=</span> <span class="punctuation">[</span><span class="string">"string"</span><span class="punctuation">,</span> <span class="number">10</span><span class="punctuation">,</span> <span class="punctuation">{</span><span class="punctuation">}</span><span class="punctuation">]</span>
-          </code>
+        <h3>Advanced mathematical operators</h3>
+        <p>JavaScript supports the modulus operator (<code class="  language-javascript"><span class="operator">%</span></code>) which calculates the remainder of a division operation.</p>
+        <div class="codes">
+            <code class="language-javascript">console<span class="punctuation">.</span><span class="function">log</span><span class="punctuation">(</span><span class="number">5</span> <span class="operator">%</span> <span class="number">3</span><span class="punctuation">)</span><span class="punctuation">;</span>     <span class="comment" spellcheck="true">// outputs 2</span>
+            </code>
         </div>
-        <h2>Exercise</h2>
-        <p>You must define an array with the following three variables:</p>
+        <ul>
+            <li><code class="  language-javascript"><span class="operator">/</span><span class="operator">=</span></code></li>
+            <li><code class="  language-javascript"><span class="operator">*</span><span class="operator">=</span></code></li>
+            <li><code class="  language-javascript"><span class="operator">-</span><span class="operator">=</span></code></li>
+            <li><code class="  language-javascript"><span class="operator">+</span><span class="operator">=</span></code></li>
+            <li><code class="  language-javascript"><span class="operator">%</span><span class="operator">=</span></code></li>
+        </ul>
+        <p>JavaScript also supports combined assignment and operation operators. So, instead of typing <code class="  language-javascript">myNumber <span class="operator">=</span> myNumber <span class="operator">/</span> <span class="number">2</span></code>, you can type <code class="  language-javascript">myNumber <span class="operator">/</span><span class="operator">=</span> <span class="number">2</span></code>. Here is a list of all these operators:</p>
+        <ul>
+            <li><code class="  language-javascript">Math<span class="punctuation">.</span>abs</code> calculates the absolute value of a number</li>
+            <li><code class="  language-javascript">Math<span class="punctuation">.</span>exp</code> calculates <strong>e</strong> to the power of a number</li>
+            <li><code class="  language-javascript">Math<span class="punctuation">.</span><span class="function">pow</span><span class="punctuation">(</span>x<span class="punctuation">,</span>y<span class="punctuation">)</span></code> calculates the result of <strong>x</strong> to the power of <strong>y</strong></li>
+            <li><code class="  language-javascript">Math<span class="punctuation">.</span>floor</code> removes the fraction part from a number</li>
+            <li><code class="  language-javascript">Math<span class="punctuation">.</span><span class="function">random</span><span class="punctuation">(</span><span class="punctuation">)</span></code> will give a random number <code class="  language-javascript">x</code> where 0&lt;=x&lt;1</li>
+        </ul>
+        
+        <h2>Exercise:</h2>
+        <p>In this exercise, you do the following:</p>
         <ol class="ms-5">
-          <li>A string which has the value of "What is the meaning of life?"</li>
-          <li>A number which has a value of <code class="  language-javascript"><span class="number">42</span></code></li>
-          <li>A boolean which has a value of <code class="  language-javascript"><span class="boolean">true</span></code></li>
-          </ol>
-
-          <div class="exercise-container">
-            <button class="exercise-button btn btn-success" onclick="showExercise()"><i class="fas fa-play"></i> Start Exercise</button>
-            <div class="container"></div>
-            <div class="row">
-              <textarea class="exercise-textarea col-md-5" id="exerciseTextarea" placeholder="Write your code here..."></textarea>
-              <button class="run-button btn btn-success col-md-2" onclick="runExercise()">Run</button>
-              <div class="result-message col-md-5" id="resultMessage"></div>
-            </div>
+            <li>Connect the <code class="  language-javascript">firstName</code> and <code class="  language-javascript">lastName</code> to construct the variable <code class="  language-javascript">fullName</code>, but with a space (<code class="  language-javascript"><span class="string">" "</span></code>) in between the first and last name.</li>
+            <li>Multiply the variable <code class="  language-javascript">myNumber</code> by 2 and put the result in <code class="  language-javascript">meaningOfLife</code>.</li>
+        </ol>
+        <div class="exercise-container">
+          <button class="exercise-button btn btn-success" onclick="showExercise()"><i class="fas fa-play"></i> Start Exercise</button>
+          <div class="container"></div>
+          <div class="row">
+            <textarea class="exercise-textarea col-md-5" id="exerciseTextarea" placeholder="Write your code here..."></textarea>
+            <button class="run-button btn btn-success col-md-2" onclick="runExercise()">Run</button>
+            <div class="result-message col-md-5" id="resultMessage"></div>
           </div>
-
-
-
-        <div class="col mb-3">
-            <a class="btn btn-primary pull-left" href="tutorial-variables.html">
-            <i class="fas fa-angle-double-left"></i> Previous Tutorial
-            </a>
-                 
-            <a class="btn btn-primary pull-right" href="tutorial-manipulating.html">
-             Next Tutorial <i class="fas fa-angle-double-right"></i>
-            </a>
         </div>
+    
+        <div class="col mb-3">
+          <a class="btn btn-primary pull-left" href="tutorial-manipulating.html">
+          <i class="fas fa-angle-double-left"></i> Previous Tutorial
+          </a>
+               
+          <a class="btn btn-primary pull-right" id="premiumAlert" href="#">
+           Next Tutorial <i class="fas fa-angle-double-right"></i>
+          </a>
+      </div>
 
       </div>
 
@@ -357,20 +376,41 @@ console<span class="punctuation">.</span><span class="function">log</span><span 
         let exerciseCode = textarea.value;
         let resultMessage = document.getElementById("resultMessage");
   
-        let correctCode = `var myArray = ["What is the meaning of life?", 42, true];
-console.log(myArray[0]);
-console.log(myArray[1]);
-console.log(myArray[2]);`;
+        let correctCode = `var firstName = "John";
+var lastName = "Smith";
+var myNumber = 21;
+
+// TODO: change the following code
+var fullName = firstName + " " + lastName;
+var meaningOfLife = myNumber * 2;
+
+console.log("The name is " + fullName);
+console.log("The meaning of life is " + meaningOfLife);`;
   
         if (exerciseCode.trim() === correctCode.trim()) {
-          resultMessage.innerText = `What is the meaning of life?
-42
-true
-`;
+          resultMessage.innerText = `The name is John Smith
+The meaning of life is 42`;
         } else {
           resultMessage.innerText = "Incorrect answer. The correct answer is:\n" + correctCode;
         }
       }
+
+      document.getElementById('premiumAlert').addEventListener('click', function() {
+        Swal.fire({
+        titleText: 'Avail Premium Membership to access our exclsive content ',
+        width: 600,
+        padding: '80px',
+        color: '#006666',
+        background: 'url(https://media3.giphy.com/media/xT4uQF7h39mlsF5czK/giphy.gif?cid=6c09b9525a1b59077ce33c265f225e5d09d0c93228d36d48&ep=v1_internal_gifs_gifId&rid=giphy.gif&ct=g)',
+        backdrop: `
+            rgba(0,0,0,0.1) 
+            url(https://res.cloudinary.com/practicaldev/image/fetch/s--5k5YYtLZ--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://www.masterhacker.guru/wp-content/uploads/2020/07/HACKER.gif)
+            left top
+            no-repeat
+  `
+})
+      })
+      
     </script>
   </body>
 </html>

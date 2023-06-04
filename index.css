@@ -801,3 +801,35 @@ ul a{
         box-sizing: border-box;
         color: #f08d49;
     }
+
+    /* CSS for alert */
+
+    body.swal2-shown > [aria-hidden="true"] {
+        transition: 0.1s filter;
+        filter: blur(10px);
+    }
+    
+
+    /* CSS for main tutorial */
+    
+    #tutorial {
+        margin-bottom:  100px;
+    }
+
+    #variables {
+        margin-bottom: 500px;
+    }
+
+    #arrays {
+        margin-bottom: 500px;
+    }
+
+    #manipulating {
+        margin-bottom: 1500px;
+    }
+
+    #operators {
+        margin-bottom: 1050px;
+    }
+
+    
