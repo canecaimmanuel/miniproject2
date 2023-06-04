@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700&display=swap');
 
 * {
-    font-family: 'Roboto';
+    font-family: century gothic;
     scrollbar-width: thin;
-
+    /* border: solid red; */
     scrollbar-color: #2193B0F7 #DFE9EB; 
 
   }
@@ -13,8 +13,7 @@
 
   }
   *::-webkit-scrollbar-track {
-    border-radius: 5px;
-    background-color: #DFE9EB;
+    background-color: #001417;
   }
   
   *::-webkit-scrollbar-track:hover {
@@ -26,7 +25,7 @@
   }
   
   *::-webkit-scrollbar-thumb {
-    border-radius: 2px;
+    border-radius: 1vw;
     background-color: #2193B0F7;
   }
   
@@ -43,10 +42,16 @@ body {
 }
 
 canvas {
-    margin-top: -50px;
     display: block;
     position: fixed;
     z-index: -9999;
+    
+}
+
+
+nav div ul li h1 {
+  scale: 70%;
+  color: #8a8a8a !important;
 }
 
 /* navbar start */
@@ -55,9 +60,8 @@ canvas {
     top: 0;
     left: 0;
     width: 100%;
-    background: #082F40;
-    z-index: 99;
-    border-bottom: 5px solid #2193B0F7;
+    backdrop-filter: blur(10px);
+    z-index: 990;
   }
 
 .navbar form {
@@ -101,26 +105,80 @@ ul ion-icon {
     font-weight: 100;
 }
 .btnLogin-popup {
+  scale: 80%;
     height: 40px;
     font-size: 1.1em;
-    background: #082F40;
+    background: rgba(0, 0, 0, 0.5);
     color: white;
     font-weight: 500;
     transition: .5s;
+    border-radius: 50px !important;
 }
 
 .btnLogin-popup:hover {
     background: #2193B0F7;
-    color: rgb(20, 20, 20);
+    color: rgb(255, 255, 255);
   }
 
  /* navbar end */
 
  /* Login start */
  .login-box {
-    display: grid;
-    place-items: center;
-    margin-top: 100px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+ }
+
+nav form input {
+   background-color: rgb(92, 92, 92) !important;
+   color: white;
+ }
+
+ nav form button {
+  background-color: rgb(34, 34, 34) !important;
+}
+
+
+#feedbackContainer {
+  padding-top: 20px;
+  background-color: #3866A3 !important;
+  height: 250px;
+  padding-left: 10px;
+}
+
+input[type="search"]::placeholder {
+  color: rgb(255, 255, 255); /* Set the color you desire */
+}
+
+#openPopupButton {
+  color: white !important;
+  margin-bottom: 10px;
+}
+
+.white {
+  fill: white;
+}
+
+.navbar-brand {
+  margin-left: 2vw;
+}
+
+ .hero-img {
+  filter: drop-shadow(0 0 10px rgba(27, 160, 255, 0.5));
+ }
+
+ .nav-logo {
+  filter: drop-shadow(0 0 10px rgba(27, 160, 255, 0.5));
+ }
+
+ .shine {
+  filter: drop-shadow(0 0 8px rgba(27, 160, 255, 0.9));
+ }
+ 
+ .box-glow {
+  box-shadow: 0 0 10px 5px rgba(34, 174, 255, 0.5);
  }
 
 .wrapper {
@@ -137,8 +195,7 @@ ul ion-icon {
     align-items: center;
     overflow: hidden;
     transform: scale(0);
-    transition: transform .5s ease, height .2s ease;
-    z-index: 99;
+    transition: transform .5s ease, height .2s ease;  
 }
 .wrapper.active-popup {
     transform: scale(1);
@@ -242,18 +299,7 @@ ul ion-icon {
 .remember-forgot a:hover {
     text-decoration: underline;
 }
-.btn-popup {
-    width: 100%;
-    height: 45px;
-    background: #082F40;
-    border: none;
-    outline: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1em;
-    color: #fff;
-    font-weight: 500;
-}
+
 .login-register {
     font-size: .9em;
     text-align: center;
@@ -273,6 +319,90 @@ ul ion-icon {
 }
 /* Login end */
 
+/* Feedback start */
+.feedback-container {
+    position: fixed;
+    bottom: 30%;
+    left: 0px;
+    padding: 5px;
+    transform: translateY(-50%, -50%);
+    white-space: nowrap;
+    writing-mode:vertical-lr;
+    font-size: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    border-end-start-radius: 20px;
+    z-index: 99;
+  }
+  .sticky {
+    position: fixed;
+    bottom: 0;
+  }
+  .popup-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease, height .5s ease;
+    width: 500px;
+    padding: 20px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    z-index: 9999;
+    display: none;
+  }
+
+  .popup-container.active-popup {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #162938;
+    font-size: 2em;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .close-button:hover {
+    background: #e91e63;
+  }
+  #feedbackInput {
+    width: 100%;
+    height: 150px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    display: none;
+  }
+
+  /* Feedback End */
+
 /* footer start */
 footer {
     margin-bottom: 0;
@@ -291,13 +421,14 @@ footer {
     margin-bottom: 0;
     padding-bottom: 10px;
     backdrop-filter: blur(20px); 
-    border-top: 5px solid #2193B0F7;         
+    border-top: 3px solid #004b5df7;         
 }
 ul {
     list-style-type: none;
 }
 ul a{
     text-decoration: none;
+    color: rgb(45, 178, 255);
 }
 /* footer end */
 
@@ -318,7 +449,45 @@ ul a{
 .about-page section h2 {
     color: rgb(101, 213, 230);
 }
+ 
+=======
 
+.path {
+  stroke-dasharray: 20;
+}
+/* buttons */
+
+.btn-play a{
+    color: #14396A !important;
+    font-size: 25px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+   margin-right: 150px !important;
+
+  }
+
+  .btn {
+    font-family: 'arial black';
+    color: #14396A !important;
+    font-size: 14px;
+    text-shadow: 2px 1px 0px #7CACDE;
+    box-shadow: 1px 1px 1px #BEE2F9;
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: 2px solid #3866A3;
+    background: #63B8EE;
+    background: linear-gradient(to top, #63B8EE, #468CCF);
+    text-decoration: none;
+  }
+
+  .btn:hover {
+    color: #14396A !important;
+    background: #468CCF;
+    background: linear-gradient(to top, #468CCF, #64DCEE);
+  }
+  /* buttons end */
+
+  
 /* CSS for code tutorial*/
 
 .codes{
@@ -831,5 +1000,3 @@ ul a{
     #operators {
         margin-bottom: 1050px;
     }
-
-    
