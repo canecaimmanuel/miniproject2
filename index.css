@@ -119,6 +119,7 @@ ul ion-icon {
     background: #2193B0F7;
     color: rgb(255, 255, 255);
   }
+
   .search-box{
     width: fit-content;
     height: fit-content;
@@ -135,12 +136,14 @@ ul ion-icon {
     border-radius: 25px;
     transition: all .5s ease-in-out;
     background-color: #22a6b3;
-    padding-right: 40px;
+    padding-right: 20px;
     color:#fff;
+    padding-left: 20px;
   }
   .input-search::placeholder{
+    font-family: arial !important;
     color:rgba(255,255,255,.5);
-    font-size: 18px;
+    font-size: 15px;
     letter-spacing: 2px;
     font-weight: 100;
   }
