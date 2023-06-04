@@ -1120,3 +1120,16 @@ ul a{
         margin-bottom: 200px;
         backdrop-filter: blur(30px);
     }
+
+    @media screen and (max-width: 767px) {
+
+      /* for about page  */
+      .img-top-about {
+        height: 100px !important;
+        margin-bottom: -30px !important;
+      }
+
+      .img-bottom-about {
+        display: none;
+      }
+    }
