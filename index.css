@@ -119,7 +119,11 @@ ul ion-icon {
     background: #2193B0F7;
     color: rgb(255, 255, 255);
   }
-
+  .search-position {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
   .search-box{
     width: fit-content;
     height: fit-content;
@@ -180,8 +184,10 @@ ul ion-icon {
   }
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 1200px) {
-.search-box{
-  width: fit-content;
+  .search-position {
+    width: fit-content;
+  }
+.search-box{ 
   height: fit-content;
   position: relative;
   margin-left: 0px;
