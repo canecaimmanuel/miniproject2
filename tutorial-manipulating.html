@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <title>Code Combat || miniproject2</title>
+    <style>
+      .custom-loader {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  color:#8cdcf0f7;
+  background: radial-gradient(farthest-side, currentColor calc(100% - 6px),#0000 calc(100% - 5px) 0);
+  -webkit-mask:radial-gradient(farthest-side,#0000 calc(100% - 13px),#000 calc(100% - 12px));
+  border-radius: 50%;
+  animation: s9 2s infinite linear;
+}
+.custom-loader::before,
+.custom-loader::after {    
+  content:"";
+  grid-area: 1/1;
+  background:
+    linear-gradient(currentColor 0 0) center,
+    linear-gradient(currentColor 0 0) center;
+  background-size: 100% 10px,10px 100%;
+  background-repeat: no-repeat;
+}
+.custom-loader::after {
+   transform: rotate(45deg);
+}
+
+@keyframes s9 { 
+  100%{transform: rotate(1turn)}
+}
+.tutorial {
+    margin-top: -350px;
+    height: 100vh;
+    
+  }
+  .some-text {
+    backdrop-filter: blur(2px); 
+  }
+
+  /* CSS for Exercise Button */
+
+  .exercise-container {
+      text-align: start;
+    }
+
+    .exercise-button {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+
+    .exercise-textarea {
+      width: 500px;
+      height: 200px;
+      margin: 20px;
+      background: transparent;
+      color:#189AB4;
+      display: none;
+      resize:none;
+    }
+
+    .run-button {
+      height: 50px;
+      width: 75px;
+      padding: 2px 2px;
+      margin-top:80px;
+      font-size: 16px;
+      font-weight: bold;
+      display: none;
+    }
+
+    .result-message {
+      margin: 20px;
+      width: 500px;
+      font-weight: bold;
+      background:transparent;
+      color: #189AB4;
+      border-style: hidden;
+    }
+     
+    </style>
+  </head>
+  <body>
+    <canvas></canvas>
+    <!-- navigation bar start -->
+    <section class="navbar-body">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid d-flex">
+          <button class="navbar-toggler  bg-info" 
+                  type="button" 
+                  data-bs-toggle="collapse" 
+                  data-bs-target="#navbarTogglerDemo03" 
+                  aria-controls="navbarTogglerDemo03" 
+                  aria-expanded="false" 
+                  aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img src="images/logo.png" width="200px" alt="Code Combat Logo"></a>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <form class="me-auto">
+              <div class="d-flex border-0 bg-light rounded-5" id="search">
+                <button class="btn-search rounded-start-5 border-0 p-2" type="submit"><ion-icon name="search"></ion-icon></ion-icon></button>            
+                <input class="rounded-end-5 border-0 p-2" type="search" placeholder="Search" aria-label="Search">
+              </div>       
+            </form>
+            <ul class="navbar-nav">
+              <li class="nav-item d-flex pe-2 ">
+                <a class="nav-link" href="index.html" title="Home Page"><ion-icon name="home"></ion-icon></a> 
+                <h1 class="ps-2">|</h1>
+              </li>
+              <li class="nav-item d-flex pe-2 ">
+                <a class="nav-link" href="#" title="Play Game"><ion-icon name="game-controller"></ion-icon></ion-icon></a>
+                <h1 class="ps-2">|</h1>
+              </li>              
+              <li class="nav-item d-flex pe-2">
+                <a class="nav-link text-info text-bg-secondary rounded" aria-current="page" href="tutorial.html" title="Tutorial"><ion-icon name="book"></ion-icon></a>
+                <h1 class="ps-2">|</h1>
+              </li>
+              <li class="nav-item d-flex pe-2">
+                <a class="nav-link" href="about.html" title="About Us"><ion-icon name="alert-circle"></ion-icon></a>
+                <h1 class="ps-2"></h1>
+              </li>
+            </ul>  
+            <button class="btnLogin-popup border rounded-4 px-4 mx-5 text-center">LOGIN</ion-icon></button>
+          </div>
+        </div>
+      </nav>
+    </section>
+  <!-- navigation bar end -->
+
+
+  <!-- Login start -->
+  <div class="login-box">
+    <div class="wrapper">
+      <span class="icon-close"><ion-icon name="close-outline"></ion-icon></span>
+
+    <div class="form-box login">
+        <h2 class="text-info">Login</h2>
+        <form action="#">
+            <div class="input-box">
+                <span class="icon text-info"><ion-icon name="mail-outline"></ion-icon></span>
+                <input class="text-light" type="email" required>
+                <label class="text-light">Email</label>
+            </div>
+            <div class="input-box">
+                <span class="icon text-info"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                <input class="text-light" type="password" required>
+                <label class="text-light">Password</label>
+            </div>
+            <div class="remember-forgot">
+                <label class="text-info"><input type="checkbox">
+                Remember me</label>
+                <a class="text-info" href="#">Forgot Password?</a>
+            </div>
+            <button type="submit" class="btn-popup">Login
+            </button>
+            <div class="login-register text-info">
+                <p>Don't have an account? <a 
+                href="#"
+                class="register-link text-light">Sign up</a></a></p>
+            </div>
+            <div class="d-flex text-white">
+              <p>or login with</p>
+              <div class="social-logo ms-4 fs-3">
+                <a href=""><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href=""><ion-icon name="logo-github"></ion-icon></a>
+                <a href=""><ion-icon name="logo-linkedin"></ion-icon></a>
+                <a href=""><ion-icon name="logo-twitter"></ion-icon></a>
+                <a href=""><ion-icon name="logo-google"></ion-icon></a>
+              </div>
+            </div>
+        </form>
+    </div>
+    <!-- Login end -->
+
+      <!-- Register Start -->
+      <div class="form-box register">
+          <h2 class="text-info">Create Account</h2>
+          <form action="#">
+              <div class="input-box">
+                  <span class="icon">
+                      <ion-icon class="text-info" name="person-outline"></ion-icon></ion-icon></span>
+                  <input class="text-light" type="email" required>
+                  <label class="text-light">Username</label>
+              </div>
+              <div class="input-box">
+                  <span class="icon">
+                      <ion-icon class="text-info" name="mail-outline"></ion-icon></span>
+                  <input class="text-light" type="email" required>
+                  <label class="text-light">Email</label>
+              </div>
+              <div class="input-box">
+                  <span class="icon">
+                      <ion-icon class="text-info" name="lock-closed-outline"></ion-icon></span>
+                  <input class="text-light" type="password" required>
+                  <label class="text-light">Password</label>
+              </div>
+              <div class="remember-forgot">
+                  <label class="text-info"><input type="checkbox">
+                I agree to the terms & conditions</label>
+              </div>
+              <button type="submit" class="btn-popup">Register
+              </button>
+              <div class="login-register">
+                  <p class="text-info">Already have an account? <a 
+                  href="#"
+                  class="login-link text-light">Login</a></p>
+              </div>
+          </form>
+        </div>
+    </div>
+  </div>
+  <!-- register End -->
+  
+  <!-- main content start -->
+    <main class="container tutorial col-md-12" id="manipulating">
+      <div class="row some-text border text-white fs-5">
+        <h1 class="mt-3">Manipulating Arrays</h1>
+        <h3>Pushing and popping</h3>
+        <p>Arrays can also function as a stack. The push and pop methods insert and remove variables from the end of an array.</p>
+        <p>For example, let's create an empty array and push a few variables.</p>
+        <div class="codes">
+        <code class="language-javascript"><span class="keyword">var</span> myStack <span class="operator">=</span> <span class="punctuation">[</span><span class="punctuation">]</span><span class="punctuation">;</span>
+myStack<span class="punctuation">.</span><span class="function">push</span><span class="punctuation">(</span><span class="number">1</span><span class="punctuation">)</span><span class="punctuation">;</span>
+myStack<span class="punctuation">.</span><span class="function">push</span><span class="punctuation">(</span><span class="number">2</span><span class="punctuation">)</span><span class="punctuation">;</span>
+myStack<span class="punctuation">.</span><span class="function">push</span><span class="punctuation">(</span><span class="number">3</span><span class="punctuation">)</span><span class="punctuation">;</span>
+console<span class="punctuation">.</span><span class="function">log</span><span class="punctuation">(</span>myStack<span class="punctuation">)</span><span class="punctuation">;</span>
+        </code>
+        </div>
+        <p>This will print out:</p>
+        <div class="codes">
+          <code class="language-javascript"><span class="number">1</span><span class="punctuation">,</span><span class="number">2</span><span class="punctuation">,</span><span class="number">3</span>
+          </code>
+        </div>
+        <p>After pushing variables to the array, we can then pop variables off from the end.</p>
+        <div class="codes">
+        <code class="language-javascript">console<span class="punctuation">.</span><span class="function">log</span><span class="punctuation">(</span>myStack<span class="punctuation">.</span><span class="function">pop</span><span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">;</span>
+console<span class="punctuation">.</span><span class="function">log</span><span class="punctuation">(</span>myStack<span class="punctuation">)</span><span class="punctuation">;</span>
+            </code>
+        </div>
+        <p>This will print out the variable we popped from the array, and what's left of the array:</p>
+        <div class="codes">
+          <code class="language-javascript"><span class="number">3</span>           <span class="comment" spellcheck="true">// the result from myStack.pop()</span>
+<span class="number">1</span><span class="punctuation">,</span><span class="number">2</span>         <span class="comment" spellcheck="true">// what myStack contains now</span>
+          </code>
+        </div>
+        <h3>Queues using shifting and unshifting</h3>
+        <p>The <code class="language-javascript">unshift</code> and <code class="  language-javascript">shift</code> methods are similar to <code class="  language-javascript">push</code> and <code class="  language-javascript">pop</code>, only they work from the beginning of the array. We can use the <code class="  language-javascript">push</code> and <code class="  language-javascript">shift</code> methods consecutively to utilize an array as a queue. For example:</p>
+        <div class="codes">
+          <pre class="language-javascript"><code class="  language-javascript"><span class="keyword">var</span> myQueue <span class="operator">=</span> <span class="punctuation">[</span><span class="punctuation">]</span><span class="punctuation">;</span>
+myQueue<span class="punctuation">.</span><span class="function">push</span><span class="punctuation">(</span><span class="number">1</span><span class="punctuation">)</span><span class="punctuation">;</span>
+myQueue<span class="punctuation">.</span><span class="function">push</span><span class="punctuation">(</span><span class="number">2</span><span class="punctuation">)</span><span class="punctuation">;</span>
+myQueue<span class="punctuation">.</span><span class="function">push</span><span class="punctuation">(</span><span class="number">3</span><span class="punctuation">)</span><span class="punctuation">;</span>
+            
+console<span class="punctuation">.</span><span class="function">log</span><span class="punctuation">(</span>myQueue<span class="punctuation">.</span><span class="function">shift</span><span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">;</span>
+console<span class="punctuation">.</span><span class="function">log</span><span class="punctuation">(</span>myQueue<span class="punctuation">.</span><span class="function">shift</span><span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">;</span>
+console<span class="punctuation">.</span><span class="function">log</span><span class="punctuation">(</span>myQueue<span class="punctuation">.</span><span class="function">shift</span><span class="punctuation">(</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">;</span>
+            </code></pre>
+        </div>
+        <p>The <code class="language-javascript">shift</code> keyword will remove the variables of the array in the exact order they were inserted in, and the output will be:</p>
+        <div class="codes">
+          <code class="  language-javascript"><span class="number">1</span>
+<span class="number">2</span>
+<span class="number">3</span>
+          </code>
+        </div>
+        <p>The <code class="language-javascript">unshift</code> method is used to insert a variable at the beginning of an array. For example:</p>
+        <div class="codes">
+          <code class="language-javascript"><span class="keyword">var</span> myArray <span class="operator">=</span> <span class="punctuation">[</span><span class="number">1</span><span class="punctuation">,</span><span class="number">2</span><span class="punctuation">,</span><span class="number">3</span><span class="punctuation">]</span><span class="punctuation">;</span>
+myArray<span class="punctuation">.</span><span class="function">unshift</span><span class="punctuation">(</span><span class="number">0</span><span class="punctuation">)</span><span class="punctuation">;</span>
+console<span class="punctuation">.</span><span class="function">log</span><span class="punctuation">(</span>myArray<span class="punctuation">)</span><span class="punctuation">;</span>       <span class="comment" spellcheck="true">// will print out 0,1,2,3</span>
+          </code>
+        </div>
+        <h3>Splicing</h3>
+        <p>Splicing arrays in JavaScript removes a certain part from an array to create a new array, made up from the part we took out. For example, if we wanted to remove the five numbers from the following array beginning from the 3rd index, we would do the following:</p>
+        <div class="codes">
+          <code class="language-javascript"><span class="keyword">var</span> myArray <span class="operator">=</span> <span class="punctuation">[</span><span class="number">0</span><span class="punctuation">,</span><span class="number">1</span><span class="punctuation">,</span><span class="number">2</span><span class="punctuation">,</span><span class="number">3</span><span class="punctuation">,</span><span class="number">4</span><span class="punctuation">,</span><span class="number">5</span><span class="punctuation">,</span><span class="number">6</span><span class="punctuation">,</span><span class="number">7</span><span class="punctuation">,</span><span class="number">8</span><span class="punctuation">,</span><span class="number">9</span><span class="punctuation">]</span><span class="punctuation">;</span>
+<span class="keyword">var</span> splice <span class="operator">=</span> myArray<span class="punctuation">.</span><span class="function">splice</span><span class="punctuation">(</span><span class="number">3</span><span class="punctuation">,</span><span class="number">5</span><span class="punctuation">)</span><span class="punctuation">;</span>
+            
+console<span class="punctuation">.</span><span class="function">log</span><span class="punctuation">(</span>splice<span class="punctuation">)</span><span class="punctuation">;</span>        <span class="comment" spellcheck="true">// will print out 3,4,5,6,7</span>
+console<span class="punctuation">.</span><span class="function">log</span><span class="punctuation">(</span>myArray<span class="punctuation">)</span><span class="punctuation">;</span>       <span class="comment" spellcheck="true">// will print out 0,1,2,8,9</span>
+            </code></pre>
+        </div>
+        <p>After splicing the array, it will only contain the part before and after the splicing. The splice is equal to all the variables between 3 and 7 (inclusive), and the remainder of the array, which contains all variables between 0 and 2 (inclusive), and 8 to 9 (inclusive).</p>
+        <h2>Exercise:</h2>
+        <p>In this tutorial, you must manipulate the array called myArray and do the following:</p>
+        <ol class="ms-5">
+          <li>Push the number 42 to the end of the array</li>
+          <li>Shift a variable from the beginning of the array</li>
+        </ol>
+        <div class="exercise-container">
+          <button class="exercise-button btn btn-success" onclick="showExercise()"><i class="fas fa-play"></i> Start Exercise</button>
+          <div class="container"></div>
+          <div class="row">
+            <textarea class="exercise-textarea col-md-5" id="exerciseTextarea" placeholder="Write your code here..."></textarea>
+            <button class="run-button btn btn-success col-md-2" onclick="runExercise()">Run</button>
+            <div class="result-message col-md-5" id="resultMessage"></div>
+          </div>
+        </div>
+    
+        <div class="col mb-3">
+          <a class="btn btn-primary pull-left" href="tutorial-arrays.html">
+          <i class="fas fa-angle-double-left"></i> Previous Tutorial
+          </a>
+               
+          <a class="btn btn-primary pull-right" href="tutorial-operators.html">
+           Next Tutorial <i class="fas fa-angle-double-right"></i>
+          </a>
+      </div>
+
+      </div>
+
+    </main>
+    <!-- main content end -->
+
+    <footer class="p-1">
+      <div class="row d-flex">
+        <div class="col-md-3 fs-5 ms-5 ps-5 pt-3 text-white">
+          <p class="ps-4"><b>General</b></p>       
+          <ul>
+            <li><a class="text-decoration-none" href="#">About</a></li>
+            <li><a class="text-decoration-none" href="#">Help Center</a></li>
+            <li><a class="text-decoration-none" href="#">Privacy Policy</a></li>
+            <li><a class="text-decoration-none" href="#">Contact</a></li>
+            <li><a class="text-decoration-none" href="#">Blog</a></li>
+            <li><a class="text-decoration-none" href="#"> Chagelog</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 fs-5 ms-5 ps-5 pt-3 text-white">
+          <p class="ps-4"><b>Get Involved</b></p>       
+          <ul>
+            <li><a class="text-decoration-none" href="#">GitHub</a></li>
+            <li><a class="text-decoration-none" href="#">Community</a></li>
+            <li><a class="text-decoration-none" href="#">Contribute</a></li>
+            <li><a class="text-decoration-none" href="#">Forum</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 text-center pe-5">
+          <div class="animate__animated animate__swing animate__infinite	infinite">
+            <img src="./images/footerLogo.png" width="230px" alt="Logo">
+          </div>
+          <div class="social-logo ms-4 fs-3 animate__animated animate__tada animate__infinite	infinite">
+            <a href=""><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href=""><ion-icon name="logo-github"></ion-icon></a>
+            <a href=""><ion-icon name="logo-linkedin"></ion-icon></a>
+            <a href=""><ion-icon name="logo-twitter"></ion-icon></a>
+            <a href=""><ion-icon name="logo-google"></ion-icon></a>
+            <a href=""><ion-icon name="logo-youtube"></ion-icon></a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p class="text-white text-center">Copyright &copy;2023 COdeCombat Inc. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="index.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://kit.fontawesome.com/d8edc96e0a.js" crossorigin="anonymous"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="script.js"></script>
+    <!-- Script for Exercise Button -->
+    <script>
+      function showExercise() {
+        let textarea = document.getElementById("exerciseTextarea");
+        let runButton = document.getElementsByClassName("run-button")[0];
+  
+        textarea.style.display = "block";
+        runButton.style.display = "block";
+        document.getElementById("resultMessage").innerText = "";
+      }
+  
+      function runExercise() {
+        let textarea = document.getElementById("exerciseTextarea");
+        let exerciseCode = textarea.value;
+        let resultMessage = document.getElementById("resultMessage");
+  
+        let correctCode = `var myArray = [true, "What is the meaning of life?"];
+myArray.push(42);
+myArray.shift();
+
+console.log(myArray[0]);
+console.log(myArray[1]);`;
+  
+        if (exerciseCode.trim() === correctCode.trim()) {
+          resultMessage.innerText = `What is the meaning of life?
+42`;
+        } else {
+          resultMessage.innerText = "Incorrect answer. The correct answer is:\n" + correctCode;
+        }
+      }
+      
+    </script>
+  </body>
+</html>
