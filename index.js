@@ -125,3 +125,5 @@ window.addEventListener('scroll', function () {
           additionalText.style.display = "none";
         }
       }
+
+
