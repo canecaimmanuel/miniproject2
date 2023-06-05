@@ -35,15 +35,26 @@ document.addEventListener("DOMContentLoaded", function (){
 
     window.addEventListener("resize", () => location.reload());
 
-    anime({
-        targets: '.fil0',
-        strokeDashoffset: [anime.setDashoffset, 0],
-        easing: 'easeInOutSine',
-        duration: 1500,
-        delay: function(el, i) { return i * 250 },
-        direction: 'alternate',
-        loop: true
-      });
+
+
+    var logowrap = document.querySelector('.logo-wrap svg');
+      
+    function animateLoop() {
+      // Add the 'active' class
+      logowrap.classList.add('active');
+    
+      // Wait for 0.5 seconds
+      setTimeout(function() {
+        // Remove the 'active' class
+        logowrap.classList.remove('active');
+    
+        // Call the function again after 0.5 seconds
+        setTimeout(animateLoop, 2100);
+      }, 3000);
+    }
+    
+    // Call the function to start the animation loop
+    animateLoop();
 });
 
 
