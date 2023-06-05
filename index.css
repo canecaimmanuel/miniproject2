@@ -48,6 +48,28 @@ canvas {
     z-index: -9999;
     
 }
+#scroll-up-btn {
+  display: none;
+}
+  
+.arrow{
+  position: fixed;
+  height: 50px;
+  bottom: 30px;
+  right: 20px;  
+  border-radius: 100%;
+  background: #63B8EE;
+  text-shadow: 2px 1px 0px #7CACDE;
+  box-shadow: 1px 1px 1px #BEE2F9; 
+  background: linear-gradient(to top, #63B8EE, #468CCF);
+  z-index: 99;
+}
+.arrow:hover {
+  background: #468CCF;
+  background: linear-gradient(to top, #468CCF, #64DCEE);
+}
+
+
 
 
 nav div ul li h1 {
