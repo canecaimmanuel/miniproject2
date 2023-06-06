@@ -1178,6 +1178,11 @@ ul a{
       margin-top: 10rem !important;
     }
 
+    .title-div{
+      margin-top: 12rem;
+      margin-bottom: 8rem;
+    }
+
     .title {
         padding-top: 30px;
         padding-bottom: 30px;
