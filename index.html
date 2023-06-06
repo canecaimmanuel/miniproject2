@@ -24,10 +24,16 @@
       padding: 10px;
       margin-top: 160px;
   }
+
   .hero-content {
     margin-top: 100px;
     margin-bottom: 200px;
   }
+
+  .title-text{
+      font-weight: 900;
+      font-family: 'zzzz', cursive, sans-serif;
+    }
     
   .hero-content2 h3 {
     padding: 100px;
@@ -283,7 +289,7 @@
                 and reach the Pinnacle of Glory.</h1>         
             </div>
             <div class="btn-play text-center animate__animated animate__bounceInUp shine">
-              <a style="font-family: 'arial black';" class="btn p-2 px-5 rounded-5 shine mt-5" href=""><b>PLAY NOW</b></a>
+              <a style="font-family: 'arial black';" class="btn p-2 px-5 rounded-5 shine mt-5" href="gamePage.html"><b>PLAY NOW</b></a>
             </div>
           </div>
           <div class="hero-img col-md-6 text-end animate__animated animate__bounceInRight">
@@ -320,28 +326,36 @@
   
     <div id="overlay" class="overlay"></div>
     <!-- Feedback End -->
-    
+
     <!-- main content start -->
     <main class="container my-5 pb-5 justify-content-center">
-      <div class="hero-content">
+      <div class="hero-content ">
         <div class="row text-center">
           <div class="col-md-4 d-flex justify-content-center my-5">
             <div class="card background-blur" data-aos="fade-up-right" data-aos-anchor-placement="top-center" data-aos-duration="1500" style="width: 25rem;">
-              <img src="./images/trainingImg.jpg" width="300px" height="280" class="card-img-top" alt="...">
+              <img src="./images/image-danger-cyber.avif" width="300px" height="280" class="card-img-top" alt="...">
               <div class="card-body">
                 <h3 class="card-title"><b>TRAINING MODE</b></h3>
                 <p class="card-text text-start">In Code Combat's training mode, aspiring JavaScript developers embark on a thrilling journey to enhance their coding skills.</p>
-                <a href="#additional-text" class="btn shine" style="font-family: 'arial black';" onclick="toggleParagraph()">Start Training</a>
+                <div style="font-family: 'arial black';" class="d-flex justify-content-between">
+                  <a class="text-info shine mt-2 text-decoration-none fs-6 fw-bolder" href="#additional-text1" 
+                  onclick="toggleParagraph1()">Learn more</a>
+                  <a href="#" class="btn shine" >Start Training</a>
+                </div>
               </div>
             </div>
           </div>
           <div class="col-md-4 d-flex justify-content-center my-5">
             <div class="card background-blur" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="1500" style="width: 25rem;">
-              <img src="./images/playerImg.png" width="300px" height="280" class="card-img-top" alt="...">
+              <img src="./images/hero-img.png" width="300px" height="280" class="card-img-top" alt="...">
               <div class="card-body">
                 <h3 class="card-title"><b>SINGLE PLAYER</b></h3>
                 <p class="card-text text-start">In the captivating world of a code-based single-player game, JavaScript enthusiasts embark on an exhilarating solo adventure.</p>
-                <a href="#additional-text1" class="btn shine" style="font-family: 'arial black';" onclick="toggleParagraph1()">Start Solo</a>
+                <div style="font-family: 'arial black';" class="d-flex justify-content-between">
+                  <a class="text-info shine mt-2 text-decoration-none fs-6 fw-bolder" href="#additional-text1" 
+                  onclick="toggleParagraph1()">Learn more</a>
+                  <a href="#" class="btn shine" >Start Solo</a>
+                </div>
               </div>
             </div>
           </div>
@@ -350,8 +364,12 @@
               <img src="./images/multiimg.jpg" class="card-img-top" width="300px" height="280" alt="...">
               <div class="card-body">
                 <h3 class="card-title"><b>PLAYER VS PLAYER</b></h3>
-                <p class="card-text text-start">In the adrenaline-fueled arena of player versus player (PvP) battles, JavaScript developers engage in intense coding duels like never before.</p>
-                <a href="#additional-text2 " class="btn shine" style="font-family: 'arial black';" onclick="toggleParagraph2()">Start Battle</a>
+                <p class="card-text text-start">In the adrenaline-fueled arena of player versus player  battles, JavaScript developers engage in intense coding duels like never before.</p>
+                <div style="font-family: 'arial black';" class="d-flex justify-content-between">
+                  <a class="text-info shine mt-2 text-decoration-none fs-6 fw-bolder" href="#additional-text1" 
+                  onclick="toggleParagraph1()">Learn more</a>
+                  <a href="#" class="btn shine" >Start Battle</a>
+                </div>
               </div>
             </div>  
           </div>   
@@ -372,10 +390,18 @@
         </div>
       </div>
 
-      <div class="about-info background-blur row text-center my-5 rounded-3" data-aos="zoom-out-up" data-aos-anchor-placement="top-center" data-aos-duration="1500">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 title ">
+            <h1 class="title-text">WE ARE CODE COMBAT</h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-info background-blur row text-center mt-5 mb-5 my-5 rounded-3">
         <img class="hero-img2 col-md-6 rounded" src="images/about_pic.svg" alt="">
         <di class="hero-content2 col-md-6 text-start text-white p-3">
-          <h3>The game is designed to teach players
+          <h3 class="content">The game is designed to teach players
           how to code in a fun and interactive way
           by presenting programming concepts 
          and techniques in a game-like format. 
@@ -383,7 +409,8 @@
           challenges and must write code to 
          complete them.
          <br>
-         <a style="font-family: 'arial black';" class="btn p-2 px-5 rounded-5 shine mt-5" href="about.html">LEARN MORE</a>
+         <br>
+         <a style="font-family: 'arial black';" class="text-info fs-6 text-decoration-none shine mt-5" href="about.html">Learn more</a>
         </h3>
       </div>
     </main>
