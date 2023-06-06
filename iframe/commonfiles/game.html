@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Combat</title>
+  <link rel="stylesheet" href="css/game.css">
+  <link rel="stylesheet" href="https://unpkg.com/cropperjs/dist/cropper.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/effects.css">
+  <link rel="stylesheet" href="css/fireflies.css">
+  <link rel="stylesheet" href="particle.css">
+  <link rel="stylesheet" href="css/loading.css">
+</head>
+<body>
+<!--  - - - - - -LOADING  - - - - - - - --  - - - - - - - -->
+<div id="loadingOverlay">
+  <div id="loadingCircle">
+  <div class="Disc">
+    <div class="Line"></div>
+    <div class="Line"></div>
+    <div class="Line"></div>
+    <div class="Line"></div>
+    <div class="Line"></div>
+    <div class="Line"></div>
+    <div class="Line"></div>
+    <div class="Line"></div>
+    <div class="Line"></div>
+    <div class="Line"></div>
+    <div class="Line"></div>
+    <div class="Line"></div>
+    <svg class="Disc-svg" viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg">
+      <circle class="Disc-circle" cx="125" cy="125" r="75"/>
+    </svg>
+    <div class="Spinner">
+      <svg class="Spinner-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle class="Spinner-circle" cx="50" cy="50" r="50"/>
+      </svg>
+    </div>
+    <div class="Radar"></div>
+  </div>
+  
+  <div class="Clip"></div>
+  
+  <div class="Bars">
+     <div class="Bar"></div>
+    <div class="Bar"></div>
+    <div class="Bar"></div>
+    <div class="Bar"></div>
+    <div class="Bar"></div>
+    <div class="Bar"></div>
+    <div class="Bar"></div>
+    <div class="Bar"></div>
+    <div class="Bar"></div>
+    <div class="Bar"></div>
+    <div class="Bar"></div>
+    <div class="Bar"></div>
+  </div>
+  </div>
+</div>
+
+
+  <nav>
+                  <div id="profileContainer">
+                    <button id="profileButton"> <img id="profilePicture" class="profilePicture" src=""> </button>
+                    <div class="userinfo">
+     
+                            <p id="fullName"></p>
+                            <p id="username"></p>
+
+                    </div>
+                    <img class="name-holder" src="images/vector_designs/name-holder.svg" alt="">
+
+                  </div>
+
+          
+                  
+                  <div class="level-exp">
+                    <p id="level"></p>
+                    <img class="level-holder" src="images/vector_designs/level-holder.svg" alt="">
+
+                      <span class="currentlevel">LVL <span id="currentlevel"></span></span>
+
+                    <span class="exp">Current EXP: <span id="exp"></span></span> 
+                    <div id="experienceBar">
+                      <div id="experienceBox">
+                        <div id="experienceBarFill"></div>
+                      </div>
+                    </div>
+                    <img class="exp-holder" src="images/vector_designs/EXP-holder.svg" alt="">
+                  </div>
+                
+                  <!-- Profile pop-up box -->
+                  <div id="profileBox">
+                    <button id="closeProfileButton">&times;</button>
+                  
+                    <div>
+                      <img id="profilePictureLarge" src="images/blank-profile.png" alt="">
+                      <button id="imageUploadButton"><i class="fa-solid fa-pen-to-square fa-xs" style="color: #f2f2f2;"></i></button>
+                      <input type="file" id="imageInput" style="display: none;">
+                    </div>
+                  
+                    <div class="pnameContainer">
+                    <h2 id="profileName"></h2>     <button id="editProfileButton"><i class="fa-solid fa-pen-to-square fa-xs" style="color: #ffffff;"></i></button>
+                    </div>
+                    
+                    <p id="profileUsername"></p>
+                    <button id="addExperienceButton">Add Experience</button>
+                    <button id="logoutButton">Log Out</button>
+
+                  </div>
+
+                    <!-- Crop editor -->
+                  <div id="cropEditorBox" class="crop-editor-box">
+
+                      <img id="previewImage" src="" alt="Preview">
+
+                      <button id="cropButton">Crop</button>
+
+                  </div>
+
+                  <!-- Profile name edit pop-up box -->
+                  <div id="editProfileNameBox" class="edit-profile-box">
+                    <h2>Edit Profile Name</h2>
+                    <input type="text" id="editProfileNameInput">
+                    <button id="saveProfileNameButton">Save</button>
+                    <button id="closeEditProfileButton">Close</button>
+
+                  </div> 
+
+                <!-- -  - - - - - - - - - - - - - - --  - - -->
+
+                    <div class="coin-area">
+
+                      <div id="peso-circle"><i class="fa-solid fa-peso-sign" style="color: #ffffff;"></i> </div>
+
+                      <div class="coinBox">
+                        <p id="coins"></p>
+                      </div>
+                      <div id="coin-holder">
+                      <img src="images/coin-holder.svg" alt="">
+                    </div>
+
+                  </div>
+
+
+  
+
+</nav>
+
+<div class="right-buttons">
+  <img class="settings-icons" src="images/vector_designs/settings.svg" alt="">
+  <img class="horizon-button" src="images/vector_designs/horizon-button.svg" alt="">
+  <img class="message-icons" src="images/vector_designs/message.svg" alt="">
+  <img class="horizon-button" src="images/vector_designs/horizon-button.svg" alt="">
+  <img class="music-icons" onclick="musicBox()" src="images/vector_designs/music.svg" alt="">
+  <img class="horizon-button" src="images/vector_designs/horizon-button.svg" alt="">
+</div>
+
+
+<div id="music-box">
+  <div onclick="closeButton()" class="close-musicBox">X</div>
+  <audio id="audio" controls></audio>
+  <input type="file" id="thefile" multiple>
+  <label for="thefile" id="file-label"><i class="fa-solid fa-upload" style="color: #ffffff;"></i></label>
+</div>
+
+
+
+<canvas id="canvas"></canvas>
+
+                  <!-- Character selection pop-up box -->
+                  <div id="characterSelectionBox" class="character-box">
+                    <h2>Select a Character</h2>
+                    <div id="character1" class="character">
+                      <img src="images/characters/character1.svg" alt="">
+                      <span class="character-name">Carlo</span>
+                      <span class="character-status"></span>
+                    </div>
+                    <div id="character2" class="character locked">
+                      <img src="images/characters/character2.svg" alt="">
+                      <span class="character-name">Rannie</span>
+                      <span class="character-status"><i class="fas fa-lock"></i></span>
+                    </div>
+                    <div id="character3" class="character locked">
+                      <img src="images/characters/character3.svg" alt="">
+                      <span class="character-name">Immanuel</span>
+                      <span class="character-status"><i class="fas fa-lock"></i></span>
+                    </div>
+                    <div id="character4" class="character locked">
+                      <img src="images/characters/character4.svg" alt="">
+                      <span class="character-name">Joelo</span>
+                      <span class="character-status"><i class="fas fa-lock"></i></span>
+                    </div>
+                    <button id="closeButton">x</button>
+
+                  </div>
+                  
+
+
+
+                  <!-- Characters-->
+                  <!-- HTML -->
+  
+                  <p id="characterDisplay" style="display: none;"></p>
+                  <img class="glitch" id="characterImage" src="" alt="">
+                 <!-- <img id="character-frame" src="images/character-frame.webp" alt=""> -->
+
+                 <section>
+
+                  <div class="character-menu">
+                    <button id="charactersButton">
+                      <img class="button-icon" src="images/vector_designs/character-logo.svg" alt="">
+                      <div class="button-label">CHARACTERS</div>
+                    </button>
+                  </div>
+
+                  <div class="bag-menu">
+                    <button id="charactersButton">
+                      <img class="button-icon" src="images/vector_designs/items.svg" alt="">
+                      <div class="button-label">ITEMS</div>
+                    </button>
+                  </div>
+
+                  <div class="rewards-menu">
+                    <button id="charactersButton">
+                      <img class="reward-icon" src="images/vector_designs/rewards.svg" alt="">
+                      <div class="button-label">REWARDS</div>
+                    </button>
+                  </div>
+
+                  <div class="store-menu">
+                    <button id="charactersButton">
+                      <img class="store-icon" src="images/vector_designs/store.svg" alt="">
+                      <div class="button-label">STORE</div>
+                    </button>
+                  </div>
+
+                  <div class="achievements-menu">
+                    <button id="charactersButton">
+                      <img class="achievements-icon" src="images/vector_designs/achievements.svg" alt="">
+                      <div class="button-label">ACHIEVEMENTS</div>
+                    </button>
+                  </div>
+   
+                  <div class="side-buttons-prl"></div>
+                  <div class="side-buttons"></div>
+                  <div class="side-buttons"></div>
+                  <div class="side-buttons"></div>
+                  <div class="side-buttons-prl2"></div>
+                 </section>
+
+                 <div class="game-menu">
+                  <span class="menu-text">SOLO Mode</span>
+                  <a href="../practice/practice_mode.html"> <div class="menu-buttons"></div> </a>
+                  <span class="menu-text">Cyber Clash <i class="fa-solid fa-lock" style="color: #004466;"></i></span>
+                  <div class="menu-buttons"></div>
+                  <span class="menu-text">ADVENTURE <i class="fa-solid fa-lock" style="color: #004466;"></i></span>
+                  <div class="menu-buttons"></div>
+                  <span class="menu-text">SIDE-QUEST <i class="fa-solid fa-lock" style="color: #004466;"></i></span>
+                  <div class="menu-buttons"></div>
+                 </div>
+                              
+<!-- Quantity should be the same in Sass <div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div><div class="firefly"></div> -->
+<!--<div class="container"><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div></div>-->
+
+<div class="scene">
+  <div class="wrapper">
+    <div class="globe">
+      <span class="ring"></span>
+      <span class="ring"></span>
+      <span class="ring"></span>
+      <span class="ring"></span>
+      <span class="ring"></span>
+      <span class="ring"></span>
+      <span class="ring"></span>
+
+      <span class="ring"></span>
+      <span class="ring"></span>
+      <span class="ring"></span>
+    </div>
+  </div>
+</div>
+
+<div id="particles-js"></div>
+                <script src="https://unpkg.com/cropperjs/dist/cropper.js"></script>
+                <script src="scripts/crop-editor.js"></script>
+                <script src="scripts/character.js"></script>
+                <script src="scripts/profile.js"></script>
+                <script src="scripts/script.js"></script>
+                <script src="scripts/cursor.js"></script>
+                <script src="scripts/particles.js"></script>
+                <script src="scripts/app.js"></script>
+                <script src="scripts/musicVisualizer.js"></script>
+
+  <script>
+    document.getElementById("imageInput").addEventListener("change", function() {
+      document.getElementById("cropEditorBox").style.display = "block";
+    });
+
+    document.getElementById("cropButton").addEventListener("click", function() {
+      // Get the cropped image and perform further actions
+      // ...
+
+      // Hide the crop editor pop-up box
+      document.getElementById("cropEditorBox").style.display = "none";
+    });
+  </script>
+  
+</body>
+</html>

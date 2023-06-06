@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="fontawesome-free-6.4.0-web/css/all.css">
+  <title>Practice Mode</title>
+</head>
+<body>
+ <img id="table" src="images/vector/table.svg" alt="">
+<img id="monitor" src="images/vector/monitor.svg" alt="">
+  <div class="container">
+    <div id="question-box">
+      <h2 id="question-title">Loading...</h2>
+      <p id="question-description"></p>
+    </div>
+  </div>
+
+<div id="difficulty-container">
+    <div class="wrap">
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="100%" height="100%" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 4291.45 2895.88" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+  <defs>
+   <style type="text/css">
+    
+     .fil0 {fill:#EBEB2A}
+    
+   </style>
+  </defs>
+  <g id="Layer_x0020_1">
+   <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+   <g id="_1547444682336">
+    <polygon class="fil0 svg-elem-1" points="4256.11,2393.62 4256.11,1881.2 4210.76,1926.62 4210.76,2348.19 4256.11,2393.62 "></polygon>
+    <polygon class="fil0 svg-elem-2" points="3589.19,0 3634.61,45.36 4246.09,45.36 4291.45,0 3589.19,0 "></polygon>
+    <path class="fil0 svg-elem-3" d="M4220.91 430.19l0 54.57 70.54 -70.54 0 -54.57 -70.54 70.54zm0 -109.08l0 54.51 70.54 -70.67 0 -54.51 -70.54 70.54 0 0.13zm0 -109.15l0 54.57 70.54 -70.54 0 -54.57 -70.54 70.54z"></path>
+    <path class="fil0 svg-elem-4" d="M-0 2825.34l0 -54.57 70.54 70.54 0 54.57 -70.54 -70.54zm0 -109.08l0 -54.57 70.54 70.54 0 54.51 -70.54 -70.34 0 -0.13zm0 -109.15l0 -54.57 70.54 70.34 0 54.57 -70.54 -70.54 0 0.2z"></path>
+   </g>
+  </g>
+ </svg>
+ 
+    </div>
+
+    <div class="wrap2">
+    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="6.69876in" height="4.5225in" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 4297.26 2901.19"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str0 {stroke:#EBEB2A;stroke-width:4.28;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2.61313}
+    .fil0 {fill:none}
+   ]]>
+  </style>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_1546227899888">
+   <polygon class="fil0 str0" points="4259.77,2396.61 4259.77,1884.01 4214.4,1929.45 4214.4,2351.17 4259.77,2396.61 "/>
+   <polygon class="fil0 str0" points="3592.61,2.14 3638.05,47.51 4249.75,47.51 4295.12,2.14 3592.61,2.14 "/>
+   <path class="fil0 str0" d="M4224.56 432.48l0 54.59 70.57 -70.57 0 -54.59 -70.57 70.57zm0 -109.12l0 54.53 70.57 -70.7 0 -54.53 -70.57 70.57 0 0.13zm0 -109.19l0 54.59 70.57 -70.57 0 -54.59 -70.57 70.57z"/>
+   <path class="fil0 str0" d="M2.14 2828.49l0 -54.59 70.57 70.57 0 54.59 -70.57 -70.57zm0 -109.12l0 -54.59 70.57 70.57 0 54.53 -70.57 -70.37 0 -0.13zm0 -109.19l0 -54.59 70.57 70.37 0 54.59 -70.57 -70.57 0 0.2z"/>
+  </g>
+ </g>
+</svg>
+    </div>
+    <div class="difficulty-levels">
+    <input type="radio" id="easy" name="level" value="easy" checked>
+    <label for="easy" class="radio-button">Easy</label> 
+  
+    <input type="radio" id="normal" name="level" value="normal">
+    <label for="normal" class="radio-button">Normal</label>
+  
+    <input type="radio" id="hard" name="level" value="hard">
+    <label for="hard" class="radio-button">Hard</label>
+  </div>
+  
+<img id="diff-box" src="images/vector/difficulty-box.svg" alt="">
+
+  
+  <button id="proceed"><span id="next-button">NEXT</span><img src="images/vector/nextbuttonsvg.svg" alt="proceed"></button>
+
+</div>
+
+  <div class="quest-container">
+        <div id="quest-tracker">
+          <div class="quest-circle"></div>
+          <div class="quest-circle"></div>
+          <div class="quest-circle"></div>
+          <div class="quest-circle"></div>
+          <div class="quest-circle"></div>
+        </div>
+      
+        <div id="line-tracker">
+          <div class="quest-line"></div>
+          <div class="quest-line"></div>
+          <div class="quest-line"></div>
+          <div class="quest-line"></div>
+        </div>
+  </div>
+
+
+  <div id="characterImageContainer">
+    <img id="laptop" src="images/laptops/laptop1.svg" alt="">
+    <iframe id="characterImage" src="" alt="Selected Character"></iframe>
+  </div>
+  
+    <div class="card">
+      <button id="checkButton">Check</button> 
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="code-editor">
+        <div class="line-numbers"></div>
+        <textarea id="code"></textarea>
+      </div>
+    </div>
+<!-- HTML markup -->
+<div id="errorOutput"></div>
+
+
+<div class="logo-wrap">
+<!--?xml version="1.0" encoding="UTF-16"?-->
+
+<!-- Creator: CorelDRAW 2021 (64-Bit) -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="100%" height="100%" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 11126.48 3273.85" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+  <defs>
+   <style type="text/css">
+    
+     .str0 {stroke:#D1FFFF;stroke-width:5.24;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2.61313}
+     .fil0 {fill:none;fill-rule:nonzero}
+    
+   </style>
+  </defs>
+  <g id="Layer_x0020_1">
+   <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+   <g id="_1944994565776">
+    <polygon class="fil0 str0 svg-elem-1" points="7408.88,1587.74 7409.09,1583.08 3,1259.73 2.8,1264.38 "></polygon>
+    <polygon class="fil0 str0 svg-elem-2" points="6888.34,1464.67 5294.12,1383.82 5230.78,1162.54 3579.53,1057.38 3354.81,1313.69 3353.66,1313.69 2.62,1120.48 2.87,1115.89 3352.76,1308.94 3577.56,1052.55 5234.3,1158.12 5297.64,1379.32 6888.59,1460.09 "></polygon>
+    <polygon class="fil0 str0 svg-elem-3" points="6885.91,1562.47 6926.5,763.82 6921.84,763.58 6881.25,1562.24 "></polygon>
+    <polygon class="fil0 str0 svg-elem-4" points="4489.33,1113.13 4518.79,594.48 4514.13,594.21 4484.68,1112.86 "></polygon>
+    <polygon class="fil0 str0 svg-elem-5" points="5235.08,1160.35 5242.1,645.09 5237.43,645.02 5230.42,1160.29 "></polygon>
+    <polygon class="fil0 str0 svg-elem-6" points="7408.73,2327.7 6411,2275.81 6410.34,2274.91 6185.95,1938.74 3848.27,1858.54 3672.25,2170.57 3670.77,2170.57 2804.39,2147.66 2804.47,2143 3669.55,2165.91 3845.57,1853.79 3847.04,1853.87 6188.49,1934.15 6189.14,1935.13 6413.54,2271.31 7408.97,2323.11 "></polygon>
+    <polygon class="fil0 str0 svg-elem-7" points="2793.8,3259.89 2816.02,1387.64 2811.35,1387.59 2789.13,3259.83 "></polygon>
+    <polygon class="fil0 str0 svg-elem-8" points="2803.45,2332.78 2803.59,2328.12 2.76,2244.01 2.62,2248.67 "></polygon>
+    <polygon class="fil0 str0 svg-elem-9" points="2070.91,2830.82 2069.76,2830.82 2.79,2826.15 2.79,2821.49 2068.7,2826.23 2305.36,2528.76 2802.43,2528.76 2802.43,2533.43 2307.57,2533.43 "></polygon>
+    <polygon class="fil0 str0 svg-elem-10" points="1425.49,3266.97 1463.32,2828.41 1458.67,2828.01 1420.84,3266.57 "></polygon>
+    <polygon class="fil0 str0 svg-elem-11" points="1732.28,3259.71 1736.94,3259.71 1736.94,2827.78 1732.28,2827.78 "></polygon>
+    <polygon class="fil0 str0 svg-elem-12" points="5238.47,3263.47 5233.89,3263.39 5256.64,1904.53 5261.22,1904.61 "></polygon>
+    <polygon class="fil0 str0 svg-elem-13" points="5291.24,3271.23 5328.7,1904.7 5324.03,1904.57 5286.58,3271.1 "></polygon>
+    <polygon class="fil0 str0 svg-elem-14" points="7138.5,3260.21 7143.16,3259.98 7094.99,2309.3 7090.34,2309.54 "></polygon>
+    <polygon class="fil0 str0 svg-elem-15" points="7384.44,3259.53 7422.67,798.4 7418,798.33 7379.77,3259.45 "></polygon>
+    <polygon class="fil0 str0 svg-elem-16" points="7381.72,3167.97 7381.64,3163.31 8707.85,3135.24 8830.76,2826.23 8832.32,2826.23 11123.68,2781.96 11123.85,2786.62 8833.95,2830.82 8711.04,3139.82 8709.48,3139.82 "></polygon>
+    <polygon class="fil0 str0 svg-elem-17" points="10111.13,2804.02 10144.38,2.78 10139.72,2.73 10106.47,2803.97 "></polygon>
+    <polygon class="fil0 str0 svg-elem-18" points="10126.97,1221.36 11123.86,1151.13 11123.54,1146.47 10126.65,1216.71 "></polygon>
+    <polygon class="fil0 str0 svg-elem-19" points="9473.82,2816.17 9469.23,2816.17 9469.23,2327.62 9029.05,1930.88 9029.05,1929.9 8991.57,2.7 8996.23,2.62 9033.63,1928.75 9473.82,2325.57 "></polygon>
+    <polygon class="fil0 str0 svg-elem-20" points="7415.19,1220.72 7414.45,1216.14 9011.61,934.47 9012.43,939.05 "></polygon>
+    <polygon class="fil0 str0 svg-elem-21" points="7401.75,1786.75 9024.83,1588.61 9024.27,1583.98 7401.19,1782.12 "></polygon>
+    <polygon class="fil0 str0 svg-elem-22" points="8579.45,3140.15 8584.11,3140.15 8584.11,1639.47 8579.45,1639.47 "></polygon>
+   </g>
+  </g>
+ </svg>
+ 
+</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jshint/2.13.6/jshint.min.js"></script>
+  <script src="fontawesome-free-6.4.0-web/js/all.js"></script>
+  <script src="script.js"></script>
+  <script src="code-editor.js"></script>
+  <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        var logowrap = document.querySelector('.logo-wrap svg');
+      
+      function animateLoop() {
+        // Add the 'active' class
+        logowrap.classList.add('active');
+      
+        // Wait for 0.5 seconds
+        setTimeout(function() {
+          // Remove the 'active' class
+          logowrap.classList.remove('active');
+      
+          // Call the function again after 0.5 seconds
+          setTimeout(animateLoop, 3300);
+        }, 3000);
+      }
+      
+      // Call the function to start the animation loop
+      animateLoop();
+
+
+    });
+  </script>
+</body>
+</html>

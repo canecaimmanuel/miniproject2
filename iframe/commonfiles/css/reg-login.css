@@ -1,0 +1,18 @@
+
+/* Add some basic styling */
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+input {
+  margin-bottom: 10px;
+}
+#message {
+  margin-top: 10px;
+  color: red;
+  font-weight: bold;
+}
