@@ -642,7 +642,7 @@ ul a{
 }
 
 .card:hover {
-      transform: scale(1.1) !important;
+      transform: scale(1.05) !important;
 }
 
 .about-info {
@@ -650,6 +650,11 @@ ul a{
     border: 1px solid rgb(101, 213, 230) !important;
     background-color: #3866a330 !important;
     color: #fff !important;
+}
+
+.icon-team {
+  font-size: 30px;
+  cursor: pointer;
 }
 
 /* CSS for code tutorial*/
