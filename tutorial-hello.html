@@ -252,6 +252,27 @@
     </main>
     <!-- main content end -->
 
+          <!-- Pop-up Ad -->
+          <div id="popup" class="popup" style="display: none;">
+            <span class="close-btn text-danger" onclick="closePopup()">&times;</span>
+            <h1 class="text-center"><b>BUY NOW</b></h1>
+            <img src="https://m.media-amazon.com/images/I/61oZdbrIKpL._AC_UF1000,1000_QL80_.jpg" width="300px" alt="Pop-up Ad Image">
+            <h2>Click <span><a href="">here</a></span> to Order</h2>
+          </div>
+          <div id="popup1" class="popup1" style="display: none;">
+            <span class="close-btn text-danger" onclick="closePopup1()">&times;</span>
+            <img src="https://blog.adpushup.com/blog/wp-content/uploads/2023/02/Blog-Ad-GIF.gif" width="300px" alt="Pop-up Ad Image">
+          </div>
+          <div id="popup2" class="popup2" style="display: none;">
+            <span class="close-btn text-danger" onclick="closePopup2()">&times;</span>
+            <h2 class="text-center"><b>Try Premium Now!!!</b></h2>
+            <img src="https://tpc.googlesyndication.com/simgad/1634103270427464964?sqp=4sqPyQQrQikqJwhfEAEdAAC0QiABKAEwCTgDQPCTCUgAUAFYAWBfcAJ4AcUBLbKdPg&rs=AOga4qnQyveGEcm0Jl7R0u1o_4lYT80zPQ" width="100%" alt="Pop-up Ad Image">
+          </div>
+
+          <div id="scroll-up-btn">
+            <a href="#" class="arrow"><i><img src="./images/up-arrow.png" alt="" width="50px"></i></a>
+          </div>
+          
     <footer class="p-1">
       <div class="row d-flex">
         <div class="col-md-3 fs-5 ms-5 ps-5 pt-3 text-white">
@@ -301,6 +322,26 @@
     <script src="https://kit.fontawesome.com/d8edc96e0a.js" crossorigin="anonymous"></script>
     <script>
       AOS.init();
+      function closePopup() {
+        document.getElementById('popup').style.display = 'none';
+      }
+      setTimeout(function() {
+        document.getElementById('popup').style.display = 'block';
+      }, 3000);
+
+      function closePopup1() {
+        document.getElementById('popup1').style.display = 'none';
+      }
+      setTimeout(function() {
+        document.getElementById('popup1').style.display = 'block';
+      }, 1000);
+
+      function closePopup2() {
+        document.getElementById('popup2').style.display = 'none';
+      }
+      setTimeout(function() {
+        document.getElementById('popup2').style.display = 'block';
+      }, 1000);
     </script>
     <script src="script.js"></script>
     <!-- Script for Exercise Button -->

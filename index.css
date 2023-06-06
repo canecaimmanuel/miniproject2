@@ -48,6 +48,28 @@ canvas {
     z-index: -9999;
     
 }
+#scroll-up-btn {
+  display: none;
+}
+  
+.arrow{
+  position: fixed;
+  height: 50px;
+  bottom: 30px;
+  right: 20px;  
+  border-radius: 100%;
+  background: #63B8EE;
+  text-shadow: 2px 1px 0px #7CACDE;
+  box-shadow: 1px 1px 1px #BEE2F9; 
+  background: linear-gradient(to top, #63B8EE, #468CCF);
+  z-index: 99;
+}
+.arrow:hover {
+  background: #468CCF;
+  background: linear-gradient(to top, #468CCF, #64DCEE);
+}
+
+
 
 
 nav div ul li h1 {
@@ -62,6 +84,7 @@ nav div ul li h1 {
     left: 0;
     width: 100%;
     backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
     z-index: 990;
   }
 
@@ -265,14 +288,6 @@ nav form input {
   background-color: rgb(34, 34, 34) !important;
 }
 
-
-#feedbackContainer {
-  padding-top: 20px;
-  background-color: #3866A3 !important;
-  height: 250px;
-  padding-left: 10px;
-}
-
 input[type="search"]::placeholder {
   color: rgb(255, 255, 255); /* Set the color you desire */
 }
@@ -449,12 +464,14 @@ input[type="search"]::placeholder {
     position: fixed;
     bottom: 30%;
     left: 0px;
-    padding: 5px;
+    padding-top: 20px;
+    padding-left: 10px;
     transform: translateY(-50%, -50%);
     white-space: nowrap;
     writing-mode:vertical-lr;
     font-size: 20px;
-    background-color: #fff;
+    height: 250px;
+    background-color: #3866A3 !important;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     border-end-start-radius: 20px;
     z-index: 99;
@@ -609,6 +626,36 @@ ul a{
     background: linear-gradient(to top, #468CCF, #64DCEE);
   }
   /* buttons end */
+
+  .game-info {
+    border-radius: 5px;
+    border: 1px solid rgb(101, 213, 230) !important;
+    background-color: #3866a330 !important;
+    color: #fff !important;
+  }
+
+.card { 
+    border-radius: 5px;
+    border: 1px solid rgb(101, 213, 230) !important;
+    background-color: #3866a330 !important;
+    color: #fff !important;
+}
+
+.card:hover {
+      transform: scale(1.05) !important;
+}
+
+.about-info {
+  border-radius: 5px;
+    border: 1px solid rgb(101, 213, 230) !important;
+    background-color: #3866a330 !important;
+    color: #fff !important;
+}
+
+.icon-team {
+  font-size: 30px;
+  cursor: pointer;
+}
 
 /* CSS for code tutorial*/
 
@@ -1141,6 +1188,71 @@ ul a{
       }
     }
 
+        /* Popup Ads */
+        .popup {
+          position: fixed;
+          top: 55%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-color: #fff;
+          padding: 30px;
+          border: 1px solid #ccc;
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+          z-index: 990;
+        }
+        .close-btn {
+          position: absolute;
+          top: 0;
+          right: 10px;
+          font-size: 30px;
+          color: #aaa;
+          cursor: pointer;
+        }
+        .popup1 {
+          position:absolute;
+          top: 70%;
+          left: 88%;
+          transform: translate(-50%, -50%);
+          background-color: #fff;
+          padding: 30px;
+          border: 1px solid #ccc;
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+          z-index: 950;
+        }
+        .popup2 {
+          position:relative;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-color: #fff;
+          padding: 30px;
+          border: 1px solid #ccc;
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+          z-index: 940;
+        }
+
+        @media only screen and (max-width: 800px) {
+          .popup1 {
+            position:absolute;
+            top: 70%;
+            left: 84%;
+            width: 150px;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 15px;
+            padding-top: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            z-index: 950;
+          } 
+          .popup1 img {
+            width: 120px;
+          }
+          .close-btn {
+            font-size: 20px;
+          }
+        }
+        
     .logo-wrap {
       height: 50px;
   }
