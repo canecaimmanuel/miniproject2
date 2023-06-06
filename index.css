@@ -627,6 +627,31 @@ ul a{
   }
   /* buttons end */
 
+  .game-info {
+    border-radius: 5px;
+    border: 1px solid rgb(101, 213, 230) !important;
+    background-color: #3866a330 !important;
+    color: #fff !important;
+  }
+
+.card { 
+    border-radius: 5px;
+    border: 1px solid rgb(101, 213, 230) !important;
+    background-color: #3866a330 !important;
+    color: #fff !important;
+}
+
+.card:hover {
+      transform: scale(1.1) !important;
+}
+
+.about-info {
+  border-radius: 5px;
+    border: 1px solid rgb(101, 213, 230) !important;
+    background-color: #3866a330 !important;
+    color: #fff !important;
+}
+
 /* CSS for code tutorial*/
 
 .codes{
