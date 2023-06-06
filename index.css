@@ -1213,11 +1213,36 @@ ul a{
 
     /* Game content display */
     
+    #game-page {
+      margin-top: 80px;
+    }
+
+    .game-title {
+      margin-top: 5rem;
+      color: white;
+      text-shadow: 0 0 5px #1897ff, 0 0 10px #1897ff, 0 0 15px #1897ff, 0 0 20px #1897ff;
+    }
+
+    .game-title:hover {
+      color: #4ad2ff !important;
+      font-family: 'zzzz', cursive;
+    }
+
+    #carouselExampleDark {
+      margin-top: 5rem;
+    }
+
     .bg {
       background: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
-      clip-path: polygon(0 0, 50% 20%, 100% 70%, 0 100%);
+      clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%);
       height: 70vh;
       width: 100vw;
+    }
+
+    .rules {
+      margin-top: 8rem;
+      font-size: 30px;
+      
     }
 
     @media screen and (max-width: 767px) {
