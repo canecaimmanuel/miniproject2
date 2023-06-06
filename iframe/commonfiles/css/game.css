@@ -598,8 +598,8 @@ img {
 }
 /* - - - - - - - Side-Menu - - - - - - - - - - */
 section {
-  position: relative;
-  top: -40vw;
+  position: absolute;
+  top: 8vw;
   left: 0vw;
   width: 20vw;
   z-index: 11;
@@ -678,7 +678,7 @@ section {
   position: absolute;
   flex-wrap: wrap;
   z-index: 10;
-  top: 0.4vw;
+  top: 1.3vw;
   left: 0.5vw;
   display: flex;
   flex-direction: column;  
@@ -693,7 +693,7 @@ section {
   position: absolute;
   flex-wrap: wrap;
   z-index: 10;
-  top: 7.8vw;
+  top: 8.5vw;
   left: 1vw;
   display: flex;
   flex-direction: column;  
@@ -708,7 +708,7 @@ section {
   position: absolute;
   flex-wrap: wrap;
   z-index: 10;
-  top: 14.8vw;
+  top: 15.5vw;
   left: 1vw;
   display: flex;
   flex-direction: column;  
@@ -723,7 +723,7 @@ section {
   position: absolute;
   flex-wrap: wrap;
   z-index: 10;
-  top: 21.5vw;
+  top: 22.3vw;
   left: 0.5vw;
   display: flex;
   flex-direction: column;  
@@ -738,7 +738,7 @@ section {
   position: absolute;
   flex-wrap: wrap;
   z-index: 10;
-  top: 28.5vw;
+  top: 29.5vw;
   left: 0.3vw;
   display: flex;
   flex-direction: column;  
@@ -835,7 +835,7 @@ section {
   position: absolute;
   right: 1.5vw;
   top: 2vw;
-  scale: 0.8;
+
 }
 
 .horizon-button {
@@ -844,11 +844,11 @@ section {
 }
 
 .settings-icons {
-  right: 0.9vw;
-  top: 0.9vw;
+  right: 1vw;
+  top: 1vw;
   position: absolute;
-  height: 2.2vw;
-  width: 2.2vw;
+  height: 2vw;
+  width: 2vw;
   cursor: url('../images/cursor/Link.gif'), pointer;
 }
 
