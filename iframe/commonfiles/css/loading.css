@@ -3,7 +3,7 @@
 #loadingOverlay {
   display: block;
   position: absolute;
-  z-index: 30;
+  z-index: 60;
   top: 0px;
   background-color: rgb(26, 26, 26);
   height: 100%;

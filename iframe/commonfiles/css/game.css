@@ -32,7 +32,6 @@ nav {
 margin: 0vw;
  position: absolute;
  top: -0.8vw;
- z-index: 10;
 }
 
 img {
@@ -170,6 +169,7 @@ img {
 
 #imageUploadButton {
   position: absolute;
+  z-index: 60;
   background-color: black;
   cursor: pointer;
   height: 1.5vw;
@@ -244,8 +244,8 @@ img {
 }
 
 #profileContainer {
-  position: absolute;
-  z-index: 99;
+  position: relative;
+  z-index: 30;
   margin-top: 1.1vw;
   margin-left: 1.5vw;
   display: flex;
@@ -279,7 +279,7 @@ img {
 #profileButton {
   display: flex;
   position: relative;
-  z-index: 99;
+  z-index: 30;
   border-radius: 1.13vw;
   padding: 0vw;
   background-color: transparent;
