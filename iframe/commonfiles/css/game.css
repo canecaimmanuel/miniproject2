@@ -244,11 +244,10 @@ img {
 }
 
 #profileContainer {
+  position: absolute;
+  z-index: 99;
   margin-top: 1.1vw;
   margin-left: 1.5vw;
-  display: flex;
-  align-items: center;
-  position: relative;
   display: flex;
   align-items: center;
 
@@ -279,6 +278,8 @@ img {
 
 #profileButton {
   display: flex;
+  position: relative;
+  z-index: 99;
   border-radius: 1.13vw;
   padding: 0vw;
   background-color: transparent;
