@@ -165,7 +165,7 @@
           <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo03">
             <ul class="navbar-nav">
               <li class="nav-item d-flex pe-2 "> 
-                <a class="nav-link text-info text-bg-secondary rounded shine"  href="index.html" title="Home Page"><ion-icon class="nav-logo" name="home"></ion-icon></a> 
+                <a class="nav-link"  href="index.html" title="Home Page"><ion-icon class="nav-logo" name="home"></ion-icon></a> 
                 <h1 class="ps-2">|</h1>
               </li>
               <li class="nav-item d-flex pe-2 ">
@@ -186,6 +186,91 @@
         </div>
       </nav>
     </section>
+
+  <!-- Login start -->
+  <div class="login-box">
+    <div class="wrapper">
+      <span class="icon-close"><ion-icon name="close-outline"></ion-icon></span>
+
+    <div class="form-box login">
+        <h2 class="text-info">Login</h2>
+        <form action="#">
+            <div class="input-box">
+                <span class="icon text-info"><ion-icon name="mail-outline"></ion-icon></span>
+                <input class="text-light" autocomplete="email" type="email" required>
+                <label class="text-light">Email</label>
+            </div>
+            <div class="input-box">
+                <span class="icon text-info"><i class="fas fa-eye-slash" id="togglePassword"></i></span>
+                <input class="text-light" autocomplete="current-password" type="password" id="id_password" required>              
+                <label class="text-light">Password</label>
+            </div>
+            <div class="remember-forgot">
+                <label class="text-info"><input type="checkbox">
+                Remember me</label>
+                <a class="text-info" href="#">Forgot Password?</a>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn px-5" style="font-family: 'arial black';">Login</button>
+            </div>
+            <div class="login-register text-info">
+                <p>Don't have an account? <a 
+                href="#"
+                class="register-link text-light">Sign up</a></a></p>
+            </div>
+            <div class="d-flex text-white">
+              <p>or login with</p>
+              <div class="social-logo ms-4 fs-3">
+                <a href=""><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href=""><ion-icon name="logo-github"></ion-icon></a>
+                <a href=""><ion-icon name="logo-linkedin"></ion-icon></a>
+                <a href=""><ion-icon name="logo-twitter"></ion-icon></a>
+                <a href=""><ion-icon name="logo-google"></ion-icon></a>
+              </div>
+            </div>
+        </form>
+    </div>
+    <!-- Login end -->
+
+      <!-- Register Start -->
+      <div class="form-box register">
+          <h2 class="text-info">Create Account</h2>
+          <form action="#">
+              <div class="input-box">
+                  <span class="icon">
+                      <ion-icon class="text-info" name="person-outline"></ion-icon></ion-icon></span>
+                  <input class="text-light" type="email" id="id_password" required>
+                  <label class="text-light">Username</label>
+              </div>
+              <div class="input-box">
+                  <span class="icon">
+                      <ion-icon class="text-info" name="mail-outline"></ion-icon></span>
+                  <input class="text-light" type="email" required>
+                  <label class="text-light">Email</label>
+              </div>
+              <div class="input-box">
+                <span class="icon text-info"><i class="fas fa-eye-slash" id="togglePassword1"></i></span>
+                <input class="text-light" autocomplete="current-password" type="password" id="id_password1" required>              
+                <label class="text-light">Password</label>
+              </div>
+              <div class="remember-forgot">
+                  <label class="text-info"><input type="checkbox">
+                I agree to the terms & conditions</label>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn px-5" style="font-family: 'arial black';">Register</button>
+              </div>
+              <div class="login-register">
+                  <p class="text-info">Already have an account? <a 
+                  href="#"
+                  class="login-link text-light">Login</a></p>
+              </div>
+          </form>
+        </div>
+    </div>
+  </div>
+  <div id="overlay" class="overlay"></div>
+  <!-- register End -->
 
     <main class="container">
         <div id="game-page" class="row">
