@@ -60,8 +60,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   const messageContainer = document.getElementById('message-container');
   const messages = [
-    "Hi, Welcome to Code combat!",
-    "I will be your AI Assistant",
+    "I'm the registration Assistant",
     "Are you new here?",
   ];
   let buttonsContainer = document.getElementById('buttons-container');
@@ -140,7 +139,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
   function handlePasswordClick() {
     setTimeout(() => {
-      messageContainer.textContent = "I suggest that the password will be more than 6 characters long";
+      messageContainer.textContent = "In the password, I suggest that the password will be more than 6 characters long";
     }, 1000);
   }
   

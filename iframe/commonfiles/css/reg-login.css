@@ -139,11 +139,11 @@ input {
   display: flex;
   width: 3vw;
   height: 2vw;
-  background-color: rgb(157, 255, 255);
+  background-color: rgb(255, 157, 157);
   margin-left: 1.5vw;
   border-radius: 100%;
   animation: eye-animate 4s infinite;
-  box-shadow: 0 0 10px 10px rgba(23, 240, 255, 0.5);
+  box-shadow: 0 0 10px 10px rgba(255, 23, 23, 0.5);
 }
 
 @keyframes eye-animate {
@@ -202,6 +202,8 @@ input {
   background-color: aliceblue;
   color: black;
   border-radius: 20px;
+  padding: 1vw;
+  opacity: 0%;
   transition: width 0.5s ease forwards;
   animation-name: message-animation;
   animation-duration: 1s;
@@ -212,12 +214,19 @@ input {
 
 @keyframes message-animation {
   0% {
+    opacity: 0%;
+    width: 0vw;
+    height: 0vw;
+  }
+  10% {
+    opacity: 100%;
     width: 0vw;
     height: 0vw;
   }
   100% {
+    opacity: 100%;
     width: 15vw;
-    height: 5vw;
+    height: 4vw;
   }
 }
 

@@ -33,7 +33,7 @@
   .title-text{
       font-weight: 900;
       font-family: 'zzzz', cursive, sans-serif;
-      font-size: 6rem;
+      font-size: 110px;
     }
     
   .hero-content2 h3 {
@@ -45,7 +45,7 @@
   .typing-animation {
             font-family: 'zzzz', cursive;
             white-space: nowrap;
-            width: 30em;
+            width: 25vw !important;
             animation: typing 10s steps(40, end), blink-caret 0.75s step-end infinite, flicker 2s infinite;
             color: rgb(195, 231, 255) !important;
             text-shadow: 0 0 5px #1897ff, 0 0 10px #1897ff, 0 0 15px #1897ff, 0 0 20px #1897ff;
@@ -79,9 +79,7 @@
                 opacity: 0;
             }
         }
-    .hero-img {
-      margin-top: 150px;
-    }
+
 
     .hero-img img {
         opacity: 0.8;
@@ -105,6 +103,11 @@
         50% { transform: translateY(-20px); }
     }
     
+        .hero-img {
+      margin-top: 150px;
+      padding-left: 2vw;
+      padding-right: 2vw;
+    }
         </style>
   </head>
   <body>
@@ -276,23 +279,23 @@
     <div class="hero-section">
       <div class="container">
         <div class="row d-flex">
-          <div class=" col-md-6">
-            <div class="text-box rounded-5 text-info ms-5 animate__animated animate__bounceInLeft">
-              <h1 class="typing-animation text-info mb-5" style="overflow: hidden; padding-left: 10px; padding-top: 20px; font-size: 50px;">Unleash your
+          <div class=" col-md-6 flex-column d-flex flex-wrap">
+            <div class="text-box rounded-5 text-info ms-5 animate__animated animate__bounceInLeft d-flex flex-column flex-wrap">
+              <h1 class="typing-animation text-info mb-5 d-flex flex-wrap" style=" padding-left: 10px; padding-top: 20px; padding-right: 20px;">Unleash your
                 <br>
                   Javascript coding
                 <br>
                   Potential.
               </h1>
-              <h1 class="text-white fs-3 bounce" style="font-family: 'zzzz', cursive;">Play against other player <br>
+              <h1 class="text-white fs-4 bounce d-flex flex-wrap" style="font-family: 'zzzz', cursive;">Play against other player <br>
                 and reach the Pinnacle of Glory.</h1>         
             </div>
-            <div class="btn-play text-center animate__animated animate__bounceInUp shine">
-              <a style="font-family: 'arial black';" class="btn p-2 px-5 rounded-5 shine mt-5" href="gamePage.html"><b>PLAY NOW</b></a>
+            <div class="d-flex flex-wrap justify-content-center align-items-center">
+              <a style="font-family: 'arial black';" class="btn p-2 px-5 rounded-5 shine mt-5 d-flex flex-wrap justify-content-center align-items-center" href="gamePage.html"><b>PLAY NOW</b></a>
             </div>
           </div>
-          <div class="hero-img col-md-6 text-end animate__animated animate__bounceInRight">
-            <img src="./images/characterW_logo.svg" width="500px" alt="">
+          <div class="hero-img col-md-6 text-end animate__animated animate__bounceInRight d-flex justify-content-center align-items-center">
+            <img class="d-flex justify-content-center align-items-center" src="./images/characterW_logo.svg" width="500px" alt="">
           </div>
         </div>       
       </div>
@@ -389,10 +392,10 @@
         </div>
       </div>
 
-      <div class="container title-div">
-        <div class="row">
-          <div class="col-md-6 title ">
-            <h1 class="title-text">WE ARE CODE COMBAT</h1>
+      <div class="container title-div d-flex justify-content-center align-items-center">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="col-md-6 title d-flex justify-content-center align-items-center">
+            <h1 class="title-text d-flex">WE ARE CODE COMBAT</h1>
           </div>
           <div class="col-md-6" data-aos="fade-left" data-aos-anchor-placement="top-center" data-aos-duration="1500">
             <img class="img-fluid" src="images/41672.jpg" alt="">
