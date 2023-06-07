@@ -87,18 +87,18 @@ window.addEventListener('scroll', function () {
           overlay.style.display = "none";
         }, 500);
       }
-  
+      
       feedbackForm.addEventListener("submit", function(event) {
         event.preventDefault();
-
+      
         closePopup();
         if (document.getElementById("feedbackInput").value.trim() !== "") {
           alert("Thank you for your feedback!");
-        }else{
-            
+          document.getElementById("feedbackInput").value = "";
         }
       });
 
+      // learn  more in home page
       function toggleParagraph() {
         var additionalText = document.getElementById("additional-text");
         if (additionalText.style.display === "none") {
