@@ -309,18 +309,19 @@
           <div class="col-md-6">
             <p class="title-text text-center game-title" >START YOUR JOURNEY HERE</p>
           </div>
-          <div class="bg d-flex justify-content-center mt-5 mb-5">
-            <div class="col-md-8 rules">
-              <p>Objective:</p>
-              <p class="rules-content"> The objective of Code Combat is to complete each level by writing the Javascript code. And if you have an error you cannot proceed.</p>
-              <br>
-              <a href="./iframe/commonfiles/registration.html" class="text-center fs-1 text-bg-dark  text-decoration-none fw-bolder d-flex justify-content-center rounded-4 shine" style="font-family: 'zzzz', cursive;">ENTER GAME</a>
-            </div>
-          </div>
-        </div>
     </main>
+    <div class="bg d-flex justify-content-center mt-5">
+      <div class="col-md-8 rules">
+        <p class="fw-bold fs-1">Rules in Code Combat:</p>
+        <p id="rules-content"> </p>
+        <br>
+        <a href="./iframe/commonfiles/registration.html" class="text-center fs-1 text-bg-dark  text-decoration-none fw-bolder d-flex justify-content-center rounded-4 shine" style="font-family: 'zzzz', cursive;">ENTER GAME</a>
+      </div>
+    </div>
+  </div>
+    
 
-    <footer class="pt-3 mt-5">
+    <footer class="pt-3 ">
         <div class="row d-flex">
           <div class="col-md-3 fs-5 ms-5 ps-5 pt-3 text-white">
             <p class="ps-4"><b>General</b></p>       
@@ -361,6 +362,49 @@
         </div>
       </footer>
   
+
+      <script>
+        const textElement = document.getElementById('rules-content');
+
+const texts = [
+  'To complete each level in Code Combat you need to answer the Javascript code correctly. You cannot proceed to the next level until you solve the code.',
+  'You can choose a game mode you prefer. You can play solo or play against other player. ',
+  'Solo game mode: You can choose different difficulty level between easy, medium and hard.',
+  'Score and Achievements: Code Combat keeps track of your score, which is based on the completion time, code efficiency, and other factors. The game also offers achievements for completing levels with specific conditions or using advanced Javascripts techniques',
+  'Code Execution and Debugging: Your code is executed in real-time, and you can observe the effects of your code on the screen.',
+  'Coding Language: CodeCombat supports Javascript programming language.'
+  
+];
+
+let currentIndex = 0;
+let currentText = '';
+let isDeleting = false;
+let typingSpeed = 100;
+let deletingSpeed = 50;
+
+function changeText() {
+  if (isDeleting) {
+    currentText = texts[currentIndex].substring(0, currentText.length - 1);
+  } else {
+    currentText = texts[currentIndex].substring(0, currentText.length + 1);
+  }
+
+  textElement.textContent = currentText;
+
+  if (!isDeleting && currentText === texts[currentIndex]) {
+    isDeleting = true;
+    typingSpeed = 2000;
+  } else if (isDeleting && currentText === '') {
+    isDeleting = false;
+    typingSpeed = 1000;
+    currentIndex = (currentIndex + 1) % texts.length;
+  }
+
+  setTimeout(changeText, isDeleting ? deletingSpeed : typingSpeed);
+}
+
+changeText();
+      </script>
       <script src="index.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
       <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
@@ -371,6 +415,7 @@
       <script>
         AOS.init();
       </script>
+
       <script src="script.js"></script>
     </body>
   </html>
