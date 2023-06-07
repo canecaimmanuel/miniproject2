@@ -226,13 +226,13 @@
         <p>To define an array, either use the brackets notation or the Array object notation:</p>
         <div class="codes">
         <code class="language-javascript"><span class="keyword">var</span> myArray <span class="operator">=</span> <span class="punctuation">[</span><span class="number">1</span><span class="punctuation">,</span> <span class="number">2</span><span class="punctuation">,</span> <span class="number">3</span><span class="punctuation">]</span><span class="punctuation">;</span>
-        <span class="keyword">var</span> theSameArray <span class="operator">=</span> <span class="keyword">new</span> <span class="class-name">Array</span><span class="punctuation">(</span><span class="number">1</span><span class="punctuation">,</span> <span class="number">2</span><span class="punctuation">,</span> <span class="number">3</span><span class="punctuation">)</span><span class="punctuation">;</span>
+<span class="keyword">var</span> theSameArray <span class="operator">=</span> <span class="keyword">new</span> <span class="class-name">Array</span><span class="punctuation">(</span><span class="number">1</span><span class="punctuation">,</span> <span class="number">2</span><span class="punctuation">,</span> <span class="number">3</span><span class="punctuation">)</span><span class="punctuation">;</span>
         </code>
         </div>
         <h3>Addressing</h3>
         <p>We can use the brackets [] operator to address a specific cell in our array. Addressing uses zero-based indices, so for example, in myArray the 2nd member can be addressed with index 1. One of the benefits of using an array datastructure is that you have constant time look-up, if you already know the index of the element you are trying to access.</p>
         <div class="class">
-          <pre class="language-javascript"><code class="  language-javascript">console<span class="punctuation">.</span><span class="function">log</span><span class="punctuation">(</span>myArray<span class="punctuation">[</span><span class="number">1</span><span class="punctuation">]</span><span class="punctuation">)</span><span class="punctuation">;</span>      <span class="comment" spellcheck="true">// prints out 2</span>
+          <pre class="language-javascript"><code class="language-javascript">console<span class="punctuation">.</span><span class="function">log</span><span class="punctuation">(</span>myArray<span class="punctuation">[</span><span class="number">1</span><span class="punctuation">]</span><span class="punctuation">)</span><span class="punctuation">;</span>      <span class="comment" spellcheck="true">// prints out 2</span>
           </code></pre>
         </div>
         <p>Arrays in JavaScript are sparse, meaning that we can also assign variables to random locations even though previous cells were undefined. For example:</p>
