@@ -69,9 +69,12 @@ document.addEventListener("DOMContentLoaded", function() {
   let noButton = document.createElement('button');
   let loginArea = document.querySelector('.login-area');
   let registrationArea = document.querySelector('.registration-area');
+  let fullNameInput = document.getElementById('fullName');
+  let usernameInput = document.getElementById('username');
+  let passwordInput = document.getElementById('password');
   let currentIndex = 0;
   let delayCounter = 0;
-
+  
   function changeMessage() {
     if (delayCounter === 1) {
       if (currentIndex < messages.length) {
@@ -85,21 +88,21 @@ document.addEventListener("DOMContentLoaded", function() {
       delayCounter++;
     }
   }
-
+  
   function displayButtons() {
     yesButton.textContent = 'YES';
     noButton.textContent = 'NO';
-
+  
     buttonsContainer.appendChild(yesButton);
     buttonsContainer.appendChild(noButton);
-
+  
     yesButton.addEventListener('click', showNewMessages);
     noButton.addEventListener('click', showNewMessages);
   }
-
+  
   function showNewMessages(event) {
     const buttonClicked = event.target.textContent;
-
+  
     if (buttonClicked === 'YES') {
       messageContainer.textContent = "I see that you are New Here";
       setTimeout(() => {
@@ -113,17 +116,43 @@ document.addEventListener("DOMContentLoaded", function() {
         loginArea.classList.add('login-animation');
       }, 2000);
     }
-
+  
     // Remove event listeners
     yesButton.removeEventListener('click', showNewMessages);
     noButton.removeEventListener('click', showNewMessages);
-
+  
     // Remove buttons from container
     buttonsContainer.removeChild(yesButton);
     buttonsContainer.removeChild(noButton);
   }
+  
+  function handleFullNameBlur() {
+    const fullName = fullNameInput.value;
+    if (fullName.trim().length > 0) {
+      messageContainer.textContent = "Wow, your name looks awesome!";
+    }
+  }
+  
+  function handleUsernameClick() {
+    setTimeout(() => {
+      messageContainer.textContent = "In the username, I suggest that it must contain letters and numbers";
+    }, 1000);
+  }
+  function handlePasswordClick() {
+    setTimeout(() => {
+      messageContainer.textContent = "I suggest that the password will be more than 6 characters long";
+    }, 1000);
+  }
+  
+  // ...
+  
+  usernameInput.addEventListener('click', handleUsernameClick);
+  passwordInput.addEventListener('click', handlePasswordClick);
+  fullNameInput.addEventListener('blur', handleFullNameBlur);
 
+  
   const messageInterval = setInterval(changeMessage, 2500);
+  
 
 });
 
