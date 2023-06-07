@@ -55,7 +55,79 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
   }
+
+  //  -- - - - - --  robot - - - -- - - - 
+
+  const messageContainer = document.getElementById('message-container');
+  const messages = [
+    "Hi, Welcome to Code combat!",
+    "I will be your AI Assistant",
+    "Are you new here?",
+  ];
+  let buttonsContainer = document.getElementById('buttons-container');
+  let yesButton = document.createElement('button');
+  let noButton = document.createElement('button');
+  let loginArea = document.querySelector('.login-area');
+  let registrationArea = document.querySelector('.registration-area');
+  let currentIndex = 0;
+  let delayCounter = 0;
+
+  function changeMessage() {
+    if (delayCounter === 1) {
+      if (currentIndex < messages.length) {
+        messageContainer.textContent = messages[currentIndex];
+        currentIndex++;
+      } else {
+        clearInterval(messageInterval);
+        displayButtons();
+      }
+    } else {
+      delayCounter++;
+    }
+  }
+
+  function displayButtons() {
+    yesButton.textContent = 'YES';
+    noButton.textContent = 'NO';
+
+    buttonsContainer.appendChild(yesButton);
+    buttonsContainer.appendChild(noButton);
+
+    yesButton.addEventListener('click', showNewMessages);
+    noButton.addEventListener('click', showNewMessages);
+  }
+
+  function showNewMessages(event) {
+    const buttonClicked = event.target.textContent;
+
+    if (buttonClicked === 'YES') {
+      messageContainer.textContent = "I see that you are New Here";
+      setTimeout(() => {
+        messageContainer.textContent = "Then you must need to register";
+        registrationArea.classList.add('registration-animation');
+      }, 2000);
+    } else if (buttonClicked === 'NO') {
+      messageContainer.textContent = "Oh, it seems like you're not new here";
+      setTimeout(() => {
+        messageContainer.textContent = "So you just need to Login";
+        loginArea.classList.add('login-animation');
+      }, 2000);
+    }
+
+    // Remove event listeners
+    yesButton.removeEventListener('click', showNewMessages);
+    noButton.removeEventListener('click', showNewMessages);
+
+    // Remove buttons from container
+    buttonsContainer.removeChild(yesButton);
+    buttonsContainer.removeChild(noButton);
+  }
+
+  const messageInterval = setInterval(changeMessage, 2500);
+
 });
+
+
 
 // Function to generate a unique ID for the new user
 function generateUniqueId(users) {
@@ -67,8 +139,8 @@ function generateUniqueId(users) {
 
 
 function login() {
-  var username = document.getElementById("username").value;
-  var password = document.getElementById("password").value;
+  var username = document.getElementById("l_username").value;
+  var password = document.getElementById("l_password").value;
 
   // Retrieve users from local storage or create an empty array
   var users = JSON.parse(localStorage.getItem("users")) || [];
@@ -102,3 +174,5 @@ function login() {
     document.getElementById("message").textContent = "Invalid username or password!";
   }
 }
+
+

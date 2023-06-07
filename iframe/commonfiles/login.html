@@ -8,19 +8,109 @@
     <title>Document</title>
 </head>
 <body>
+  <div class="container">
+
+    <!-- LOGIN -->
+    <div class="card login-area">
     <h1>User Login</h1>
     <label for="username">Username</label>
-    <input type="text" id="username" required>
+    <input type="text" id="l_username" required>
     
     <label for="password">Password</label>
-    <input type="password" id="password" required>
+    <input type="password" id="l_password" required>
     
     <button id="loginButton" onclick="login()">Login</button>
-    
+    <div class="footer-icons">
+      
+    </div>
     <p id="message"></p>
     
     <script src="scripts/reg-login.js"></script>
+    </div>
+
+  <!-- Registration -->
+
+    <div class="card registration-area">
+      <h1>User Registration</h1>
+      <form id="registrationForm">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" required>
     
+        <label for="username">Username</label>
+        <input type="text" id="username" required>
     
+        <label for="password">Password</label>
+        <input type="password" id="password" required>
+    
+        <input type="submit" value="Register" id="registerButton">
+      </form>
+    
+      <p id="message"></p>
+    </div>
+  </div>
+  <div id="buttons-container"></div>
+
+  <div class="robot-container">
+    <div id="message-container"></div>
+
+    <img id="robot" src="images/robot/robot.svg" alt="">
+
+  </div>
+
+
+  <script>
+var messageContainer = document.getElementById('message-container');
+
+// Observe changes in the message container
+var observer = new MutationObserver(function(mutations) {
+  mutations.forEach(function(mutation) {
+    if (mutation.addedNodes.length) {
+      Array.from(mutation.addedNodes).forEach(function(node) {
+        speak(node.textContent);
+      });
+    }
+  });
+});
+
+// Check if the message container already has child nodes
+if (messageContainer.hasChildNodes()) {
+  Array.from(messageContainer.childNodes).forEach(function(node) {
+    speak(node.textContent);
+  });
+}
+
+// Configure and start observing the message container
+observer.observe(messageContainer, { childList: true });
+
+function speak(text) {
+  var msg = new SpeechSynthesisUtterance();
+  var voices = window.speechSynthesis.getVoices();
+
+  // Find a robotic voice (you can modify this to select a different voice)
+  var roboticVoice = voices.find(function(voice) {
+    return voice.name === 'Microsoft Mark - English (United States)';
+  });
+  window.speechSynthesis.onvoiceschanged = function () {
+  var voices = window.speechSynthesis.getVoices();
+
+  voices.forEach(function (voice, index) {
+    console.log('Voice ' + index + ': ' + voice.name);
+  });
+};
+  msg.voice = roboticVoice;
+  msg.text = text;
+
+  window.speechSynthesis.speak(msg);
+}
+
+// Example usage: dynamically add text to the message container
+setTimeout(function() {
+  var newMessage = document.createElement('p');
+  newMessage.textContent = 'This is a new message.';
+  messageContainer.appendChild(newMessage);
+}, 2000);
+
+
+  </script>
   </body>
 </html>

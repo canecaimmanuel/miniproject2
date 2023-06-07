@@ -1,6 +1,8 @@
 
 /* Add some basic styling */
 body {
+  overflow: hidden;
+  background-color: rgb(32, 32, 32);
   font-family: Arial, sans-serif;
   padding: 20px;
 }
@@ -10,9 +12,179 @@ label {
 }
 input {
   margin-bottom: 10px;
+  border-radius: 10px;
+  border: solid 0.5px;
+  padding-left: 5px;
+  height: 30px;
+  width: 300px;
 }
 #message {
   margin-top: 10px;
   color: red;
   font-weight: bold;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 400px;
+  padding: 50px;
+  background-color: rgb(1, 143, 179);
+  border-radius: 20px;
+  color: aliceblue;
+}
+
+.container {
+  position: absolute;
+  top: -10vw;
+  left: 20vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.login-area {
+  position: absolute;
+  top: -30vw;
+  left: 10vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  transition: top 0.5s ease;
+  z-index: 20;
+}
+
+.login-animation {
+  animation-name: login-animation;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes login-animation {
+  0% {
+    top: -30vw;
+    left: 10vw;
+  }
+  100% {
+    top: 20vw;
+    left: 10vw;
+  }
+}
+
+.registration-area {
+  position: absolute;
+  top: -30vw;
+  left: 10vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  transition: top 0.5s ease;
+  z-index: 30;
+}
+
+.registration-animation {
+  animation-name: registration-animation;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes registration-animation {
+  0% {
+    top: -30vw;
+    left: 10vw;
+  }
+  100% {
+    top: 20vw;
+    left: 10vw;
+  }
+}
+
+#loginButton {
+  margin-top: 15px;
+  width: 100px;
+  height: 50px;
+}
+
+/*-  - - - - -- ROBOT - - - - - - - --  */
+
+#buttons-container {
+  position: absolute;
+  right: 35vw;
+  top: 15vw;
+}
+
+#buttons-container button {
+  padding: 1vw;
+  margin-left: 1vw;
+  font-size: 2vw;
+  border-radius: 1.5vw;
+  cursor: pointer;
+}
+
+#message-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  top: -15vw;
+  right: 32vw;
+  width: 15vw;
+  height: 5vw;
+  background-color: aliceblue;
+  color: black;
+  border-radius: 20px;
+  transition: top 0.5s ease forwards;
+  animation-name: message-animation;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-delay: 1.7s;
+}
+
+@keyframes message-animation {
+  0% {
+    top: -15vw;
+    right: 32vw;
+  }
+  100% {
+    top: 5vw;
+    right: 32vw;
+  }
+}
+#robot {
+  position: absolute;
+  top: 5vw;
+  right: -25vw;
+  height: 30vw;
+  transition: right 0.5s ease forwards;
+  animation-name: robot-animation;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes robot-animation {
+  0% {
+    top: 5vw;
+    right: -25vw;
+  }
+  100% {
+    top: 5vw;
+    right: 15vw;
+  }
 }

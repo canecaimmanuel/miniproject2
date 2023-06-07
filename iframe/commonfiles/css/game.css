@@ -14,6 +14,12 @@ body {
   cursor: url('../images/cursor/Normal.gif'), default;
 }
 
+@media (max-width: 480px) {
+  body {
+    background-size: auto;
+  }
+}
+
 * {
   font-family: maintext;
 }

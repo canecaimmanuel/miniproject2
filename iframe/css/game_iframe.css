@@ -14,12 +14,12 @@ iframe {
 @media (max-width: 480px) {
     iframe {
         position: absolute;
-        top: 0px;
-        left: 0px;
-        width: 100vw;
-        height: 100vh;
+        top: 0;
+        right: 100vw;
+        width: 100vh;
+        height: 100vw;
         border: none;
         transform: rotate(-90deg); /* Rotate the iframe vertically */
-        transform-origin: left top; /* Set the rotation origin */
+        transform-origin: right top; /* Set the rotation origin */
     }
   }
