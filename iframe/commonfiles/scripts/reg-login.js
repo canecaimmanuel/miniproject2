@@ -127,8 +127,8 @@ document.addEventListener("DOMContentLoaded", function() {
   }
   
   function handleFullNameBlur() {
-    const fullName = fullNameInput.value;
-    if (fullName.trim().length > 0) {
+    const fullName = fullNameInput.value.trim();
+    if (fullName.length > 0) {
       messageContainer.textContent = "Wow, your name looks awesome!";
     }
   }
