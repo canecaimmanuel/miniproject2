@@ -40,20 +40,13 @@ document.addEventListener("DOMContentLoaded", function (){
     var logowrap = document.querySelector('.logo-wrap svg');
       
     function animateLoop() {
-      // Add the 'active' class
-      logowrap.classList.add('active');
-    
-      // Wait for 0.5 seconds
+      logowrap.classList.add('active');   
       setTimeout(function() {
-        // Remove the 'active' class
         logowrap.classList.remove('active');
     
-        // Call the function again after 0.5 seconds
         setTimeout(animateLoop, 2100);
       }, 3000);
     }
-    
-    // Call the function to start the animation loop
     animateLoop();
 });
 

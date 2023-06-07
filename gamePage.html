@@ -29,6 +29,12 @@
     margin-top: 100px;
     margin-bottom: 200px;
   }
+
+  .title-text{
+      font-weight: 900;
+      font-family: 'zzzz', cursive, sans-serif;
+      font-size: 6rem;
+    }
     
   .hero-content2 h3 {
     padding: 100px;
@@ -79,7 +85,7 @@
 
     .hero-img img {
         opacity: 0.8;
-        animation: flicker 1s infinite;
+        animation: flicker 2s infinite;
 
     @keyframes flicker {
         0%, 25%, 75%, 100% {
@@ -159,13 +165,13 @@
           <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo03">
             <ul class="navbar-nav">
               <li class="nav-item d-flex pe-2 "> 
-                <a class="nav-link text-info text-bg-secondary rounded shine" aria-current="page" href="#" title="Home Page"><ion-icon class="nav-logo" name="home"></ion-icon></a> 
+                <a class="nav-link shine"  href="index.html" title="Home Page"><ion-icon class="nav-logo" name="home"></ion-icon></a> 
                 <h1 class="ps-2">|</h1>
               </li>
               <li class="nav-item d-flex pe-2 ">
-                <a class="nav-link shine" href="#" title="Play Game"><ion-icon class="nav-logo" name="game-controller"></ion-icon></ion-icon></a>
+                <a class="nav-link text-info text-bg-secondary rounded shine" aria-current="page" href="gamePage.html" title="Play Game"><ion-icon class="nav-logo" name="game-controller"></ion-icon></ion-icon></a>
                 <h1 class="ps-2">|</h1>
-              </li>              
+              </li>             
               <li class="nav-item d-flex pe-2">
                 <a class="nav-link shine" href="tutorial.html" title="Tutorial"><ion-icon class="nav-logo" name="book"></ion-icon></a>
                 <h1 class="ps-2">|</h1>
@@ -181,7 +187,140 @@
       </nav>
     </section>
 
-    <footer class="pt-3">
+  <!-- Login start -->
+  <div class="login-box">
+    <div class="wrapper">
+      <span class="icon-close"><ion-icon name="close-outline"></ion-icon></span>
+
+    <div class="form-box login">
+        <h2 class="text-info">Login</h2>
+        <form action="#">
+            <div class="input-box">
+                <span class="icon text-info"><ion-icon name="mail-outline"></ion-icon></span>
+                <input class="text-light" autocomplete="email" type="email" required>
+                <label class="text-light">Email</label>
+            </div>
+            <div class="input-box">
+                <span class="icon text-info"><i class="fas fa-eye-slash" id="togglePassword"></i></span>
+                <input class="text-light" autocomplete="current-password" type="password" id="id_password" required>              
+                <label class="text-light">Password</label>
+            </div>
+            <div class="remember-forgot">
+                <label class="text-info"><input type="checkbox">
+                Remember me</label>
+                <a class="text-info" href="#">Forgot Password?</a>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn px-5" style="font-family: 'arial black';">Login</button>
+            </div>
+            <div class="login-register text-info">
+                <p>Don't have an account? <a 
+                href="#"
+                class="register-link text-light">Sign up</a></a></p>
+            </div>
+            <div class="d-flex text-white">
+              <p>or login with</p>
+              <div class="social-logo ms-4 fs-3">
+                <a href=""><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href=""><ion-icon name="logo-github"></ion-icon></a>
+                <a href=""><ion-icon name="logo-linkedin"></ion-icon></a>
+                <a href=""><ion-icon name="logo-twitter"></ion-icon></a>
+                <a href=""><ion-icon name="logo-google"></ion-icon></a>
+              </div>
+            </div>
+        </form>
+    </div>
+    <!-- Login end -->
+
+      <!-- Register Start -->
+      <div class="form-box register">
+          <h2 class="text-info">Create Account</h2>
+          <form action="#">
+              <div class="input-box">
+                  <span class="icon">
+                      <ion-icon class="text-info" name="person-outline"></ion-icon></ion-icon></span>
+                  <input class="text-light" type="email" id="id_password" required>
+                  <label class="text-light">Username</label>
+              </div>
+              <div class="input-box">
+                  <span class="icon">
+                      <ion-icon class="text-info" name="mail-outline"></ion-icon></span>
+                  <input class="text-light" type="email" required>
+                  <label class="text-light">Email</label>
+              </div>
+              <div class="input-box">
+                <span class="icon text-info"><i class="fas fa-eye-slash" id="togglePassword1"></i></span>
+                <input class="text-light" autocomplete="current-password" type="password" id="id_password1" required>              
+                <label class="text-light">Password</label>
+              </div>
+              <div class="remember-forgot">
+                  <label class="text-info"><input type="checkbox">
+                I agree to the terms & conditions</label>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn px-5" style="font-family: 'arial black';">Register</button>
+              </div>
+              <div class="login-register">
+                  <p class="text-info">Already have an account? <a 
+                  href="#"
+                  class="login-link text-light">Login</a></p>
+              </div>
+          </form>
+        </div>
+    </div>
+  </div>
+  <div id="overlay" class="overlay"></div>
+  <!-- register End -->
+
+    <main class="container">
+        <div id="game-page" class="row">
+
+          <div class="col-md-5 " data-aos="fade-right" data-aos-anchor-placement="top-center" data-aos-duration="1500">
+            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active image-" data-bs-interval="10000">
+                  <img src="images/image-danger-cyber.avif" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block text-info fw-bold">
+                  </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                  <img src="images/hero-img.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/multiimg.jpg" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          <div class="col-md-1"></div>
+          <div class="col-md-6">
+            <p class="title-text text-center game-title" >START YOUR JOURNEY HERE</p>
+          </div>
+          <div class="bg d-flex justify-content-center mt-5 mb-5">
+            <div class="col-md-8 rules">
+              <p>Objective:</p>
+              <p class="rules-content"> The objective of Code Combat is to complete each level by writing the Javascript code. And if you have an error you cannot proceed.</p>
+              <br>
+              <a href="./iframe/commonfiles/registration.html" class="text-center fs-1 text-bg-dark  text-decoration-none fw-bolder d-flex justify-content-center rounded-4 shine" style="font-family: 'zzzz', cursive;">ENTER GAME</a>
+            </div>
+          </div>
+        </div>
+    </main>
+
+    <footer class="pt-3 mt-5">
         <div class="row d-flex">
           <div class="col-md-3 fs-5 ms-5 ps-5 pt-3 text-white">
             <p class="ps-4"><b>General</b></p>       
@@ -232,7 +371,6 @@
       <script>
         AOS.init();
       </script>
-      <script src="gamepage.js"></script>
       <script src="script.js"></script>
     </body>
   </html>

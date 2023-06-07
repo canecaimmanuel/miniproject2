@@ -69,9 +69,6 @@ canvas {
   background: linear-gradient(to top, #468CCF, #64DCEE);
 }
 
-
-
-
 nav div ul li h1 {
   scale: 70%;
   color: #8a8a8a !important;
@@ -595,6 +592,8 @@ ul a{
 .path {
   stroke-dasharray: 20;
 }
+
+
 /* buttons */
 
 .btn-play a{
@@ -1173,6 +1172,77 @@ ul a{
     #operators {
         margin-bottom: 200px;
         backdrop-filter: blur(30px);
+    }
+
+    .footer-about {
+      margin-top: 10rem !important;
+    }
+
+    .title-div{
+      margin-top: 12rem;
+      margin-bottom: 8rem;
+    }
+
+    .title {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        backdrop-filter: blur(5px);
+        color: #fff;
+        transition: 0.5s ease-in-out;
+    }
+
+    .title:hover {
+      color: #17a2b8;
+    }
+
+    .content {
+      font-size: 30px;
+      transition: 0.5s ease-in-out;
+    }
+
+    .content:hover {
+      color: #17a2b8;
+    }
+
+    .some-text section {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        backdrop-filter: blur(5px);
+        border-radius: 30px;
+      }
+
+    /* Game content display */
+    
+    #game-page {
+      margin-top: 80px;
+    }
+
+    .game-title {
+      margin-top: 5rem;
+      color: white;
+      text-shadow: 0 0 5px #1897ff, 0 0 10px #1897ff, 0 0 15px #1897ff, 0 0 20px #1897ff;
+    }
+
+    .game-title:hover {
+      color: #4ad2ff !important;
+      font-family: 'zzzz', cursive;
+    }
+
+    #carouselExampleDark {
+      margin-top: 5rem;
+    }
+
+    .bg {
+      background: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+      clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%);
+      height: 70vh;
+      width: 100vw;
+    }
+
+    .rules {
+      margin-top: 8rem;
+      font-size: 30px;
+      
     }
 
     @media screen and (max-width: 767px) {
