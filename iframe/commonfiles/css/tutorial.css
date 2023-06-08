@@ -56,10 +56,11 @@
 
   .screenshoot {
     position: absolute;
-    right: 2.5vw;
+    right: 35vw;
     top: 8.2vw;
     z-index: 30;
     height: 8vw;
+    width: 12vw;
   }
 
   .okay-button {
@@ -79,7 +80,7 @@
     cursor: url('../images/cursor/Link.gif'), pointer;
   }
 
-  .robot-container {
+  .robot-container-slide {
     /* Existing animation properties */
     position: absolute;
     right: -12vw; /* Start position */
@@ -88,7 +89,6 @@
     animation-name: robotSlide;
     animation-duration: 1s;
     animation-fill-mode: forwards;
-    animation-delay: 4s; /* Delay of 4 seconds */
   }
   
   @keyframes robotSlide {
@@ -132,18 +132,30 @@
   }
 
 
-
-  .two-eyes {
+  .two-eyes-slide {
     display: flex;
     position: absolute;
     height: 4vw;
-    right: 3vw;
+    right: -12vw;
     top: 10vw;
     z-index: 60;
     justify-content: center;
     align-items: center;
     scale: 80%;
+    animation-name: robotSlide;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
   }
+  
+  @keyframes robotSlide {
+    0% {
+      right: -8vw; /* Start position */
+    }
+    100% {
+      right: 3vw; /* End position */
+    }
+  }
+
   .eye {
     display: flex;
     width: 3vw;

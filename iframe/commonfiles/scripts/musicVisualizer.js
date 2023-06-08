@@ -15,7 +15,7 @@ window.onload = function() {
     }
   } else {
     // No saved state, load the startup audio
-    var startupAudio = new Audio("music/music.mp3"); // Replace "music/music.mp3" with the actual path to your startup audio file
+    var startupAudio = new Audio("music/.music.mp3"); // Replace "music/music.mp3" with the actual path to your startup audio file
 
     startupAudio.addEventListener("canplaythrough", function() {
       audio.src = startupAudio.src; // Set the startup audio as the source for the player

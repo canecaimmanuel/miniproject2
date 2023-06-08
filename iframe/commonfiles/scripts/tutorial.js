@@ -15,10 +15,23 @@ document.addEventListener("DOMContentLoaded", function() {
     robotImage.classList.add("robot-image");
     robotContainer.appendChild(robotImage);
 
+    
+    setTimeout(function() {
+      // Add the "robot-container-animate" class to start the new animation
+      document.querySelector('.two-eyes').classList.add('two-eyes-slide');
+      }, 1000);
+
+    setTimeout(function() {
+        // Add the "robot-container-animate" class to start the new animation
+        document.querySelector('.robot-container').classList.add('robot-container-slide');
+        }, 1000);
+  
     setTimeout(function() {
     // Add the "robot-container-animate" class to start the new animation
     document.querySelector('.robot-container').classList.add('robot-container-animate');
     }, 4500);
+
+
 
     // Add the initial tutorial message to the page after a delay
     setTimeout(function() {

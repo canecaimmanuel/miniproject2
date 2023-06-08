@@ -91,13 +91,29 @@
     
     
     </div>
-    
+    <audio src="introSounds/introMusic.mp3" autoplay>
+    </audio>
     <script>
       window.addEventListener("load", function() {
 var wrapper = document.querySelector('.wrapper svg')
   wrapper.classList.add('active');
 
 });
+    </script>
+    <script>
+      // Set the duration of the timer in milliseconds (10 seconds in this example)
+const timerDuration = 10000;
+
+// Function to redirect to another webpage
+function redirectToPage() {
+  window.location.href = "game.html"; // Replace with the desired URL
+}
+
+// Start the timer when the page loads
+window.onload = function() {
+  setTimeout(redirectToPage, timerDuration);
+};
+
     </script>
 </body>
 </html>

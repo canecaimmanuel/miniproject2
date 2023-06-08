@@ -2,7 +2,7 @@
 var iframe = document.createElement('iframe');
 
 var loc1 = "commonfiles/"
-var loc2 = "game.html"
+var loc2 = "intro-screen.html"
 
 iframe.src = loc1 + loc2;
 
