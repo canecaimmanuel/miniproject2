@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
       });
 
       if (isUsernameTaken) {
-        document.getElementById("message").textContent = "Username already taken!";
+        document.getElementById("registrationMessage").textContent = "Username already taken!";
       } else {
         // Generate a unique ID for the new user
         var id = generateUniqueId(users);
@@ -48,7 +48,10 @@ document.addEventListener("DOMContentLoaded", function() {
         localStorage.setItem("users", JSON.stringify(users));
 
         // Display success message
-        document.getElementById("message").textContent = "Registration successful!";
+        document.getElementById("registrationMessage").textContent = "Registration successful!";
+
+        // Set the logged-in user's username in local storage
+        localStorage.setItem("loggedInUsername", username);
 
         // Redirect to the game page with the registered username
         window.location.href = "game.html?username=" + username;
