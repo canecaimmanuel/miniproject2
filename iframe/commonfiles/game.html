@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="particle.css">
   <link rel="stylesheet" href="css/loading.css">
   <link rel="stylesheet" href="css/tutorial.css">
+  <link rel="stylesheet" href="css/airobot.css">
 </head>
 <body>
 <!--  - - - - - -LOADING  - - - - - - - --  - - - - - - - -->
@@ -149,6 +150,19 @@
   
 
 </nav>
+<!-- AI robot COntainer-->
+<div id="ai-message" style="display: none;"></div>
+<div id="aiRobotContainer">
+  <img id="aiRobotImage" src="images/robot/java-robot.svg" alt="AI Robot Character">
+
+  <div class="aitwo-eyes">
+    <div class="aieye"></div>
+    <div class="aieye"></div>
+</div>
+</div>
+<button id="aiRobotButton"><img src="images/robot/robot-logo.svg" alt=""></button>
+
+<!-- END AI robot COntainer-->
 
 <div class="right-buttons">
   <img class="settings-icons" src="images/vector_designs/settings.svg" alt="">
@@ -302,6 +316,7 @@
                 <script src="scripts/musicVisualizer.js"></script>
                 <script src="scripts/tutorial.js"></script>
 
+  <script src="scripts/airobot.js"></script>
   <script>
     document.getElementById("imageInput").addEventListener("change", function() {
       document.getElementById("cropEditorBox").style.display = "block";

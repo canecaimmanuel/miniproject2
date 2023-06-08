@@ -1,4 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
+  var loadingOverlay = document.getElementById("loadingOverlay");
+  loadingOverlay.style.opacity = 1;
+
+      // Add a load event listener to fade out the loading overlay once the page is fully loaded
+      window.addEventListener("load", function() {
+        setTimeout(function() {
+          loadingOverlay.style.opacity = 0;
+          setTimeout(function() {
+            loadingOverlay.style.display = "none";
+          }, 500); // Adjust the duration of the fade out transition (in milliseconds) as needed
+        }, 3000); // Delay of 3000 milliseconds (3 seconds) before fading out the loading overlay
+      });
+      
+  
   let data;
   let completedQuests = 0; // Track the number of completed quests
   
@@ -141,7 +155,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const levelRadios = document.querySelectorAll('input[name="level"]');
     const selectedLevel = [...levelRadios].find(radio => radio.checked).value;
   
-    const currentQuestion = getRandomQuestionByLevel(data.activities, selectedLevel); // Use the data variable here
+    const currentQuestion = getRandomQuestionByLevel(data.activities, selectedLevel);
     updateQuestion(currentQuestion);
   
     console.log('Level:', currentQuestion.level);
@@ -149,9 +163,21 @@ document.addEventListener('DOMContentLoaded', function() {
   
     // Check if the player has completed all 5 quests
     if (completedQuests === 5) {
-      alert("Congratulations! You won! You successfully exploited an enemy hacker.");
+      alert("Congratulations! You won! Additional 300 Exp Points for you");
+  
+      // Update the user's exp by adding 200
+      const loggedInUserIndex = users.findIndex(user => user.username === loggedInUsername);
+      if (loggedInUserIndex !== -1) {
+        users[loggedInUserIndex].exp += 300;
+        localStorage.setItem('users', JSON.stringify(users));
+      }
+  
+      // Redirect to another page
+      window.location.href = "../game.html";
     }
   }
+  
+
   
   
   // Function to show error message
